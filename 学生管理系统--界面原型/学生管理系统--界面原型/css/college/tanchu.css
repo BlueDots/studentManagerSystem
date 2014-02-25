@@ -1,0 +1,1230 @@
+body, h2
+        {
+            margin: 0;
+            padding: 0;
+        }
+        #
+        {
+            background-color: #e3e3e3;
+            position: absolute;
+            z-index: 99;
+            left: 0;
+            top: 0;
+            display: none;
+            width: 100%;
+            height: 1000px;
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+            -moz-opacity: 0.5;
+        }
+        
+	#projectProportionDiv
+        {
+            position: absolute;
+            width: 1000px;
+            left: 50%;
+            top: 50%;
+            margin-left: -500px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #projectProportionDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #projectProportionDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #projectProportionDiv .form 
+        {
+            padding: 10px;
+        }
+	
+	#advancedSearchDiv
+	{
+            position: absolute;
+            width: 500px;
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #advancedSearchDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #advancedSearchDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #advancedSearchDiv .form 
+        {
+            padding: 10px;
+        }
+
+	#CreditProportionDiv
+	{
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #CreditProportionDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #CreditProportionDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #CreditProportionDiv .form 
+        {
+            padding: 10px;
+        }
+
+	#ActivityTypeDiv
+	{
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #ActivityTypeDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #ActivityTypeDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #ActivityTypeDiv .form 
+        {
+            padding: 10px;
+        }
+
+	#AdvanceDetailsDiv
+	{
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #AdvanceDetailsDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #AdvanceDetailsDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #AdvanceDetailsDiv .form 
+        {
+            padding: 10px;
+        }
+
+	#setTimeDiv
+	{
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #setTimeDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #setTimeDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #setTimeDiv .form 
+        {
+            padding: 10px;
+        }
+
+	#AdvanceInfoDiv
+	{
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #AdvanceInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #AdvanceInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #AdvanceInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #SchoolShipDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #SchoolShipDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #SchoolShipDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #SchoolShipDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #setSchshipTimeDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #setSchshipTimeDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #setSchshipTimeDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #setSchshipTimeDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #SchoolshipInfoDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #SchoolshipInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #SchoolshipInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #SchoolshipInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #setPovertyLevelDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #setPovertyLevelDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #setPovertyLevelDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #setPovertyLevelDiv .form 
+        {
+            padding: 10px;
+        }
+
+         #setPovertyTimeDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #setPovertyTimeDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #setPovertyTimeDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #setPovertyTimeDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #setSchJobInfoDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #setSchJobInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #setSchJobInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #setSchJobInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #setSchStuBasicInfoDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #setSchStuBasicInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #setSchStuBasicInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #setSchStuBasicInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+    #ActivityHoldInfoDiv
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #ActivityHoldInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #ActivityHoldInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #ActivityHoldInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+    #ActivityScore
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #ActivityScore h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #ActivityScore h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #ActivityScore .form 
+        {
+            padding: 10px;
+        }
+
+            #ActivityProportion
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #ActivityProportion h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #ActivityProportion h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #ActivityProportion .form 
+        {
+            padding: 10px;
+        }
+
+            #StuBasicInfoDiv
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #StuBasicInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #StuBasicInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #StuBasicInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+         #StuPastAdvInfoDiv
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #StuPastAdvInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #StuPastAdvInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #StuPastAdvInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+         #StuScholarshipCollectInfoDiv
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #StuScholarshipCollectInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #StuScholarshipCollectInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #StuScholarshipCollectInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+
+        #StuAdvCollectInfoDiv
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #StuAdvCollectInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #StuAdvCollectInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #StuAdvCollectInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+
+        #StuSchShipCollectInfoDiv
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #StuSchShipCollectInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #StuSchShipCollectInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #StuSchShipCollectInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+
+        #StuJobInfoDiv
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #StuJobInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #StuJobInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #StuJobInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+
+        #StuJiandangCollectInfoDiv
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #StuJiandangCollectInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #StuJiandangCollectInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #StuJiandangCollectInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+
+        #AdvNum
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #AdvNum h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #AdvNum h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #AdvNum .form 
+        {
+            padding: 10px;
+        }
+
+
+        #AdvProportion
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #AdvProportion h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #AdvProportion h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #AdvProportion .form 
+        {
+            padding: 10px;
+        }
+
+
+
+        #ScholarshipProportion
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #ScholarshipProportion h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #ScholarshipProportion h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #ScholarshipProportion .form 
+        {
+            padding: 10px;
+        }
+
+
+        #ScholarshipNum
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #ScholarshipNum h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #ScholarshipNum h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #ScholarshipNum .form 
+        {
+            padding: 10px;
+        }
+
+
+        #ScholarshipInfoProportion
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #ScholarshipInfoProportion h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #ScholarshipInfoProportion h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #ScholarshipInfoProportion .form 
+        {
+            padding: 10px;
+        }
+
+
+        #ScholarshipInfoNum
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #ScholarshipInfoNum h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #ScholarshipInfoNum h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #ScholarshipInfoNum .form 
+        {
+            padding: 10px;
+        }
+
+
+
+        #JiandangNum
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #JiandangNum h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #JiandangNum h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #JiandangNum .form 
+        {
+            padding: 10px;
+        }
+
+
+        #JiandangProportion
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #JiandangProportion h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #JiandangProportion h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #JiandangProportion .form 
+        {
+            padding: 10px;
+        }
+
+
+
+
+        #ActivityInfoadvancedSearchDiv
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #ActivityInfoadvancedSearchDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #ActivityInfoadvancedSearchDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #ActivityInfoadvancedSearchDiv .form 
+        {
+            padding: 10px;
+        }
+
+
+
+        #ActivityManageadvancedSearchDiv
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #ActivityManageadvancedSearchDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #ActivityManageadvancedSearchDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #ActivityManageadvancedSearchDiv .form 
+        {
+            padding: 10px;
+        }
+
+
+
+        #advancedSearchDiv
+    {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #advancedSearchDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #advancedSearchDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #advancedSearchDiv .form 
+        {
+            padding: 10px;
+        }

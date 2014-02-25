@@ -1,0 +1,524 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>学生工作管理系统</title>
+	
+		<link href="../../../css/css.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/college/tanchu.css">
+		<link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../../../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<link href="../../../css/arrow.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+.demo{border:solid 1px #D5D5D5;border-collapse:collapse;width:100%;}
+.demo td{border:1px solid #D5D5D5;font-size:12px;padding:7px 5px;}
+.demo th{background-color:#EEE;border-right:1px solid #D5D5D5;font-size:13.5px;line-height:120%;font-weight:bold;padding:8px 5px;text-align:left;}
+ 
+</style>
+		
+	</head>
+
+<script src="../../../js/jquery-1.7.2.min.js"></script>
+<script src="../../../js/jquery-ui-1.8.21.custom.min.js"></script>
+
+<script src="../../../js/jquery.chromatable.js"></script>
+<script type="text/javascript">
+   
+
+$(document).ready(function(){ 
+ 	
+	$("#tableID").chromatable({
+		width: "100%",
+	 
+          scrolling: "yes"
+	});
+
+	});
+
+
+</script>
+<script src="../../../js/college/college.js"></script>
+	<body> 
+		<form name="fom" id="fom" method="post" action="">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+				<tr>
+					<td height="30">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="62" background="../../../images/nav04.gif">
+
+									<table width="98%" border="0" align="center" cellpadding="0"
+										cellspacing="0">
+										<tr>
+											<td width="21">
+												<img src="../../../images/ico07.gif" width="20" height="18" />
+											</td>
+											<td width="538">
+												学院：
+												<select name="学院">
+													<option>
+														软件学院
+													</option>
+												</select>
+												<input name="textfield" type="text" size="16" value="请输入活动编号或活动项目"/>
+												<input name="Submit4" type="button" class="right-button02"
+													value="查 询" />
+												<select name="排序">
+													<option>
+														编号升序
+													</option>
+													<option>
+														编号降序
+													</option>
+												</select>
+											</td>
+											<td width="77" align="center" style="position:relative;left:-100px">
+												<div class="suckerdiv">
+													<ul id="suckertree1">
+														<li>
+															<a href="#">分配</a>
+															<ul>
+																<li>
+																	<a href="#" onclick="popup('#activityProportion', '#ActivityProportion', '#btnCloseProportion')">活动学分比例</a>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+											</td>
+											<td width="77" align="center">
+
+												<a href="#" onclick="sousuo()"> <input name="Submit3"
+														type="button" class="right-button07" value="高级搜索" /> </a>
+
+
+												<!--<div class="suckerdiv">
+														<ul id="suckertree1">
+															
+																	<li>
+																	<a href="#">高级搜索</a>
+																	</li>
+																	
+																</ul>
+																</a>
+															</li>
+														</ul>
+													</div>-->
+											</td>
+											<td width="77" align="center">
+												<a href="#" onclick="sousuo()"> <input name="Submit4"
+														type="button" class="right-button07" value="导出" /> </a>
+												<!--<div class="suckerdiv">
+															<ul id="suckertree1">
+															
+																	<li>
+																	<a href="#">导出</a>
+																	</li>
+																	
+																</ul>
+															</div>	-->
+
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="allbasicMsg" style="display: block">
+							<table id="subtree1" style="DISPLAY: " width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="CPanel">
+										<div id="liulanbiao" style="margin-left: 10px">
+											<table width="99%" border="0" cellpadding="0" cellspacing="0" class="CContent">
+												<tr>
+													<th class="tablestyle_title">
+														当前位置：<a href="../dept_activityManage.html">活动管理页面</a>--->活动学分比例
+													</th>
+												</tr>
+												<tr id="allbasicMsg">
+
+													<td class="CPanel" align="center">
+														<table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+															<tr>
+																<td height="40" class="font42">
+																	<table width="100%" border="0" cellpadding="4"
+																		cellspacing="1" bgcolor="#464646" class="demo" id="tableID" >
+																		<tr class="CTitle">
+																			<td height="22" colspan="18" align="center"
+																				style="font-size: 16px">
+																				活动学分比例表
+																			</td>
+																		</tr>
+																		<tr bgcolor="#EEEEEE" align = "center">
+                                                                        	<th width="2%"><center><input type="checkbox" /></center></th>
+																			<th width="4%">
+																				<center>活动编号</center>
+																			</th>
+																			<th width="5%">
+																				<center>活动项目</center>													
+																			</th>
+																			<th width="5%">
+																				<center>活动性质</center>														
+																			</th>
+																			<th width="5%">
+																				<center>活动类型</center>
+																			</th>
+																			<th width="5%">
+																				<center>学分金额</center>
+																			</th>
+																			<th width="5%">
+																				<center>活动学分比例</center>
+																			</th>														
+																			</tr>
+																		
+																			</thead>
+																		<tr bgcolor="#FFFFFF" align = "center">
+
+																			<td><input type="checkbox" /></td>
+                                                                            <td>
+																				20120111XXX										
+																			</td>
+																			<td>
+																				软件创新设计大赛																
+																			</td>
+																			<td>
+																				校级															
+																			</td>
+																			<td>
+																				学术科技类																
+																			</td>
+																			<td>
+																				<input type="button" value="详细信息" onclick="popup('#activityScore', '#ActivityScore', '#btnCloseScore')">
+																			</td>
+																			<td>
+																				60%																		
+																			</td>
+																		</tr>			
+																	</table>													
+																	</table>
+																</td>
+															</tr>
+														</table>
+														
+														
+														<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+															<tr>
+																<td height="6">
+																	<img src="../../images/spacer.gif" width="1" height="1" />
+																</td>
+															</tr>
+															<tr>
+																<td height="33">
+																	<table width="100%" border="0" align="center"
+																		cellpadding="0" cellspacing="0" class="right-font08">
+																		<tr>
+																			<td width="50%">
+																				共
+																				<span class="right-text09">5</span> 页 | 第
+																				<span class="right-text09">1</span> 页
+																			</td>
+																			<td width="49%" align="right">
+																				[
+																				<a href="#" class="right-font08">首页</a> |
+																				<a href="#" class="right-font08">上一页</a> |
+																				<a href="#" class="right-font08">下一页</a> |
+																				<a href="#" class="right-font08">末页</a>] 转至：
+																			</td>
+																			<td width="1%">
+																				<table width="20" border="0" cellspacing="0"
+																					cellpadding="0">
+																					<tr>
+																						<td width="1%">
+																							<input name="textfield3" type="text"
+																								class="right-textfield03" size="1" />
+																						</td>
+																						<td width="87%">
+																							<input name="Submit23222" type="submit"
+																								class="right-button06" value=" " />
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</table>
+
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>					
+					</td>
+				</tr>
+			</table>
+		</form>
+
+				<div id="ActivityScore" style="display: none">
+		        		<h2>活动学分<a href="#" id="btnCloseScore">关闭</a></h2>
+		        		<div class="form">
+		            		<table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="demo" id="tableID" ><thead>
+		            			<tr class="CTitle">
+		            				<td height="22" colspan="12" align="center" style="font-size: 16px">
+		            				活动学分表 <input type="button" value="增加" style="position: absolute;right: 15px;" onclick="edit('editScore')">
+									</td>
+								</tr>
+								<tr bgcolor="#FFFFFF">
+								    <th width='20%' name='advanceProjectNo'> 
+								    	<center>活动项目</center>
+								    </th>
+								    <th width='20%' name='advanceProjectType'> 
+								    	<center>活动等级</center>
+								    </th>
+								    <th width='10%' name='level'> 
+								    	<center>活动学分</center>
+								    </th>
+								    <th width='10%' name='time'> 
+								    	<center>创新学分</center>
+								    </th>
+								   	<th width='10%' name='oprate'> 
+								    	<center>奖励金额</center>
+								    </th>
+								    <th width='20%' name='oprate'> 
+								    	<center>操作</center>
+								    </th>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td> 
+								    	<center>软件创新设计大赛</center>
+								    </td>
+								    <td > 
+								    	<center>一等奖</center>
+								    </td>
+								    <td> 
+								    	<center>3</center>
+								    </td>
+								    <td > 
+								    	<center>20</center>
+								    </td>
+								    <td > 
+								    	<center>300</center>
+								    </td>
+								    <td> 
+								    	<center><button>编辑</button><button>删除</button></center>
+								    </td>
+
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td> 
+								    	<center>软件创新设计大赛</center>
+								    </td>
+								    <td > 
+								    	<center>二等奖</center>
+								    </td>
+								    <td> 
+								    	<center>2</center>
+								    </td>
+								    <td > 
+								    	<center>15</center>
+								    </td>
+								    <td > 
+								    	<center>200</center>
+								    </td>
+								  	<td> 
+								    	<center><button>编辑</button><button>删除</button></center>
+								    </td>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td> 
+								    	<center>软件创新设计大赛</center>
+								    </td>
+								    <td > 
+								    	<center>三等奖</center>
+								    </td>
+								    <td> 
+								    	<center>1</center>
+								    </td>
+								    <td > 
+								    	<center>10</center>
+								    </td>
+								    <td > 
+								    	<center>100</center>
+								    </td>
+								    <td> 
+								    	<center><button>编辑<button>删除</button></button></center>
+								    </td>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td> 
+								    	<center>软件创新设计大赛</center>
+								    </td>
+								    <td > 
+								    	<center>优胜奖</center>
+								    </td>
+								    <td> 
+								    	<center>0.5</center>
+								    </td>
+								    <td > 
+								    	<center>5</center>
+								    </td>
+								    <td > 
+								    	<center>0</center>
+								    </td>
+								    <td> 
+								    	<center><button>编辑<button>删除</button></button></center>
+								    </td>
+								</tr>
+								
+		            		</table>
+		            	
+		            		<div id="editScore" style="display: none">
+		            			<div  align="center">
+		            				<input type='button' value='保存' id="saveProjectPro" onclick="save('editScore')" />
+		            				&nbsp;&nbsp;&nbsp;&nbsp;
+		            				<input type='button' value='取消' onclick="cancel()" />
+		            			</div>
+		            		</div>
+		        		</div>
+		    		</div>
+
+
+				<div id="ActivityProportion" style="display: none">
+		        		<h2>活动学分比例<a href="#" id="btnCloseProportion">关闭</a></h2>
+		        		<div class="form">
+		            		<table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="demo" id="tableID" ><thead>
+		            			<tr class="CTitle">
+		            				<td height="22" colspan="12" align="center" style="font-size: 16px">
+		            				活动学分比例表 <input type="button" value="增加" style="position: absolute;right: 15px;" onclick="edit('editProportion')">
+									</td>
+								</tr>
+								<tr bgcolor="#FFFFFF">
+								    <th width='20%' name='advanceProjectType'> 
+								    	<center>活动类型</center>
+								    </th>
+								    <th width='20%' name='level'> 
+								    	<center>活动性质</center>
+								    </th>
+								    <th width='20%' name='time'> 
+								    	<center>活动比例</center>
+								    </th>
+								    <th width='20%' name='time'> 
+								    	<center>操作</center>
+								    </th>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td> 
+								    	<center>学术科技类</center>
+								    </td>
+								    <td > 
+								    	<center>校级</center>
+								    </td>
+								    <td> 
+								    	<center>60%</center>
+								    </td>
+								    <td> 
+								    	<center><button>编辑</button><button>删除</button></center>
+								    </td>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td> 
+								    	<center>创新实践类</center>
+								    </td>
+								    <td > 
+								    	<center>校级</center>
+								    </td>
+								    <td> 
+								    	<center>10%</center>
+								    </td>
+								    <td> 
+								    	<center><button>编辑</button><button>删除</button></center>
+								    </td>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td> 
+								    	<center>文艺体育类</center>
+								    </td>
+								    <td > 
+								    	<center>校级</center>
+								    </td>
+								    <td> 
+								    	<center>10%</center>
+								    </td>
+								    <td> 
+								    	<center><button>编辑</button><button>删除</button></center>
+								    </td>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td> 
+								    	<center>学术科技类</center>
+								    </td>
+								    <td > 
+								    	<center>院级</center>
+								    </td>
+								    <td> 
+								    	<center>60%</center>
+								    </td>
+								    <td> 
+								    	<center><button>编辑</button><button>删除</button></center>
+								    </td>
+								</tr>
+
+								<tr bgcolor="#EEEEEE">
+								    <td> 
+								    	<center>创新实践类</center>
+								    </td>
+								    <td > 
+								    	<center>院级</center>
+								    </td>
+								    <td> 
+								    	<center>10%</center>
+								    </td>
+								    <td> 
+								    	<center><button>编辑</button><button>删除</button></center>
+								    </td>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td> 
+								    	<center>文艺体育类</center>
+								    </td>
+								    <td > 
+								    	<center>院级</center>
+								    </td>
+								    <td> 
+								    	<center>10%</center>
+								    </td>
+								    <td> 
+								    	<center><button>编辑</button><button>删除</button></center>
+								    </td>
+								</tr>								
+				
+		            		</table>
+		            	
+		            		<div id="editProportion" style="display: none">
+		            			<div  align="center">
+		            				<input type='button' value='保存' id="saveProjectPro" onclick="save('editProportion')" />
+		            				&nbsp;&nbsp;&nbsp;&nbsp;
+		            				<input type='button' value='取消' onclick="cancel()" />
+		            			</div>
+		            		</div>
+		        		</div>
+		    		</div>
+
+
+
+
+	</body>
+</html>
+
+

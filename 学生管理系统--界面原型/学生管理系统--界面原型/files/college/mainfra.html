@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>江西农业大学学生工作管理系统</title>
+<link rel="stylesheet" href="../../css/zTreeStyle/demo.css" type="text/css">
+  <link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+  <script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript" src="../../js/jquery.ztree.core-3.5.js"></script>
+<style type="text/css">
+<!--
+
+-->
+</style>
+<SCRIPT type="text/javascript">
+    <!--
+    var setting = {
+      data: {
+        simpleData: {
+          enable: true
+        }
+      }
+    };
+
+    var zNodes =[
+      { id:1, pId:0, name:"功能模块", open:true},
+      { id:11, pId:1, name:"学生基本信息",url:"dept_basicInfo.html", target:"mainFrame"},
+      { id:12, pId:1, name:"教师基本信息",url:"dept_teacherInfoManagement.html", target:"mainFrame"},
+      { id:13, pId:1, name:"学生参与活动",url:"dept_activityInfo.html", target:"mainFrame"},
+      { id:14, pId:1, name:"活动管理",url:"dept_activityManage.html", target:"mainFrame"},
+      { id:15, pId:1, name:"评优评先",url:"dept_advanceInfo.html", target:"mainFrame"},
+      { id:16, pId:1, name:"奖助学金信息",url:"dept_scholarshipInfo.html", target:"mainFrame"},
+      { id:17, pId:1, name:"奖学金评定",url:"dept_scholarshipAssess.html", target:"mainFrame"},
+      { id:18, pId:1, name:"处分信息",url:"dept_punishInfo.html", target:"mainFrame"},
+      { id:19, pId:1, name:"学籍变动",url:"dept_statusInfo.html", target:"mainFrame"},
+      { id:20, pId:1, name:"就业信息",url:"dept_jobInfo.html", target:"mainFrame"},
+      { id:21, pId:1, name:"贫困建档",url:"dept_jiandang.html", target:"mainFrame"},
+      { id:2, pId:0, name:"软件学院"},
+      { id:21, pId:2, name:"物联网", open:true},
+      { id:211, pId:21, name:"叶子节点211"},
+      { id:212, pId:21, name:"叶子节点212"},
+      { id:213, pId:21, name:"叶子节点213"},
+      { id:214, pId:21, name:"叶子节点214"},
+      { id:22, pId:2, name:"软件英语"},
+      { id:221, pId:22, name:"叶子节点221"},
+      { id:222, pId:22, name:"叶子节点222"},
+      { id:223, pId:22, name:"叶子节点223"},
+      { id:224, pId:22, name:"叶子节点224"},
+      { id:23, pId:2, name:"软件开发"},
+      { id:231, pId:23, name:"叶子节点231"},
+      { id:232, pId:23, name:"叶子节点232"},
+      { id:233, pId:23, name:"叶子节点233"},
+      { id:234, pId:23, name:"叶子节点234"},
+      { id:3, pId:0, name:"外语学院", isParent:true}
+    ];
+
+
+    $(document).ready(function(){
+      $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+    //-->
+  </SCRIPT>
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      <div class="content_wrap">
+          <div class="zTreeDemoBackground left">
+              <ul id="treeDemo" class="ztree"></ul>
+          </div>
+      </div>
+    </td>
+    <td><img src="../../images/welcome.gif"></a></td>
+  </tr>
+</table>
+</body>
+</html>

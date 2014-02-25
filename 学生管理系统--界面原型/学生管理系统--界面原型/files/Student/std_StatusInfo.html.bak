@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>学籍变动信息</title>
+<link rel="stylesheet" rev="stylesheet" href="../../css/style.css"
+			type="text/css" media="all" />
+<style type="text/css">div {
+	font-size: 16px
+}
+</style>
+</head>
+
+<body>
+      <div id="lurubiao" style="margin-left:10px">
+					<table width="99%" border="1" cellpadding="4" cellspacing="1"
+						class="CContent">
+						<th class="tablestyle_title">
+								学籍变动信息
+						    </th>
+						</tr>
+						<tr>
+						<td>
+	<table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+            <tr>
+            <td  colspan = "1" rowspan = "5" valign="middle" bgcolor="#FFFFFF"><div  align="center" class="STYLE9">
+             
+              <p><strong>学籍</strong><b>变动记录</b> </p>
+              </div></td>
+            <td height="35" colspan = "2" bgcolor="#FFFFFF"><div align="center" class="STYLE9"><b>学籍变动</b> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>变动时间</b></div></td>
+            <td bgcolor="#FFFFFF" colspan = "3"><div align="center" class="STYLE9"><b>变动原因</b> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>备注</b> </div></td>
+            </tr> 
+           <tr height = 35 >
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">江西农业大学 </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2011-09</div></td>
+            <td bgcolor="#FFFFFF" colspan = "3"><div align="center" class="STYLE9">留级</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">无 </div></td>
+            </tr>
+           <tr height = 35 >
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">牛津大学 </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2013-07</div></td>
+            <td bgcolor="#FFFFFF" colspan = "3"><div align="center" class="STYLE9">留学 </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">无 </div></td>
+            </tr>                       
+           <tr height = 35 >
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF" colspan = "3"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            </tr>
+           <tr height = 35 >
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF" colspan = "3"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            </tr> 
+      </table>
+	  </td>
+	</tr>
+   </table>   
+    </td>
+   </tr>  
+   </table>
+   </div>
+</body>
+</html>

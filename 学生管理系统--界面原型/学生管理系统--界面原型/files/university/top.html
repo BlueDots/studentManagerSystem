@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>½­Î÷Å©Òµ´óÑ§Ñ§Éú¹¤×÷¹ÜÀíÏµÍ³</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+<link href="../../css/css.css" rel="stylesheet" type="text/css" />
+ <script language=Javascript> 
+  function time(){
+    //»ñµÃÏÔÊ¾Ê±¼äµÄdiv
+    t_div = document.getElementById('showtime');
+   var now=new Date()
+    //Ìæ»»divÄÚÈÝ 
+   t_div.innerHTML = "当前时间:"+now.getFullYear()
+    +"年"+(now.getMonth()+1)+"月"+now.getDate()
+    +"日"+now.getHours()+"时"+now.getMinutes()
+    +"分"+now.getSeconds()+"秒";
+    //µÈ´ýÒ»ÃëÖÓºóµ÷ÓÃtime·½·¨£¬ÓÉÓÚsettimeoutÔÚtime·½·¨ÄÚ£¬ËùÒÔ¿ÉÒÔÎÞÏÞµ÷ÓÃ
+   setTimeout(time,1000);
+  }
+</script>
+</head>
+
+<body onload="time()">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="59" background="../../images/top.gif"><table width="99%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="2%"></img><img src="../../images/logo.jpg" width="557" height="59" /></td>
+        <td width="64%" align="right"> </td>
+        <td width="34%" background="../../images/nav01.gif" height="59">
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+          <td width="25%"><img src="../../images/ico02.gif" width="40" height="35" /></td>
+          <td width="75%" height="22" class="left-font01" rowspan="2">你好<span class="left-font02">&nbsp校级工作人员&nbsp &nbsp &nbsp<a href="mainfra.html" target="mainFrame">返回首页</a></span>
+          <br><br> <div id="showtime"></div></td>
+          </tr>
+          <tr>
+          <td height="22" class="left-font01">
+            [&nbsp;<a href="../../login.html" target="_top" class="left-font01">退出</a>&nbsp;]
+            </td>
+            <td></td>
+          </tr>
+        </table>
+      </td>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

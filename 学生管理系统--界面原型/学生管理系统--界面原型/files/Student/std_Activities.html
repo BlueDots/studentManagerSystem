@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>学生活动信息</title>
+<link rel="stylesheet" rev="stylesheet" href="../../css/style.css"
+			type="text/css" media="all" />
+<style type="text/css">
+.STYLE1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.STYLE2 {
+	font-size: 16px
+}
+</style>
+</head>
+<SCRIPT language=JavaScript>
+function tupian(idt){
+    var nametu="xiaotu"+idt;
+    var tp = document.getElementById(nametu);
+    tp.src="../images/ico05.gif";//图片ico04为白色的正方形
+	
+	for(var i=1;i<30;i++)
+	{
+	  
+	  var nametu2="xiaotu"+i;
+	  if(i!=idt*1)
+	  {
+	    var tp2=document.getElementById('xiaotu'+i);
+		if(tp2!=undefined)
+	    {tp2.src="../images/ico06.gif";}//图片ico06为蓝色的正方形
+	  }
+	}
+}
+
+function list(idstr){
+	var name1="subtree"+idstr;
+	var name2="img"+idstr;
+	var objectobj=document.all(name1);
+	var imgobj=document.all(name2);
+	
+	
+	//alert(imgobj);
+	
+	if(objectobj.style.display=="none"){
+		for(i=1;i<10;i++){
+			var name3="img"+i;
+			var name="subtree"+i;
+			var o=document.all(name);
+			if(o!=undefined){
+				o.style.display="none";
+				var image=document.all(name3);
+				//alert(image);
+				image.src="../../images/ico04.gif";
+			}
+		}
+		objectobj.style.display="";
+		imgobj.src="../../images/ico03.gif";
+	}
+	else{
+		objectobj.style.display="none";
+		imgobj.src="../../images/ico04.gif";
+	}
+}
+
+</SCRIPT>
+<body>
+        <div id="lurubiao" style="margin-left:10px">
+					<table width="99%" border="0" cellpadding="4" cellspacing="1"
+						class="CContent">
+						<tr>
+						<th class="tablestyle_title">
+								学生活动信息  
+								<input type="button" name="Otput" value="导出"
+									onclick="alert('导出成功！');" />
+						 </th>
+						</tr>
+						<tr>
+						<td>
+        <table width="100%" border="1" cellpadding="4" cellspacing="0" class="newfont03" style="border-collapse:collapse">
+        <tr>
+          <td width="93" rowspan="3" bgcolor="#FFFFFF">
+		  <div class="STYLE1" align="center">
+          <p align="center"><b>学生干</b></p>            
+		  <p align="center"><b>部职位</b></p>
+		  </div>		  </td>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE2">班长</div></td>
+          <td width="119" rowspan="3" bgcolor="#FFFFFF">
+		  <div align="center" class="STYLE1">
+            <p><b>学生干部</b></p>            <p><b>任职时间</b></p>
+			</div>			</td>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011        </div>          </tr>
+        <tr>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE2">学习委员</div></td>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011        </div>          </tr>
+        <tr>
+          <td height="26" colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE2">团支书</div></td>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011        </div>          </tr>
+        
+        <tr>
+          <td colspan="2" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>性质</b></div></td>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>参加校内活动记录</b></div></td>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>参加校外活动记录</b></div></td>
+        </tr>
+		
+				<tr>
+         <td colspan="2" rowspan="4" bgcolor="#FFFFFF" class="STYLE1">
+          <b> 
+          <p align="center">科</p>
+          <p align="center">技</p>
+          <p align="center">活</p>
+          <p align="center">动</p>          <b>         </td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>项目</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>时间</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>活动表现</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>项目</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center"  class="STYLE1"><b>时间</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>活动表现</b></div></td>
+        </tr>
+		
+		<tr>
+         <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">网页制作大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-04</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">优胜奖</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">新赣杯创新大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">三等奖</div></td>
+        </tr>
+		<tr>
+         <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">网页制作大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-04</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">优胜奖</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">新赣杯创新大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">三等奖</div></td>
+        </tr>
+		<tr>
+         <td height="28" colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">网页制作大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-04</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">优胜奖</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">新赣杯创新大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">三等奖</div></td>
+        </tr>
+		<tr>
+         <td colspan="2" rowspan="4" bgcolor="#FFFFFF" class="STYLE1">
+           <p align="center"><b>文</b></p>
+           <p align="center"><b>体</b></p>
+          <p align="center"><b>活</b></p>           <p align="center"><b>动</b></p></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>项目</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>时间</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>活动表现</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>项目</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center"  class="STYLE1"><b>时间</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>活动表现</b></div></td>
+        </tr>
+		
+		<tr>
+        <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">五四活动</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-05</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最具潜质奖</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最佳主持人大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最具潜质奖</div></td>
+        </tr>
+		<tr>
+        <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">五四活动</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-05</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最具潜质奖</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最佳主持人大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最具潜质奖</div></td>
+        </tr>
+		<tr>
+        <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">五四活动</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-05</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最具潜质奖</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最佳主持人大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最具潜质奖</div></td>
+        </tr>
+         <td colspan="2" rowspan="4" bgcolor="#FFFFFF" class="STYLE1">
+           <p align="center"><b>实</b></p>
+           <p align="center"><b>践</b></p>
+          <p align="center"><b>服</b></p>           <p align="center"><b>务</b></p></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>项目</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>时间</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>活动表现</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>项目</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center"  class="STYLE1"><b>时间</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>活动表现</b></div></td>
+        </tr>
+		<tr>
+         <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">美化校园</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011-02</div></td>
+		  <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">积极努力</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">扶贫助残</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		  <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">表现突出</div></td>
+        </tr>
+		<tr>
+         <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">美化校园</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011-02</div></td>
+		  <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">积极努力</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">扶贫助残</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		  <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">表现突出</div></td>
+        </tr>
+		<tr>
+         <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">美化校园</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011-02</div></td>
+		  <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">积极努力</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">扶贫助残</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		  <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">表现突出</div></td>
+        </tr>
+     </table>
+	  </td>
+    </tr>
+  </table>
+  </div>
+</body>
+</html>

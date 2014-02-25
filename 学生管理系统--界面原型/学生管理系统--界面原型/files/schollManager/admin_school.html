@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>项目管理系统 by www.mycodes.net</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.tabfont01 {	
+	font-family: "宋体";
+	font-size: 9px;
+	color: #555555;
+	text-decoration: none;
+	text-align: center;
+}
+.font051 {font-family: "宋体";
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	line-height: 20px;
+}
+.font201 {font-family: "宋体";
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+.button {
+	font-family: "宋体";
+	font-size: 14px;
+	height: 37px;
+}
+html { overflow-x: auto; overflow-y: auto; border:0;} 
+-->
+</style>
+<script src="../js/jquery.js"></script>
+<link href="../css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/JavaScript">
+
+</script>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<SCRIPT language=JavaScript>
+function sousuo(){
+	window.open("gaojisousuo.htm","","depended=0,alwaysRaised=1,width=800,height=510,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
+}
+function selectAll(){
+	var obj = document.fom.elements;
+	for (var i=0;i<obj.length;i++){
+		if (obj[i].name == "delid"){
+			obj[i].checked = true;
+		}
+	}
+}
+
+function unselectAll(){
+	var obj = document.fom.elements;
+	for (var i=0;i<obj.length;i++){
+		if (obj[i].name == "delid"){
+			if (obj[i].checked==true) obj[i].checked = false;
+			else obj[i].checked = true;
+		}
+	}
+}
+
+function link(){
+    document.getElementById("fom").action="addrenwu.htm";
+   document.getElementById("fom").submit();
+}
+
+</SCRIPT>
+
+<body>
+<form name="fom" id="fom" method="post" action="">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  
+  <tr>
+    <td height="30">      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="62" background="../images/nav04.gif">
+            
+		   <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+		    <tr>
+			  <td width="21"><img src="../images/ico07.gif" width="20" height="18" /></td>
+			  <td width="538">
+			  <b>学院</b> <select name="学院" class="span2" style="width:120px;height:30px;"><option>农学院</option><option>园林院</option><option>动科院</option><option>工学院</option><option>软件院</option><option>计信院</option><option>经管院</option>
+	</select>      </td>
+	<td><button>搜索</button></td>
+			   <td width="144" align="left"><a href="#" onclick="sousuo()">
+			     <input name="Submit3" type="button" class="right-button07" value="高级搜索" />
+			   </a></td>	
+		    </tr>
+          </table></td>
+        </tr>
+    </table></td></tr>
+  
+	<form action="post">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" id="subtree1" style="DISPLAY: ">
+        <tr>
+          <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" >
+             
+              <tr>
+                <td height="40" class="font42"><table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="newfont03">
+                    <tr class="CTitle" >
+                      <td height="22" colspan="8" align="center" style="font-size:16px">学院管理</td>
+                    </tr>
+                    <tr bgcolor="#EEEEEE"> </tr>
+                 <tr>
+      <td width="25%" align="center" bgcolor="#EEEEEE">学院id</td>
+      <td width="25%" align="center" bgcolor="#EEEEEE">学院名称</td>
+	  <td width="25%" align="center" bgcolor="#EEEEEE">学院简称</td>
+      <td width="25%" align="center" bgcolor="#EEEEEE">操作</td>
+    </tr>
+    <tr align="center">
+      <td bgcolor="#FFFFFF">01</td>
+      <td bgcolor="#FFFFFF">软件学院</td>
+	  <td bgcolor="#FFFFFF">软件院</td>
+      <td bgcolor="#FFFFFF"><a href="#">修改</a></td>
+    </tr>
+	 <tr align="center">
+      <td bgcolor="#FFFFFF">02</td>
+      <td bgcolor="#FFFFFF">外国语学院</td>
+	  <td bgcolor="#FFFFFF">外语院</td>
+      <td bgcolor="#FFFFFF"><a href="#">修改</a></td>
+    </tr>
+	 <tr align="center">
+      <td bgcolor="#FFFFFF">03</td>
+      <td bgcolor="#FFFFFF">计算机与信息学院</td>
+	  <td bgcolor="#FFFFFF">计信院</td>
+      <td bgcolor="#FFFFFF"><a href="#">修改</a></td>
+    </tr>
+                </table></td>
+              </tr>
+          </table></td>
+        </tr>
+      </table>
+</form>
+	
+	
+	
+	<table id="subtree1" style="DISPLAY: " width="100%" border="0" cellspacing="0" cellpadding="0">
+        
+          <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" >
+          	 <tr>
+               <td height="20">
+                </td>
+          	 </tr>
+              <tr>
+                <td height="40" class="font42">
+				<table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="newfont03">
+				 <tr class="CTitle" >
+                    	<td height="22" colspan="8" align="center" style="font-size:16px">日志检查与维护</td>
+                  </tr>
+                  <tr bgcolor="#EEEEEE">
+			     <tr>
+                <td width="40%" align="center" bgcolor="#EEEEEE">学院名称</td>
+                <td width="30%" align="center" bgcolor="#EEEEEE">学院简称</td>
+                <td width="30%" align="center" bgcolor="#EEEEEE">操作</td>
+              </tr>
+                 
+                    <tr align="center">
+               
+                <td bgcolor="#FFFFFF"><input type="text" /></td>
+                <td bgcolor="#FFFFFF"><input type="text"/></td>
+                <td bgcolor="#FFFFFF"><a href="#">提交</a>|<a href="takexiaoximingxi.htm">重置</a></td>
+              </tr>
+
+            </table></td>
+        </tr>
+      </table>
+          
+        </tr>
+</table>
+</form>
+<form action="post">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" id="subtree1" style="DISPLAY: ">
+        <tr>
+          <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" >
+              <tr>
+                <td height="20"></td>
+              </tr>
+              <tr>
+                <td height="40" class="font42"><table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="newfont03">
+                    <tr class="CTitle" >
+                      <td height="22" colspan="8" align="center" style="font-size:16px">添加专业</td>
+                    </tr>
+                    <tr bgcolor="#EEEEEE"> </tr>
+                  <tr>
+                  <td width="40%" align="center" bgcolor="#EEEEEE">学院名称</td>
+                  <td width="30%" align="center" bgcolor="#EEEEEE">添加新专业</td>
+                  <td width="30%" align="center" bgcolor="#EEEEEE">操作</td>
+                </tr>
+                <tr align="center">
+                  <td bgcolor="#FFFFFF"><select >
+   <option value="1">外语院</option>
+   <option value="2">人文院</option>
+   <option value="3">经管院</option>
+</select></td>
+                  <td bgcolor="#FFFFFF"><input name="text2" type="text"/></td>
+                  <td bgcolor="#FFFFFF"><a href="#">提交</a>|<a href="takexiaoximingxi.htm">重置</a></td>
+                </tr>
+                </table></td>
+              </tr>
+          </table></td>
+        </tr>
+      </table>
+</form>
+	
+	<form action="post">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" id="subtree1" style="DISPLAY: ">
+        <tr>
+          <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" >
+              <tr>
+                <td height="20"></td>
+              </tr>
+              <tr>
+                <td height="40" class="font42"><table  align="center"width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="newfont03">
+                    <tr class="CTitle" >
+                      <td height="22" colspan="8" align="center" style="font-size:16px">添加班级</td>
+                    </tr>
+                    <tr bgcolor="#EEEEEE"> </tr>
+                  <tr>
+                  <td width="15%" align="center" bgcolor="#EEEEEE">专业方向</td>
+				  <td width="15%" align="center" bgcolor="#EEEEEE">班级编号</td>
+                  <td width="15%" align="center" bgcolor="#EEEEEE">年级</td>
+				  <td width="15%" align="center" bgcolor="#EEEEEE">班级号</td>
+                  <td width="15%" align="center" bgcolor="#EEEEEE">人数</td>
+                  <td width="25%" align="center" bgcolor="#EEEEEE">操作</td>
+                </tr>
+                <tr align="center">
+                  <td bgcolor="#FFFFFF"><select name="select" >
+                      <option value="1">软件开发</option>
+                      <option value="2">数字媒体</option>
+                      <option value="3">嵌入式</option>
+                  </select></td>
+                  <td bgcolor="#FFFFFF"><input name="text22" type="text"/></td>
+				  <td bgcolor="#FFFFFF"><input name="text22" type="text"/></td>
+				  <td bgcolor="#FFFFFF"><input name="text22" type="text"/></td>
+				  <td bgcolor="#FFFFFF"><input name="text22" type="text"/></td>
+                  <td bgcolor="#FFFFFF"><a href="#">提交</a>|<a href="takexiaoximingxi.htm">重置</a></td>
+                </tr>
+                </table></td>
+              </tr>
+          </table></td>
+        </tr>
+      </table>
+</form>
+                    <tr>
+                      <td height="40" class="font42">
+                      
+</body>
+</html>

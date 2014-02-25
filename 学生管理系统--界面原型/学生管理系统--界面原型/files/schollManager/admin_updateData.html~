@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.tabfont01 {	
+	font-family: "宋体";
+	font-size: 9px;
+	color: #555555;
+	text-decoration: none;
+	text-align: center;
+}
+.font051 {font-family: "宋体";
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	line-height: 20px;
+}
+.font201 {font-family: "宋体";
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+.button {
+	font-family: "宋体";
+	font-size: 14px;
+	height: 37px;
+}
+html { overflow-x: auto; overflow-y: auto; border:0;} 
+-->
+</style>
+
+<link href="../../css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/JavaScript">
+
+</script>
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<script language="JavaScript">
+function sousuo(){
+	window.open("gaojisousuo.html","","depended=0,alwaysRaised=1,width=800,height=510,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
+}
+function selectAll(){
+	var obj = document.fom.elements;
+	for (var i=0;i<obj.length;i++){
+		if (obj[i].name == "delid"){
+			obj[i].checked = true;
+		}
+	}
+}
+
+function unselectAll(){
+	var obj = document.fom.elements;
+	for (var i=0;i<obj.length;i++){
+		if (obj[i].name == "delid"){
+			if (obj[i].checked==true) obj[i].checked = false;
+			else obj[i].checked = true;
+		}
+	}
+}
+
+function link(){
+    document.getElementById("fom").action="addrenwu.htm";
+   document.getElementById("fom").submit();
+}
+
+</script>
+
+<body>
+<form name="fom" id="fom" method="post" action="">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  
+  <tr>
+    <td height="30">      
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="62" background="../../images/nav04.gif">
+            
+		   			<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+		    			<tr>
+			  				<td width="21"><img src="../../images/ico07.gif" width="20" height="18" /></td>
+			  				<td width="538">
+			  					<b>选择:</b>
+			  					<select name="method" class="span2" style="width:100px;height:30px;">
+			  						<option>导入excel</option>
+			  						<option>连接接口</option>
+			  					    
+									</select>
+								<b>范围:</b>
+								 <select name="which" class="span2" style="height:30px;">
+			  						<option>导入学生名单</option>
+			  						<option>导入教师名单</option>
+			  					    <option>导入学院名单</option>
+			  					     <option>导入专业名单</option>
+			  					     <option>导入班级名单</option>
+			  					    
+									</select>
+								 
+								</td>
+			   			 	
+		    		</tr>
+          </table></td>
+        </tr>
+    </table></td></tr>
+  <tr>
+    <td><table id="subtree1" style="DISPLAY: " width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" >
+          	 <tr>
+               <td height="20">
+	              </td>
+          	 </tr>
+              <tr>
+                <td height="40" class="font42">
+				<table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="newfont03">
+				 <tr class="CTitle" >
+                    	<td height="22" colspan="8" align="center" style="font-size:16px">Excel导入</td>
+                  </tr>
+                  <tr bgcolor="#EEEEEE">
+				    <td width="10%" height="30"><input type="file" name="excelImport"> </td>
+                    <td width="10%" height="30"><input type="submit" value="确定"> </td>
+                     
+                  </tr>
+            </table></td>
+        </tr>
+      </table>
+     <table id="subtree1" style="DISPLAY: " width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" >
+          	 <tr>
+               <td height="20">
+	              </td>
+          	 </tr>
+              <tr>
+                <td height="40" class="font42">
+				<table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="newfont03">
+				 <tr class="CTitle" >
+                    	<td height="22" colspan="8" align="center" style="font-size:16px">接口连接</td>
+                  </tr>
+                  <tr bgcolor="#EEEEEE">
+				    <td width="10%" height="30">url: </td>
+                    <td width="10%" height="30"><input type="txt" > </td>
+                     
+                  </tr>
+                   <tr bgcolor="#EEEEEE">
+				    <td width="10%" height="30">账号: </td>
+                    <td width="10%" height="30"><input type="txt" > </td>
+                     
+                  </tr>
+                   <tr bgcolor="#EEEEEE">
+				    <td width="10%" height="30">密码: </td>
+                    <td width="10%" height="30"><input type="password" > </td>
+                     
+                  </tr>
+                   <tr bgcolor="#EEEEEE">
+				    <td width="10%" height="30">确认: </td>
+                    <td width="10%" height="30"><input type="submit" value="提交" > </td>
+                     
+                  </tr>
+            </table></td>
+        </tr>
+      </table>
+     
+     </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

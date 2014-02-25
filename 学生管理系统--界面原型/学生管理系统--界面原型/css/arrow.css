@@ -1,0 +1,62 @@
+.suckerdiv ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+width: 80px; /* Width of Menu Items */
+border-bottom: 1px solid #ccc;
+}
+	
+.suckerdiv ul li{
+position: relative;
+}
+	
+/*1st level sub menu style */
+.suckerdiv ul li ul{
+left: 80px; /* Parent menu width - 1*/
+position: absolute;
+width: 90px; /*sub menu width*/
+top: 0;
+display: none;
+}
+
+/*All subsequent sub menu levels offset */
+.suckerdiv ul li ul li ul{ 
+left: 90px; /* Parent menu width - 1*/
+}
+
+/* menu links style */
+.suckerdiv ul li a{
+display: block;
+color: black;
+text-decoration: none;
+font:12px ËÎÌו;
+background: #fff;
+padding: 5px 5px;
+border: 1px solid #ccc;
+border-bottom: 0;
+}
+
+.suckerdiv ul li a:visited{
+color: black;
+background-color:#FFFFFF;
+background:#FFFFFF;
+}
+
+.suckerdiv ul li a:hover{
+color: white;
+background-color: #6795b4;
+}
+
+.suckerdiv .subfolderstyle{
+background-color:#FFFFFF;
+background: url(../images/arrow-list.gif) no-repeat center right;
+}
+
+	
+/* Holly Hack for IE \*/
+* html .suckerdiv ul li { float: left; height: 1%; }
+* html .suckerdiv ul li a { height: 1%; }
+/* End */
+
+
+
