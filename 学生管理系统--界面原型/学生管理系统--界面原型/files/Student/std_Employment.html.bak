@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>就业信息</title>
+<link rel="stylesheet" rev="stylesheet" href="../../css/style.css"
+			type="text/css" media="all" />
+<style type="text/css">
+.STYLE1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+div {
+	font-size: 16px
+}
+</style>
+</head>
+
+<body>
+      <div id="lurubiao" style="margin-left:10px">
+					<table width="99%" border="1" cellpadding="4" cellspacing="1"
+						class="CContent">
+						<th class="tablestyle_title">
+								就业信息
+						 <input type="button" name="Otput" value="导出"
+									onclick="alert('导出成功！');" />
+						    </th>
+						</tr>
+						<tr>
+						<td>
+	<table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+    
+           <tr>
+		    <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>毕业时间</b> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>就业次数</b> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9"><b>公司/单位名称</b></div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>就业类型</b> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>就业时间</b> </div></td>
+           </tr>
+           <tr>
+		   <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2013-10</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> 第一次就业</div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9">IBM</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">企事业单位</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2014-08 </div></td>
+            </tr>  
+           <tr>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> 第二次就业</div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9">微软</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">企事业单位</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2015-09 </div></td>
+            </tr>  
+           <tr>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">自主创业</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            </tr>
+           <tr>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">西部计划</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            </tr> 
+      </table>
+	  </td>
+	</tr>
+   </table>   
+    </td>
+   </tr>  
+   </table>
+   </div>
+</body>
+</html>

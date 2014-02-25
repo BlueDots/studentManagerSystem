@@ -1,0 +1,223 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>学生工作管理系统</title>
+	
+		<link href="../../css/css.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/arrow.css" rel="stylesheet" type="text/css" />
+ 
+</head>
+
+	 
+	<script src="../../js/jquery-1.7.2.min.js"></script>
+	<script src="../../js/testSearch.js"></script>
+	<script src="../../js/jquery-ui-1.8.21.custom.min.js"></script>
+	
+	<body >
+		<form name="fom" id="fom" method="post" action="">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+				<tr>
+					<td height="30">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="62" background="../../images/nav04.gif">
+
+									<table width="98%" border="0" align="center" cellpadding="0"
+										cellspacing="0">
+										<tr>
+											<td width="21">
+												<img src="../../images/ico07.gif" width="20" height="18" />
+											</td>
+										  <td width="538">
+												学院：
+												<select name="job" size="1">
+													<option selected="selected">
+														全部
+													</option>
+													<option>
+													  农学院
+													</option>
+													<option>
+														软件学院
+													</option>
+                                                    <option>
+														工学院
+													</option>
+												</select>
+												性别：
+												<select name="sex">
+													<option>
+														全部
+													</option>
+													<option>
+														男
+													</option>
+													<option>
+													女
+													</option>
+												</select>
+												 
+												教师工号:<input name="teacherNo"    type="text" size="10" />
+											    教师姓名:<input name="teacherName" type="text" size="10" />
+												<input name="Submit4" type="button" class="right-button02"
+													value="查 询" />
+													 
+											 <td width="77" align="center">
+												<a href="#" onclick="sousuo()"> <input name="Submit4"
+														type="button" class="right-button07" value="导出" /> </a>
+											 
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td> 
+						<div id="add"  >
+						<form>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td>
+										<div id="lurubiao" style="margin-left: 10px">
+											<table width="99%" border="0" cellpadding="0" cellspacing="0"
+												class="CContent">
+												<tr>
+													<th class="tablestyle_title">
+														  		当前位置： <a href="#" style="color:red;">职位管理</a>>><a style="color:red;" href="#">添加职位	</a> 
+													</th>
+												</tr>
+												<tr>
+													<td class="CPanel">
+														<table width="100%" border="0" align="center"
+															cellpadding="0" cellspacing="0">
+															<tr>
+																<td height="40" class="font42">
+																	<table width="100%" border="0" cellpadding="4"
+																		cellspacing="1" bgcolor="#464646" class="newfont03">
+																		<tr class="CTitle">
+																			<td height="22" colspan="13" align="center"
+																				style="font-size: 16px">
+																				职位填加表
+																			</td>
+																		</tr>
+																		<tr bgcolor="#EEEEEE">
+																			 
+																			<td width="8%">
+																				学号
+																			</td>
+																			<td width="7%">
+																				姓名
+																			</td>
+																			<td width="7%">
+																				学院
+																			</td>
+																			<td width="8%">
+																				专业
+																			</td>
+																			<td width="7%">
+																				班级
+																			</td>
+																			<td width="13%">
+																				项目
+																			</td>
+																			<td width="9%">
+																				获奖时间
+																			</td>
+																			<td width="8%">
+																				类别
+																			</td>
+																			<td width="5%">
+																				性质
+																			</td>
+																			<td width="7%">
+																				职位(前)
+																			</td>
+																			<td width="7%">
+																				职位(现)
+																			</td>
+																			<td width="7%">
+																				活动奖励
+																			</td>
+																		</tr>
+																		<tr bgcolor="#FFFFFF">
+																			 
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				陈鹏
+																			</td>
+																			<td>
+																				软件学院
+																			</td>
+																			<td>
+																				软件开发
+																			</td>
+																			<td>
+																				软件1001
+																			</td>
+																			<td>
+																				<input type="text" size="18" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" class="datepicker" />
+																			</td>
+																			<td>
+																				科技活动
+																			</td>
+																			<td>
+																				校级
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																		</tr>
+																			 
+																	</table>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="2" align="center" height="30px">
+																	<input type="button" name="Submit" value="新增一列"
+																		class="button" onclick="link();" />
+																	<input type="button" name="Submit" value="保存"
+																		class="button" onclick="link();" />
+																    <input type="button" name="Submit" value="提交"
+																		class="button" onclick="link();" />
+																	<input type="button" name="Submit2" value="返回"
+																		class="button" onclick="window.history.go(-1);" />
+																</td>
+															</tr>
+														</table>
+							                         </form>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+			<script src="../../js/date.js">
+</script>
+</html>
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>评优评先</title>
+<link rel="stylesheet" rev="stylesheet" href="../../css/style.css"
+			type="text/css" media="all" />
+<style type="text/css">
+.STYLE1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+div {
+	font-size: 16px
+}
+</style>
+</head>
+
+<body>
+      <div id="lurubiao" style="margin-left:10px">
+					<table width="99%" border="1" cellpadding="4" cellspacing="1" class="CContent">
+						<th class="tablestyle_title">
+								评优评先信息
+						    </th>
+						 <input type="button" name="Otput" value="导出"
+									onclick="alert('导出成功！');" />
+						</tr>
+						<tr>
+						<td>
+	<table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+       <tr>
+          <td width="25%" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><strong>先进项目类型</strong></div></td>
+          <td width="25%" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><strong>级别</strong></div></td>
+		  <td width="25%" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><strong>时间</strong></div></td>
+		  <td width="25%" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><strong>备注</strong></div></td>
+        </tr>
+		
+		 <tr>
+          <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">优秀三好学生</div></td>
+          <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">国家级</div></td>
+		  <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011-04-07</div></td>
+		  <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">无</div></td>
+        </tr>
+		
+
+		<tr>
+          <td bgcolor="#FFFFFF" ><div align="center" class="STYLE2">优秀学生干部</div></td>
+          <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">学校级</div></td>
+		  <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">2012-04-07</div></td>
+		  <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">无</div></td>
+        </tr>
+		
+		<tr>
+          <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">优秀团员</div></td>
+          <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">学院级</div></td>
+		  <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-04-07</div></td>
+		  <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">无</div></td>
+        </tr>
+      </table>
+	  </td>
+	</tr>
+   </table>   
+    </td>
+   </tr>  
+   </table>
+   </div>
+</body>
+</html>

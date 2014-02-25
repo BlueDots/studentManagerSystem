@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>医保审核消息</title>
+<link rel="stylesheet" rev="stylesheet" href="../../css/style.css"
+			type="text/css" media="all" />
+<style type="text/css">
+.STYLE1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+div {
+	font-size: 16px
+}
+</style>
+</head>
+
+<body>
+      <div id="lurubiao" style="margin-left:10px">
+					<table width="99%" border="1" cellpadding="4" cellspacing="1"
+						class="CContent">
+						 <tr>
+     <td class="tablestyle_title" width="15%">
+	     <div align="left">
+          <span class="STYLE1">医保信息</span></div>
+	 </td>
+	 <td class="tablestyle_title" width="84%">
+	 <div class="suckerdiv" align="left">
+            <ul id="suckertree1">
+            <li> <a href="#">医保操作</a>
+                <ul>
+                  <li> <a href="std_InsuranceInfo.html">查看医保</a> </li>
+                  <li> <a href="std_InsuranceAppli.html">申请医保</a> </li>
+                  <li> <a href="std_InsuranceCheck.html">审核消息</a> </li>
+                </ul>
+            </li>
+          </ul>
+      </div>     
+      </td>
+    </tr>
+						<tr>
+						<td>
+	<table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+       <tr>
+    <td width="63"><div align="center"><strong>序号</strong></div></td>
+	<td width="150"><div align="center"><strong>住院地址</strong></div></td>
+	<td width="150"><div align="center"><strong>住院日期</strong></div></td>
+	<td width="150"><div align="center"><strong>出院日期</strong></div></td>
+	<td width="150"><div align="center"><strong>住院天数</strong></div></td>
+	<td width="150"><div align="center"><strong>本市或转外</strong></div></td>
+	<td width="150"><div align="center"><strong>病情</strong></div></td>
+	<td width="150"><div align="center"><strong>总费用</strong></div></td>
+	<td width="150"><div align="center"><strong>申请时间</strong></div></td>
+    <td width="150"><div align="center"><strong>审核状态</strong></div></td>
+	<td width="624"><div align="center"><strong>备注</strong></div></td>
+  </tr>
+  <tr>
+    <td><div align="center">1</div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+	<td><div align="center"></div></td>
+  </tr>
+      </table>
+	  </td>
+	</tr>
+   </table>   
+   </div>
+</body>
+</html>

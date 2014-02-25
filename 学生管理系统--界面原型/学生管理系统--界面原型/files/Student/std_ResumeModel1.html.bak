@@ -1,0 +1,826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>个人简历</title>
+<link rel="stylesheet" rev="stylesheet" href="../../css/style.css"
+			type="text/css" media="all" />
+<link href="../../css/css.css" rel="stylesheet" type="text/css" />
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../../css/arrow.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+var menuids = [ "suckertree1" ]
+
+function buildsubmenus() {
+	for ( var i = 0; i < menuids.length; i++) {
+		var ultags = document.getElementById(menuids[i]).getElementsByTagName(
+				"ul")
+		for ( var t = 0; t < ultags.length; t++) {
+			ultags[t].parentNode.getElementsByTagName("a")[0].className = "subfolderstyle"
+			ultags[t].parentNode.onmouseover = function() {
+				this.getElementsByTagName("ul")[0].style.display = "block"
+			}
+			ultags[t].parentNode.onmouseout = function() {
+				this.getElementsByTagName("ul")[0].style.display = "none"
+			}
+		}
+	}
+}
+
+if (window.addEventListener)
+	window.addEventListener("load", buildsubmenus, false)
+else if (window.attachEvent)
+	window.attachEvent("onload", buildsubmenus)</script>
+	<script language=JavaScript>
+<script language=JavaScript>
+function viewmypic(mypic,imgfile) {
+if (imgfile.value){
+mypic.src=imgfile.value;
+mypic.style.display="";
+mypic.border=1;
+}
+}
+function sousuo() {
+	window
+			.open(
+					"gaojisousuo.htm",
+					"",
+					"depended=0,alwaysRaised=1,width=800,height=510,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
+}
+function selectAll() {
+	var obj = document.fom.elements;
+	for ( var i = 0; i < obj.length; i++) {
+		if (obj[i].name == "delid") {
+			obj[i].checked = true;
+		}
+	}
+}
+
+function unselectAll() {
+	var obj = document.fom.elements;
+	for ( var i = 0; i < obj.length; i++) {
+		if (obj[i].name == "delid") {
+			if (obj[i].checked == true)
+				obj[i].checked = false;
+			else
+				obj[i].checked = true;
+		}
+	}
+}
+
+function link() {
+	document.getElementById("fom").action = "../addrenwu.htm";
+	document.getElementById("fom").submit();
+}
+</script>
+<script src="../../js/jquery-1.7.2.min.js">
+</script>
+<script src="../../js/testSearch.js">
+</script>
+<script src="../../js/provincesdata.js">
+</script>
+<script src="../../js/jquery.provincesCity.js">
+</script>
+<style type="text/css">
+.STYLE1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+div {
+	font-size: 16px
+}
+</style>
+</head>
+
+<body>
+      <div id="lurubiao" style="margin-left:10px">
+					<table width="99%" border="1" cellpadding="4" cellspacing="1" class="CContent">
+						<tr>
+     <td class="tablestyle_title" width="15%">
+	     <div align="left">
+	          <span class="STYLE1">基本信息</span>
+           <input type="button" name="Otput" value="导出"
+									onclick="alert('导出成功！');" />
+		  </div>
+	 </td>
+	<!-- //<td class="tablestyle_title" width="84%">
+	 //<div class="suckerdiv" align="left">
+            //<ul id="suckertree1">
+            //<li> <a href="#">修改信息</a>
+                //<ul>
+                  //<li> <a href="std_ResumeModel1.html">模板一</a> </li>
+                  //<li> <a href="std_ResumeModel2.html">模板二</a> </li>
+                 // <li> <a href="std_ResumeModel3.html">模板三</a> </li>
+                //</ul>
+           // </li>
+         // </ul>
+      //</div>
+     // </td>*/-->
+    </tr>
+	<tr>
+	<td colspan="2">
+	<table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+       <tr>
+                    <td width="125" bgcolor="#FFFFFF" colspan = "5"><div align="center"><span  class="STYLE9"><b>个人情况</b> </span></div></td>
+                  </tr>
+                  <tr>
+                    <td width="125" bgcolor="#FFFFFF"><div align="center"><span  class="STYLE9"><b>姓名</b></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"></span>罗伟富</div></td>
+                    <td width="153" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"><b>性别</b> </span></div></td>
+                    <td width="153" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"></span>不详</div></td>
+                    <td width="90" height="120" rowspan="4" bgcolor="#FFFFFF" align="center" style="padding-left:50px"><img src="img/luoweifu.jpg" alt="protrait" width="90" height="120" /></td>
+                  </tr>
+                  <tr>
+                    <td width="125" bgcolor="#FFFFFF"><div align="center"><span  class="STYLE9"><b>民族</b></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"></span>汉族</div></td>
+                    <td width="153" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"><b>籍贯</b> </span></div></td>
+                    <td width="153" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"></span>江西</div></td>
+                  </tr>
+                  <tr>
+                    <td width="125" bgcolor="#FFFFFF"><div align="center"><span  class="STYLE9"><b>政治面貌</b></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"></span>赣州市</div></td>
+                    <td width="153" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"><b>出生年月</b> </span></div></td>
+                    <td width="153" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"></span>党员</div></td>
+                  </tr>
+                  <tr>
+                    <td width="125" bgcolor="#FFFFFF"><div align="center"><span  class="STYLE9"><b>专业</b></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"></span>本科</div></td>
+                    <td width="153" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"><b>学制</b> </span></div></td>
+                    <td width="153" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"></span>软件</div></td>
+                  </tr>
+                  <tr>
+                    <td width="125" bgcolor="#FFFFFF"><div align="center"><span  class="STYLE9"><b>手机号</b></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"></span>18070514222</div></td>
+                    <td width="153" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"><b>个人邮箱</b> </span></div></td>
+                    <td width="153" bgcolor="#FFFFFF" colspan = "3"><div align="center"><span align="center" class="STYLE9"></span>4年</div></td>
+                  </tr>
+                  <tr>
+                    <td width="125" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span  class="STYLE9"><b>担任职务及时间</b></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span align="center" class="STYLE9"></span>江西农业大学</div></td>
+					<td width="125" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span  class="STYLE9"><b>学历</b></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "3"><div align="center"><span align="center" class="STYLE9"></span>江西农业大学</div></td>
+                  </tr>
+                  <tr>
+                    <td width="153" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"><b>英语等级</b> </span></div></td>
+                    <td width="153" bgcolor="#FFFFFF"><div align="center"><span align="center" class="STYLE9"></span>2013-07</div></td>
+                  </tr>              
+                  <tr>
+                    <td width="125" bgcolor="#FFFFFF" colspan = "5"><div align="center"><span  class="STYLE9"><b>实习经历与社会实践</b> </span><strong>(实践活动)</strong></div></td>
+                  </tr>
+                  <tr>
+                    <td width="125" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span  class="STYLE9"><b>实习/实践时间 </b></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span align="center" class="STYLE9"><b>公司/实践名称 </b></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span align="center" class="STYLE9"><b>实习/实践职位 </b></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span align="center" class="STYLE9"><b>实习/实践内容 </b></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span align="center" class="STYLE9"><b>备注</b></span></div></td>
+                  </tr>
+                  <tr height = "30">
+                    <td width="125" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span  class="STYLE9"></span>
+                      <p >2010/9</p>
+                    </div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span align="center" class="STYLE9"></span>
+                      <p >学校招生就业处</p>
+                    </div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span align="center" class="STYLE9"></span>
+                      <p >学生助理</p>
+                    </div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span align="center" class="STYLE9"></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span align="center" class="STYLE9"></span></div></td>
+                  </tr>
+
+                  <tr height = "30">
+                    <td width="125" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span  class="STYLE9"></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span align="center" class="STYLE9"></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span align="center" class="STYLE9"></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span align="center" class="STYLE9"></span></div></td>
+                    <td width="162" bgcolor="#FFFFFF" colspan = "1"><div align="center"><span align="center" class="STYLE9"></span></div></td>
+                  </tr>
+				  <tr>
+				<table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+				 <tr>
+                    <td width="125" bgcolor="#FFFFFF" colspan = "5"><div align="center"><span  class="STYLE9"><b>评优评先</b> </span></div></td>
+                  </tr>
+       <tr>
+          <td width="25%" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><strong>先进项目类型</strong></div></td>
+          <td width="25%" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><strong>级别</strong></div></td>
+		  <td width="25%" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><strong>时间</strong></div></td>
+		  <td width="25%" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><strong>备注</strong></div></td>
+        </tr>
+		
+		 <tr>
+          <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">优秀三好学生</div></td>
+          <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">国家级</div></td>
+		  <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011-04-07</div></td>
+		  <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">无</div></td>
+        </tr>
+		
+
+		<tr>
+          <td bgcolor="#FFFFFF" ><div align="center" class="STYLE2">优秀学生干部</div></td>
+          <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">学校级</div></td>
+		  <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">2012-04-07</div></td>
+		  <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">无</div></td>
+        </tr>
+		
+		<tr>
+          <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">优秀团员</div></td>
+          <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">学院级</div></td>
+		  <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-04-07</div></td>
+		  <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">无</div></td>
+        </tr>
+      </table>
+	</tr>
+                 <tr>
+					 <table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+					 <tr>
+					<td width="125" bgcolor="#FFFFFF" colspan = "10"><div align="center"><span  class="STYLE9"><b>学生活动</b> </span></div></td>
+		</tr>
+        <tr>
+          <td width="93" rowspan="3" bgcolor="#FFFFFF">
+		  <div class="STYLE1" align="center">
+          <p align="center"><b>学生干</b></p>            
+		  <p align="center"><b>部职位</b></p>
+		  </div>		  </td>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE2">班长</div></td>
+          <td width="119" rowspan="3" bgcolor="#FFFFFF">
+		  <div align="center" class="STYLE1">
+            <p><b>学生干部</b></p>            <p><b>任职时间</b></p>
+			</div>			</td>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011        </div>          </tr>
+        <tr>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE2">学习委员</div></td>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011        </div>          </tr>
+        <tr>
+          <td height="26" colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE2">团支书</div></td>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011        </div>          </tr>
+        
+        <tr>
+          <td colspan="2" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>性质</b></div></td>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>参加校内活动记录</b></div></td>
+          <td colspan="3" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>参加校外活动记录</b></div></td>
+        </tr>
+		
+				<tr>
+         <td colspan="2" rowspan="4" bgcolor="#FFFFFF" class="STYLE1">
+          <b> 
+          <p align="center">科</p>
+          <p align="center">技</p>
+          <p align="center">活</p>
+          <p align="center">动</p>          <b>         </td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>项目</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>时间</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>活动表现</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>项目</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center"  class="STYLE1"><b>时间</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>活动表现</b></div></td>
+        </tr>
+		
+		<tr>
+         <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">网页制作大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-04</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">优胜奖</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">新赣杯创新大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">三等奖</div></td>
+        </tr>
+		<tr>
+         <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">网页制作大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-04</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">优胜奖</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">新赣杯创新大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">三等奖</div></td>
+        </tr>
+		<tr>
+         <td height="28" colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">网页制作大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-04</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">优胜奖</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">新赣杯创新大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">三等奖</div></td>
+        </tr>
+		<tr>
+         <td colspan="2" rowspan="4" bgcolor="#FFFFFF" class="STYLE1">
+           <p align="center"><b>文</b></p>
+           <p align="center"><b>体</b></p>
+          <p align="center"><b>活</b></p>           <p align="center"><b>动</b></p></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>项目</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>时间</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>活动表现</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>项目</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center"  class="STYLE1"><b>时间</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>活动表现</b></div></td>
+        </tr>
+		
+		<tr>
+        <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">五四活动</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-05</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最具潜质奖</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最佳主持人大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最具潜质奖</div></td>
+        </tr>
+		<tr>
+        <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">五四活动</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-05</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最具潜质奖</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最佳主持人大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最具潜质奖</div></td>
+        </tr>
+		<tr>
+        <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">五四活动</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2013-05</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最具潜质奖</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最佳主持人大赛</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">最具潜质奖</div></td>
+        </tr>
+         <td colspan="2" rowspan="4" bgcolor="#FFFFFF" class="STYLE1">
+           <p align="center"><b>实</b></p>
+           <p align="center"><b>践</b></p>
+          <p align="center"><b>服</b></p>           <p align="center"><b>务</b></p></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>项目</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>时间</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>活动表现</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>项目</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center"  class="STYLE1"><b>时间</b></div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><b>活动表现</b></div></td>
+        </tr>
+		<tr>
+         <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">美化校园</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011-02</div></td>
+		  <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">积极努力</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">扶贫助残</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		  <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">表现突出</div></td>
+        </tr>
+		<tr>
+         <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">美化校园</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011-02</div></td>
+		  <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">积极努力</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">扶贫助残</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		  <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">表现突出</div></td>
+        </tr>
+		<tr>
+         <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">美化校园</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011-02</div></td>
+		  <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">积极努力</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">扶贫助残</div></td>
+		 <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">2011</div></td>
+		  <td colspan="1" bgcolor="#FFFFFF"><div align="center" class="STYLE2">表现突出</div></td>
+        </tr>
+     </table>
+				 </tr>
+				
+		<tr>
+		<table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+		<tr>
+					<td width="125" bgcolor="#FFFFFF" colspan = "5"><div align="center"><span  class="STYLE9"><b>奖助学金</b> </span></div></td>
+		</tr>
+        <tr>
+    <td width="10%" rowspan="7"><div align="center">
+      <p><strong>各</strong></p>
+      <p><strong>类</strong></p>
+      <p><strong>奖</strong></p>
+      <p><strong>助</strong></p><p></p>
+      <p><strong>学</strong></p>
+      <p><strong>金</strong></p>
+    </div>
+	</td>
+    <td width="25%" height="35"><div align="center"><strong>名称</strong></div></td>
+    <td width="20%"><div align="center"><strong>性质</strong></div></td>
+    <td width="25%"><div align="center"><strong>荣获时间</strong></div></td>
+    <td width="20%"><div align="center"><strong>金额</strong></div></td>
+  </tr>
+  <tr>
+    <td><div align="center">国家励志奖学金</div></td>
+    <td><div align="center">国家</div></td>
+    <td><div align="center">2011-09</div></td>
+    <td><div align="center">5000</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">国家奖学金</div></td>
+    <td><div align="center">国家</div></td>
+    <td><div align="center">2011-09</div></td>
+    <td><div align="center">8000</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">国家助学金</div></td>
+    <td><div align="center">国家</div></td>
+    <td><div align="center">2011-09</div></td>
+    <td><div align="center">3000</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">李嘉诚勤工讲学金</div></td>
+    <td><div align="center">个人资助</div></td>
+    <td><div align="center">2011-09</div></td>
+    <td><div align="center">5000</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">&quot;鑫强&quot;奖学金</div></td>
+    <td><div align="center">私企</div></td>
+    <td><div align="center">2011-09</div></td>
+    <td><div align="center">5000</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">国家励志奖学金</div></td>
+    <td><div align="center">国家</div></td>
+    <td><div align="center">2011-09</div></td>
+    <td><div align="center">5000</div></td>
+  </tr>
+      </table>
+	</tr>
+
+  <tr>
+      <table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+        <tr>
+          <td width="125" bgcolor="#FFFFFF" colspan = "12"><div align="center"><span  class="STYLE9"><b>班级奖学金</b> </span></div></td>
+        </tr>
+        <tr>
+            <td colspan = "2" rowspan="2" bgcolor="#FFFFFF"><div align="center" class="STYLE1">
+              <p><strong>学期</strong></p>
+              </div></td>
+            <td colspan = "2" rowspan="2" bgcolor="#FFFFFF"><div align="center" class="STYLE1">
+              <p><strong>德育素质测评</strong></p>
+              </div></td>
+            <td width="15%" rowspan="2" bgcolor="#FFFFFF"><div align="center" class="STYLE1">
+              <p><strong>智育素质测评</strong></p>
+              </div></td>
+            <td colspan = "2" rowspan="2" bgcolor="#FFFFFF"><div align="center" class="STYLE1">
+              <p><strong>体育素质测评</strong></p>
+              </div></td>
+            <td width="15%" rowspan="2" bgcolor="#FFFFFF"><div align="center" class="STYLE1">
+              <p><strong>美育素质测评</strong></p>
+              </div></td>
+            <td colspan="2" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><strong>综合测评</strong></div></td>
+            <td width="10%" rowspan="2" bgcolor="#FFFFFF"><div align="center" class="STYLE1">
+              <p><strong>奖学金</strong></p>
+              </div></td>
+          </tr>
+          <tr>
+            <td width="7%" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><strong>得分</strong></div></td>
+            <td width="7%" bgcolor="#FFFFFF"><div align="center" class="STYLE1"><strong>排名</strong></div></td>
+          </tr>
+          <tr>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE2">201101</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE92">80</div></td>
+            <td width="15%" bgcolor="#FFFFFF"><div align="center">80</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE2">90</div></td>
+            <td width="15%" bgcolor="#FFFFFF"><div align="center" class="STYLE2">90</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">85.0</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">1</div></td>
+            <td width="10%" bgcolor="#FFFFFF"><div align="center" class="STYLE2">一等</div></td>
+          </tr>
+         <tr>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE2">201202</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE2">80</div></td>
+            <td width="15%" bgcolor="#FFFFFF"><div align="center" class="STYLE2">80</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE2">90</div></td>
+            <td width="15%" bgcolor="#FFFFFF"><div align="center" class="STYLE2">90</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">85.0</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">1</div></td>
+            <td width="10%" bgcolor="#FFFFFF"><div align="center" class="STYLE2">二等</div></td>
+          </tr>
+          <tr>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE2">201301</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE2">80</div></td>
+            <td width="15%" bgcolor="#FFFFFF"><div align="center" class="STYLE2">80</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE2">90</div></td>
+            <td width="15%" bgcolor="#FFFFFF"><div align="center" class="STYLE2">90</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">85.0</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">1</div></td>
+            <td width="10%" bgcolor="#FFFFFF"><div align="center" class="STYLE2">三等</div></td>
+          </tr>
+          <tr>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE2">201302</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE2">80</div></td>
+            <td width="15%" bgcolor="#FFFFFF"><div align="center" class="STYLE2">80</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE2">90</div></td>
+            <td width="15%" bgcolor="#FFFFFF"><div align="center" class="STYLE2">90</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">85.0</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE2">1</div></td>
+            <td width="10%" bgcolor="#FFFFFF"><div align="center" class="STYLE2">一等</div></td>
+          </tr>
+      </table>
+  </tr>
+  <tr>
+      <table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+         <tr>
+          <td width="125" bgcolor="#FFFFFF" colspan = "5"><div align="center"><span  class="STYLE9"><b>处分信息</b> </span></div></td>
+        </tr>
+        <tr>
+            <td width="20%" bgcolor="#FFFFFF"><div align="center" class="STYLE9"><b>受处分时间</b> </div></td>
+            <td width="20%" bgcolor="#FFFFFF"><div align="center" class="STYLE9"><b>受处分等级</b> </div></td>
+            <td width="20%" bgcolor="#FFFFFF"><div align="center" class="STYLE9"><b>解除处分时间</b></div></td>
+            <td width="20%" bgcolor="#FFFFFF"><div align="center" class="STYLE9"><b>受处分原因</b> </div></td>
+      <td width="20%" bgcolor="#FFFFFF"><div align="center" class="STYLE9"><b>解除原因</b> </div></td>
+            </tr>
+          <tr height = 35 >
+            <td bgcolor="#FFFFFF"><div align="center"  class="STYLE9">2011-03-04 </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">学院</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">2011-09-08</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">打架</div></td>
+      <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">表现良好</div></td>
+            </tr>
+           <tr height = 35 >
+            <td bgcolor="#FFFFFF"><div align="center"  class="STYLE9">2011-03-04 </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">校级 </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">2011-09-08</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">打架 </div></td>
+      <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">表现良好</div></td>
+            </tr>
+           <tr height = 35 >
+            <td bgcolor="#FFFFFF"><div align="center"  class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"> </div></td>
+      <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"> </div></td>
+            </tr>
+          <tr height = 35 >
+            <td bgcolor="#FFFFFF"><div align="center"  class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"> </div></td>
+      <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"> </div></td>
+            </tr>            
+      </table>
+  </tr>
+  <tr>
+      <table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+              <tr>
+          <td width="125" bgcolor="#FFFFFF" colspan = "12"><div align="center"><span  class="STYLE9"><b>学籍变动</b> </span></div></td>
+        </tr>
+            <tr>
+            <td  colspan = "1" rowspan = "5" valign="middle" bgcolor="#FFFFFF"><div  align="center" class="STYLE9">
+             
+              <p><strong>学籍</strong><b>变动记录</b> </p>
+              </div></td>
+            <td height="35" colspan = "5" bgcolor="#FFFFFF"><div align="center" class="STYLE9"><b>学籍变动</b> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>变动时间</b></div></td>
+            <td bgcolor="#FFFFFF" colspan = "3"><div align="center" class="STYLE9"><b>变动原因</b> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>备注</b> </div></td>
+            </tr> 
+           <tr height = 35 >
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">江西农业大学 </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2011-09</div></td>
+            <td bgcolor="#FFFFFF" colspan = "3"><div align="center" class="STYLE9">留级</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">无 </div></td>
+            </tr>
+           <tr height = 35 >
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">牛津大学 </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2013-07</div></td>
+            <td bgcolor="#FFFFFF" colspan = "3"><div align="center" class="STYLE9">留学 </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">无 </div></td>
+            </tr>                       
+           <tr height = 35 >
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF" colspan = "3"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            </tr>
+           <tr height = 35 >
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF" colspan = "3"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            </tr> 
+      </table>
+  </tr>
+  <tr>
+      <table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+          <tr>
+            <td width="125" bgcolor="#FFFFFF" colspan = "12"><div align="center"><span  class="STYLE9"><b>就业信息</b> </span></div></td>
+        </tr>
+           <tr>
+        <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>毕业时间</b> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>就业次数</b> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9"><b>公司/单位名称</b></div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>就业类型</b> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>就业时间</b> </div></td>
+           </tr>
+           <tr>
+        <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2013-10</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> 第一次就业</div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9">IBM</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">企事业单位</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2014-08 </div></td>
+            </tr>  
+           <tr>
+        <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2013-10</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> 第二次就业</div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9">微软</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">企事业单位</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2015-09 </div></td>
+            </tr>  
+           <tr>
+        <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2013-10</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">自主创业</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            </tr>
+           <tr>
+        <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2013-10</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">西部计划</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            </tr> 
+      </table>
+  </tr>
+  <tr>
+        <table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+          <tr>
+            <td width="125" bgcolor="#FFFFFF" colspan = "12"><div align="center"><span  class="STYLE9"><b>建档信息</b> </span></div></td>
+        </tr>
+      <tr>
+            <td width="52"> <div align="center"><strong>序号</strong></div></td>
+            <td width="93"> <div align="center"><strong>学院</strong></div></td>
+            <td width="92"><div align="center"><strong>学号</strong></div></td>
+            <td width="96"><div align="center"><strong>姓名</strong></div></td>
+            <td width="83"><div align="center"><strong>性别</strong></div></td>
+            <td width="141"><div align="center"><strong>专业/班级</strong></div></td>
+            <td width="176"><div align="center"><strong>家庭住址</strong></div></td>
+            <td width="141"><div align="center"><strong>家庭经济情况</strong></div></td>
+      <td width="86"><div align="center"><strong>认定等级</strong></div></td>
+      <td width="86"><div align="center"><strong>学期</strong></div></td>
+          </tr>
+      <tr>
+      <td width="52"> <div align="center">1</div></td>
+            <td width="93"> <div align="center">软件学院</div></td>
+            <td width="92"><div align="center">20111826</div></td>
+            <td width="96"><div align="center">赖辉强</div></td>
+            <td width="83"><div align="center">男</div></td>
+            <td width="141"><div align="center">软件(英语11)</div></td>
+            <td width="176"><div align="center">江西赣州市宁都县</div></td>
+            <td width="141"><div align="center">贫困</div></td>
+      <td width="86"><div align="center">甲等</div></td>
+      <td width="86"><div align="center">甲等</div></td>
+       </tr> 
+       <tr> 
+      <td width="52"> <div align="center">1</div></td>
+            <td width="93"> <div align="center">软件学院</div></td>
+            <td width="92"><div align="center">20111826</div></td>
+            <td width="96"><div align="center">赖辉强</div></td>
+            <td width="83"><div align="center">男</div></td>
+            <td width="141"><div align="center">软件(英语11)</div></td>
+            <td width="176"><div align="center">江西赣州市宁都县</div></td>
+            <td width="141"><div align="center">贫困</div></td>
+      <td width="86"><div align="center">乙等</div></td>
+      <td width="86"><div align="center">甲等</div></td>
+          </tr>
+      </table>
+
+  </tr>
+  
+  <tr>
+       <table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+        <tr>
+      <td width="125" bgcolor="#FFFFFF" colspan = "12"><div align="center"><span  class="STYLE9"><b>居民医保</b> </span></div></td>
+  </tr>
+   <tr>
+  <td colspan="2"><table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+      <tr height="32">
+
+        <td height="100" width="86"><div align="center"><strong>序号</strong></div></td>
+    <td width="300"><div align="center"><strong>身份证号</strong></div></td>
+    <td width="300"><div align="center"><strong>学院与班级</strong></div></td>
+    <td width="300"><div align="center"><strong>联系电话</strong></div></td>
+        <td width="300"><div align="center"><strong>住院地址</strong></div></td>
+        <td width="300"><div align="center"><strong>住院日期</strong></div></td>
+        <td width="300"><div align="center"><strong>出院日期</strong></div></td>
+    <td width="200"><div align="center"><strong>住院天数</strong></div></td>
+        <td width="200"><div align="center"><strong>本市或转外</strong></div></td>
+        <td width="300"><div align="center"><strong>诊断病情</strong></div></td>
+        <td width="200"><div align="center"><strong>总费用</strong></div></td>
+        <td width="300"><div align="center"><strong>申请时间</strong></div></td>
+    <td width="200"><div align="center"><strong>是否受理</strong></div></td>
+        <td width="200"><div align="center"><strong>是否领卡</strong></div></td>
+    <td width="500"><div align="center"><strong>详情</strong></div></td>
+      </tr>
+      <tr height="18">
+       
+        <td height="18">2013001</td>
+        <td>　</td>
+        <td>  </td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+    <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+      </tr>
+      <tr height="18">
+        <td height="18">2013002</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+    <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+      </tr>
+      <tr height="18">
+        <td height="18">2013003</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+    <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+      </tr>
+      </table>
+  </tr>
+   </table> 
+  <tr> 
+  <tr>
+       <table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+          <tr>
+      <td width="125" bgcolor="#FFFFFF" colspan = "12"><div align="center"><span  class="STYLE9"><b>商业保险</b> </span></div></td>
+  </tr>
+          <tr>
+  <td colspan="2"><table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+      <tr height="32">
+        <td height="100" width="86"><div align="center"><strong>序号</strong></div></td>
+        <td width="300"><div align="center"><strong>身份证号</strong></div></td>
+        <td width="300"><div align="center"><strong>学院和班级</strong></div></td>
+        <td width="300"><div align="center"><strong>联系电话</strong></div></td>
+        <td width="300"><div align="center"><strong>银行卡号</strong></div></td>
+        <td width="200"><div align="center"><strong>除结算单材料是否齐全</strong></div></td>
+        <td width="300"><div align="center"><strong>接案子日期</strong></div></td>
+        <td width="300"><div align="center"><strong>未报销原因</strong></div></td>
+        <td width="300"><div align="center"><strong>类型</strong></div></td>
+    <td width="500"><div align="center"><strong>详细</strong></div></td>
+      </tr>
+      <tr height="18">
+         <td height="18">2013001</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+    <td>　</td>
+      </tr>
+      <tr height="18">
+        <td height="18">2013002</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+    <td>　</td>
+      </tr>
+      <tr height="18">
+        <td height="18">2013003</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+    <td>　</td>
+      </tr>
+      </table>
+  </tr> 
+	  </td>
+	</tr>
+   </table>   
+    </td>
+   </tr>  
+   </table>
+   </div>
+</body>
+</html>

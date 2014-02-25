@@ -1,0 +1,656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>学生工作管理系统</title>
+	
+		<link href="../../css/css.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/arrow.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../../css/school/tanchu.css"><!-- 需要放到公共的js包下-->
+
+		<script src="../../js/jquery-1.10.2.min.js"></script>
+		<script src="../../js/jquery-1.10.2.js"></script>
+		<script src="../../js/testSearch.js"></script>
+		<script src="../../js/provincesdata.js"></script>
+		<script src="../../js/jquery.provincesCity.js"></script>
+		<script src="../../js/jquery.chromatable.js"></script>
+		<script type="text/javascript" src="../../js/school/jquery-1.10.2-vsdoc2.js"></script>
+		<script type="text/javascript" src="../../js/school/school.js"></script><!--用于修改学生的基本信息，需要修改为自己的相应的文件-->
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+.demo{border:solid 1px #D5D5D5;border-collapse:collapse;width:100%;}
+.demo td{border:1px solid #D5D5D5;font-size:12px;padding:7px 5px;}
+.demo th{background-color:#EEE;border-right:1px solid #D5D5D5;font-size:13.5px;line-height:120%;font-weight:bold;padding:8px 5px;text-align:left;}
+ 
+</style>
+		
+		<script type="text/javascript">
+
+var menuids = [ "suckertree1" ]
+
+function buildsubmenus() {
+	for ( var i = 0; i < menuids.length; i++) {
+		var ultags = document.getElementById(menuids[i]).getElementsByTagName(
+				"ul")
+		for ( var t = 0; t < ultags.length; t++) {
+			ultags[t].parentNode.getElementsByTagName("a")[0].className = "subfolderstyle"
+			ultags[t].parentNode.onmouseover = function() {
+				this.getElementsByTagName("ul")[0].style.display = "block"
+			}
+			ultags[t].parentNode.onmouseout = function() {
+				this.getElementsByTagName("ul")[0].style.display = "none"
+			}
+		}
+	}
+}
+
+if (window.addEventListener)
+	window.addEventListener("load", buildsubmenus, false)
+else if (window.attachEvent)
+	window.attachEvent("onload", buildsubmenus)</script>
+	</head>
+
+	<script language=JavaScript>
+function sousuo() {
+	window
+			.open(
+					"gaojisousuo.htm",
+					"",
+					"depended=0,alwaysRaised=1,width=800,height=510,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
+}
+function selectAll() {
+	var obj = document.fom.elements;
+	for ( var i = 0; i < obj.length; i++) {
+		if (obj[i].name == "delid") {
+			obj[i].checked = true;
+		}
+	}
+}
+
+function unselectAll() {
+	var obj = document.fom.elements;
+	for ( var i = 0; i < obj.length; i++) {
+		if (obj[i].name == "delid") {
+			if (obj[i].checked == true)
+				obj[i].checked = false;
+			else
+				obj[i].checked = true;
+		}
+	}
+}
+
+function link() {
+	document.getElementById("fom").action = "../addrenwu.htm";
+	document.getElementById("fom").submit();
+}
+</script>
+	<script src="../../js/jquery-1.7.2.min.js">
+</script>
+	<script src="../../js/testSearch.js">
+	</script>
+		<script src="../../js/jquery-ui-1.8.21.custom.min.js">
+		</script>
+<script src="../../js/jquery.chromatable.js">
+	</script>
+	<script type="text/javascript">
+   
+
+$(document).ready(function(){ 
+ 	
+	$("#tableID").chromatable({
+		width: "100%",
+	 
+          scrolling: "yes"
+	});
+
+	});
+
+
+</script>
+	<script src="../../js/testSearch.js">
+	</script>
+	
+	<body >
+		<form name="fom" id="fom" method="post" action="">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+				<tr>
+					<td height="30">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="62" background="../../images/nav04.gif">
+
+									<table width="100%" border="0" align="center" cellpadding="0"
+										cellspacing="0">
+										<tr>
+											<td width="21">
+												<img src="../../images/ico07.gif" width="20" height="18" />
+											</td>
+											<td width="538">
+												<span class="collegeName">学院
+												<select name="college" size="1" id="collegeId">
+													<option value="selected">
+														请选择学院
+													</option>
+													<option value="agri_college">
+														农学院
+													</option>
+													<option value="garden_art">
+														园林与艺术学院
+													</option>
+													<option value="animal_science_tech">
+														动物科学技术学院
+													</option>
+													<option value="engin_college">
+														工学院
+													</option>
+													<option value="science_college">
+														理学院
+													</option>
+													<option value="land_resources">
+														国土资源与环境学院
+													</option>
+													<option value=" computer_information">
+														计算机与信息工程学院
+													</option>
+													<option value=" economics_management">
+														经济管理学院
+													</option>
+													<option value="food_science_engin">
+														食品科学与工程学院
+													</option>
+													<option value="normal_college">
+														职业师范（技术）学院
+													</option>
+													<option value="biological_science_engine">
+														生物科学与工程学院
+													</option>
+													<option value="foreign_languages">
+														外国语学院
+													</option>
+													<option value="software">
+														软件学院
+													</option>
+													<option value="marxism_college">
+														马克思主义学院（政治学院）
+													</option>
+													<option value="continu_education">
+														继续教育学院
+													</option>
+												</select>
+												</span>
+												<span class="majorName">专业方向
+												<select name="major" id="majorId">
+													<option value="selected">
+														请选择专业方向
+													</option>
+												</select>
+												</span>
+												<span class="className">班级
+												<select name="class" id="classId">
+													<option value="selected">
+														请选择班级
+													</option>
+												</select>
+												</span>
+												<input name="condition" type="text" size="16" value="请输入学号或者姓名"/>
+												<input name="find" type="button" class="right-button02"
+													value="查询" />
+												&nbsp;&nbsp;排序
+												<select name="rank">
+													<option>
+														学号升序
+													</option>
+													<option>
+														学号降序
+													</option>
+													
+												</select>
+													 
+											</td>
+											
+											<td width="77" align="center" style="padding-right:-30px">
+												<input name="advanced_search" type="button" class="right-button07" value="高级搜索" onclick="popup('#advancedDiv', '#advancedSearchDiv', '#CloseadvancedSearch')" /> 
+											</td>
+											<td width="77" align="center" style="padding-right:-100px">
+											<input name="export" type="button" class="right-button07" value="导出" onclick="exportData()"/>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="allbasicMsg" style="display: block">
+							<table id="subtree1" style="DISPLAY: " width="100%" border="0"
+								cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="CPanel">
+										<div id="liulanbiao" style="margin-left: 10px">
+											<table width="99%" border="0" cellpadding="0" cellspacing="0"
+												class="CContent">
+												<tr>
+													<th class="tablestyle_title">
+														当前位置：学生参与活动信息页面！ 该班共50人，5人参加活动，获奖3人。
+													</th>
+												</tr>
+												<tr>
+													<td class="CPanel">
+														<table width="100%" border="0" align="center"
+															cellpadding="0" cellspacing="0">
+
+															<tr>
+																<td height="40" class="font42">
+																	<table width="100%" border="0" cellpadding="4"
+																		cellspacing="1" bgcolor="#464646" class="demo" id="tableID" ><thead>																		<tr class="CTitle">
+																			<td height="22" colspan="19" align="center"
+																				style="font-size: 16px">
+																				学生参与活动表
+																			</td>
+																		</tr>
+																		<tr bgcolor="#EEEEEE" align = "center">
+                                                                        	<th width="2%"><center><input type="checkbox" /></center></th>
+																			<th width="3%">
+																				<center>学号</center>
+																			</th>
+																			<th width="3%">
+																				<center>姓名</center>															
+																			</th>
+																			<th width="3%">
+																				<center>性别</center>															
+																			</th>
+																			<th width="4%">
+																				<center>专业</center>															
+																			</th>
+																			<th width="5%">
+																				<center>班级</center>															
+																			</th>
+																			<th width="8%">
+																				<center>获奖项目</center>														
+																			</th>
+																			<th width="5%">
+																				<center>获奖等级</center>														
+																			</th>
+																			<th width="7%">
+																				<center>获奖时间</center>														
+																			</th>
+																			<th width="5%">
+																				<center>类别</center>															
+																			</th>
+																			<th width="3%">
+																				<center>性质</center>															
+																			</th>
+																			<th width="7%">
+																				<center>学生干部职务</center>													
+																			</th>
+																			<th width="4%">
+																				<center>任职时间</center>														
+																			</th>
+																			<th width="5%">
+																				<center>奖励学分</center>													
+																			</th>
+																			<th width="3%">
+																				<center>比例</center>															
+																			</th>
+																			<th width="5%">
+																				<center>最终得分</center>														
+																			</th>																
+																			<th width="5%">
+																				<center>奖励金额</center>														
+																			</th>
+																			<th width="5%">
+																				<center>审核状态</center>														
+																			</th>	
+																			<th width="3%">
+																				<center>备注</center>															
+																			</th>														
+																			</tr>
+																		
+																			</thead>
+																		<tr bgcolor="#FFFFFF" align = "center">
+
+																			<td><input type="checkbox" /></td>
+                                                                            <td>
+																				<a href="#" onclick="popup('#SchStuBasicInfoDiv', '#getSchStuBasicInfoDiv', '#CloseBasicInfo')">20111826</a>		
+																			</td>
+																			<td>
+																				陈鹏																			
+																			</td>
+																			<td>
+																				男																	
+																			</td>
+																			<td>
+																				软件开发																	
+																			</td>
+																			<td>
+																				软件1001																	
+																			</td>
+																			<td>
+																				软件创新设计大赛															
+																			</td>
+																			<td>
+																				一等奖															
+																			</td>
+																			<td>
+																				2010-04-20																	
+																			</td>
+																			<td>
+																				学术科技类																	
+																			</td>
+																			<td>
+																				校级																			
+																			</td>
+																			<td>
+																				学习委员
+																			</td>
+																			<td>
+																				2011/10/11
+																			</td>
+																			<td>
+																				3																			
+																			</td>
+																			<td>
+																				60%																			
+																			</td>
+																			<td>
+																				1.8																			
+																			</td>
+																			<td>
+																				无																		
+																			</td>
+																			<td>
+																				通过																		
+																			</td>
+																			<td>
+																				无																		
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+														<table width="95%" border="0" align="center"
+															cellpadding="0" cellspacing="0">
+															<tr>
+																<td height="6">
+																	<img src="../../images/spacer.gif" width="1" height="1" />
+																</td>
+															</tr>
+															<tr>
+																<td height="33">
+																	<table width="100%" border="0" align="center"
+																		cellpadding="0" cellspacing="0" class="right-font08">
+																		<tr>
+																			<td width="50%">
+																				共
+																				<span class="right-text09">5</span> 页 | 第
+																				<span class="right-text09">1</span> 页
+																			</td>
+																			<td width="49%" align="right">
+																				[
+																				<a href="#" class="right-font08">首页</a> |
+																				<a href="#" class="right-font08">上一页</a> |
+																				<a href="#" class="right-font08">下一页</a> |
+																				<a href="#" class="right-font08">末页</a>] 转至：
+																			</td>
+																			<td width="1%">
+																				<table width="20" border="0" cellspacing="0"
+																					cellpadding="0">
+																					<tr>
+																						<td width="1%">
+																							<input name="textfield3" type="text"
+																								class="right-textfield03" size="1" />
+																						</td>
+																						<td width="87%">
+																							<input name="Submit23222" type="submit"
+																								class="right-button06" value=" " />
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						
+						
+					</td>
+				</tr>
+			</table>
+		</form>
+
+		<!--高级查询条件-->
+	<form name="fom" id="fom" method="post" action="">
+    	<div id="advancedDiv" style="display: none"></div>
+    		<div id="advancedSearchDiv" style="display: none">
+             	<h2>高级查询选项<a href="#" id="CloseadvancedSearch">关闭</a></h2>
+        	<div class="form">
+            	<table width="50%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="demo" id="advancedSearchTab" ><thead>
+            
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%' name='projectName'> 
+					    	性别
+					    </td>
+					    <td width='35%' name='sex'> 
+					    	<input name="sex" type="radio" value="sex" checked />男 
+							<input name="sex" type="radio" value="sex" />女
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%' name='projectName'> 
+					    	类别
+					    </td>
+					    <td width='35%' name='nation'> 
+					    	<select>
+					    		<option>学术科技类</option>
+					    		<option>文艺体育类</option>
+					    		<option>社会公益类</option>
+					    		<option>实践创新类</option>
+					    		<option>理论学习类</option>
+					    		<option>其他类</option>
+					    	</select>	
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%'> 
+					    	性质
+					    </td >
+					    <td width='35%' name='nation'> 
+					  		 <select>
+					    		<option>院级</option>
+					    		<option>校级</option>
+					    		<option>厅级</option>
+					    		<option>省级</option>
+					    		<option>国家级</option>
+					    	</select>	
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%'> 
+					    	审核状态
+					    </td >
+					    <td width='35%' name='nation'> 
+					  		 <select>
+					    		<option> 未提交</option>
+					    		<option> 通过</option>
+					    		<option>院级审核中</option>
+					    		<option>校级审核中</option>
+					    		<option>院级未通过</option>
+					    		<option>校级未通过</option>
+					    	</select>	
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%'> 
+					    	获奖项目
+					    </td>
+					    <td width='35%' name='nation'> 
+					   		<select>
+					    		<option>软件创新大赛</option>
+					    		<option>五四晚会</option>
+					    	</select>	
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%' name='projectName'> 
+					    	获奖等级
+					    </td>
+					    <td width='35%' name='politics'> 
+					    	<select>
+					    		<option>一等奖</option>
+					    		<option>二等奖</option>
+					    		<option>三等奖</option>
+					    		<option>优秀奖</option>
+					    	</select>	
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center"><!--使用juquery的时间插件-->
+					    <td width='15%' name='projectName'> 
+					    	获奖时间
+					    </td>
+					    <td width='35%' name='birthplace'> 
+					    	<select>
+					    		<option>2011-2012</option>
+					    		<option>2012-2013</option>
+					    	</select>	
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%' name='projectName'> 
+					    	奖励学分
+					    </td>
+					    <td width='35%' name='birthplace'> 
+					    	<select>
+					    		<option>3</option>
+					    		<option>4</option>
+					    		<option>5</option>
+					    		<option>6</option>
+					    	</select>	
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%' name='projectName'> 
+					    	学生干部职务
+					    </td>
+					    <td width='35%' name='birthplace'> 
+					    	<select>
+					    		<option>学习委员</option>
+					    		<option>团支书</option>
+					    		<option>宣传委员</option>
+					    		<option>学生会主席</option>
+					    	</select>	
+					    </td>
+					</tr>
+            	</table>
+        	</div>
+    	</div>
+
+    <!--曾获活动奖励-->
+	<form name="fom" id="fom" method="post" action="">
+    	<div id="SchStuBasicInfoDiv" style="display: none"></div>
+    		<div id="getSchStuBasicInfoDiv" style="display: none">
+             	<h2>曾获活动奖励<a href="#" id="CloseBasicInfo">关闭</a></h2>
+        	<div class="form">
+            	<table width="50%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="demo" id="advancedSearchTab" ><thead>
+            
+					<tr bgcolor="#FFFFFF" align="center">
+						<td width='5%' name='projectName'> 
+					    	序号
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	获奖时间
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	获奖项目
+					    </td>
+					    <td width='10%' name='projectName'> 
+					    	获奖等级
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	类别
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	性质
+					    </td>
+					    <td width='10%' name='projectName'> 
+					    	奖励学分
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	奖励金额
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+						<td width='5%' name='projectName'> 
+					    	1
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	2011-1-10
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	软件创新设计大赛
+					    </td>
+					    <td width='10%' name='projectName'> 
+					    	一等奖
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	学术科技类
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	校级
+					    </td>
+					    <td width='10%' name='projectName'> 
+					    	3
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	100
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+						<td width='5%' name='projectName'> 
+					    	2
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	2011-1-10
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	软件创新设计大赛
+					    </td>
+					    <td width='10%' name='projectName'> 
+					    	一等奖
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	学术科技类
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	校级
+					    </td>
+					    <td width='10%' name='projectName'> 
+					    	3
+					    </td>
+					    <td width='15%' name='projectName'> 
+					    	100
+					    </td>
+					</tr>
+            	</table>
+        	</div>
+    	</div>
+    </form>
+</body>
+	<script src="../../js/date.js">
+	</script>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>基本信息</title>
+<link rel="stylesheet" rev="stylesheet" href="../../css/style.css"
+			type="text/css" media="all" />
+<link href="../../css/css.css" rel="stylesheet" type="text/css" />
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../../css/arrow.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+var menuids = [ "suckertree1" ]
+
+function buildsubmenus() {
+	for ( var i = 0; i < menuids.length; i++) {
+		var ultags = document.getElementById(menuids[i]).getElementsByTagName(
+				"ul")
+		for ( var t = 0; t < ultags.length; t++) {
+			ultags[t].parentNode.getElementsByTagName("a")[0].className = "subfolderstyle"
+			ultags[t].parentNode.onmouseover = function() {
+				this.getElementsByTagName("ul")[0].style.display = "block"
+			}
+			ultags[t].parentNode.onmouseout = function() {
+				this.getElementsByTagName("ul")[0].style.display = "none"
+			}
+		}
+	}
+}
+
+if (window.addEventListener)
+	window.addEventListener("load", buildsubmenus, false)
+else if (window.attachEvent)
+	window.attachEvent("onload", buildsubmenus)</script>
+	<script language=JavaScript>
+<script language=JavaScript>
+function viewmypic(mypic,imgfile) {
+if (imgfile.value){
+mypic.src=imgfile.value;
+mypic.style.display="";
+mypic.border=1;
+}
+}
+function sousuo() {
+	window
+			.open(
+					"gaojisousuo.htm",
+					"",
+					"depended=0,alwaysRaised=1,width=800,height=510,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
+}
+function selectAll() {
+	var obj = document.fom.elements;
+	for ( var i = 0; i < obj.length; i++) {
+		if (obj[i].name == "delid") {
+			obj[i].checked = true;
+		}
+	}
+}
+
+function unselectAll() {
+	var obj = document.fom.elements;
+	for ( var i = 0; i < obj.length; i++) {
+		if (obj[i].name == "delid") {
+			if (obj[i].checked == true)
+				obj[i].checked = false;
+			else
+				obj[i].checked = true;
+		}
+	}
+}
+
+function link() {
+	document.getElementById("fom").action = "../addrenwu.htm";
+	document.getElementById("fom").submit();
+}
+</script>
+<script src="../../js/jquery-1.7.2.min.js">
+</script>
+<script src="../../js/testSearch.js">
+</script>
+<script src="../../js/provincesdata.js">
+</script>
+<script src="../../js/jquery.provincesCity.js">
+</script>
+<style type="text/css">
+.STYLE1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.STYLE2 {
+	font-size: 16px
+}
+.STYLE3 {color: #FFFFFF}
+</style>
+</head>
+<SCRIPT language=JavaScript>
+function tupian(idt){
+    var nametu="xiaotu"+idt;
+    var tp = document.getElementById(nametu);
+    tp.src="../images/ico05.gif";//Í¼Æ¬ico04Îª°×É«µÄÕý·½ÐÎ
+	
+	for(var i=1;i<30;i++)
+	{
+	  
+	  var nametu2="xiaotu"+i;
+	  if(i!=idt*1)
+	  {
+	    var tp2=document.getElementById('xiaotu'+i);
+		if(tp2!=undefined)
+	    {tp2.src="../images/ico06.gif";}//Í¼Æ¬ico06ÎªÀ¶É«µÄÕý·½ÐÎ
+	  }
+	}
+}
+
+function list(idstr){
+	var name1="subtree"+idstr;
+	var name2="img"+idstr;
+	var objectobj=document.all(name1);
+	var imgobj=document.all(name2);
+	
+	
+	//alert(imgobj);
+	
+	if(objectobj.style.display=="none"){
+		for(i=1;i<10;i++){
+			var name3="img"+i;
+			var name="subtree"+i;
+			var o=document.all(name);
+			if(o!=undefined){
+				o.style.display="none";
+				var image=document.all(name3);
+				//alert(image);
+				image.src="../../images/ico04.gif";
+			}
+		}
+		objectobj.style.display="";
+		imgobj.src="../../images/ico03.gif";
+	}
+	else{
+		objectobj.style.display="none";
+		imgobj.src="../../images/ico04.gif";
+	}
+}
+
+</SCRIPT>
+<body>
+<div id="lurubiao" style="margin-left:10px">
+  <table width="99%" border="0" cellpadding="4" cellspacing="1"
+						class="newfont03">
+    <tr>
+     <td class="tablestyle_title" width="15%">
+	     <div align="left">
+	          <span class="STYLE1">基本信息</span>
+           <input type="button" name="Otput" value="导出"
+									onclick="alert('导出成功');" />
+		  </div>
+	 </td>
+	 <td class="tablestyle_title" width="84%">
+	 <div class="suckerdiv" align="left">
+            <ul id="suckertree1">
+            <li> <a href="#">信息操作</a>
+                <ul>
+				 <li> <a href="std_BasicInfo.html">查看信息</a> </li>
+                  <li> <a href="std_ModifyPassword.html">修改密码</a> </li>
+                  <li> <a href="std_ModifyEmail.html">修改邮箱</a> </li>
+                  <li> <a href="std_ModifyInfo.html">修改常用信息</a> </li>
+                </ul>
+            </li>
+          </ul>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+	  <table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+          <tr>
+            <td><div align="center" class="STYLE1"> 学号</div></td>
+            <td><div align="center" class="STYLE2">20091821</div></td>
+            <td><div align="center" class="STYLE1">姓名</div></td>
+            <td><div align="center" class="STYLE2">宋国平</div></td>
+            <td><div align="center" class="STYLE1">性别</div></td>
+            <td><div align="center" class="STYLE2">男</div></td>
+            <td colspan="2" rowspan="5" class="STYLE2"><div align="center"><img src="img/luoweifu.jpg" alt="protrait" width="90" height="120" /></div></td>
+          </tr>
+          <tr >
+            <td><div align="center" class="STYLE1">民族</div></td>
+            <td><div align="center" class="STYLE2">汉</div></td>
+            <td><div align="center" class="STYLE1">籍贯</div></td>
+            <td><div align="center" class="STYLE2">江西</div></td>
+            <td><div align="center" class="STYLE1">政治面貌</div></td>
+            <td><div align="center" class="STYLE2">群众</div></td>
+          </tr>
+          <tr >
+            <td><div align="center" class="STYLE1">学院</div></td>
+            <td><div align="center" class="STYLE2">软件学院</div></td>
+            <td><div align="center" class="STYLE1">专业方向</div></td>
+            <td><div align="center" class="STYLE2">软件加英语</div></td>
+            <td><div align="center" class="STYLE1">班级</div></td>
+            <td><div align="center" class="STYLE2">1113班</div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="STYLE1">身份证号</div></td>
+            <td><div align="center" class="STYLE2">360430199</div></td>
+            <td><div align="center" class="STYLE1">手机号</div></td>
+            <td><div align="center" class="STYLE2">15970412554</div></td>
+            <td><div align="center" class="STYLE1">个人邮箱</div></td>
+            <td><div align="center" class="STYLE2">983684843@qq.com</div></td>
+          </tr>
+          <tr>
+          
+            <td><div align="center" class="STYLE1">家庭联系人</div></td>
+            <td><div align="center" class="STYLE2"></div></td>
+            <td><div align="center" class="STYLE1">家庭地址</div></td>
+            <td  colspan="3"><div align="center" class="STYLE2"></div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="STYLE1">家庭联系电话</div></td>
+            <td><div align="center" class="STYLE2"></div></td>
+            <td><div align="center" class="STYLE1">学历</div></td>
+            <td><div align="center" class="STYLE2">18770052380</div></td>
+            <td><div align="center" class="STYLE1">英语等级</div></td>
+            <td colspan="3"><div align="center" class="STYLE2">360733xxxxxxxxxxxx</div></td>
+          </tr>
+          <tr>
+            <td><div align="center" class="STYLE1">银行卡号</div></td>
+            <td><div align="center" class="STYLE2">62202 18070514242</div></td>
+			<td><div align="center" class="STYLE1">担任职务及时间</div></td>
+            <td colspan="4"><div align="center" class="STYLE2"></div></td>
+          </tr>
+      </table>
+	  </td>
+    </tr>
+    <tr>
+    	<table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+    
+           <tr>
+		    <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>毕业时间</b> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>就业次数</b> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9"><b>公司/单位名称</b></div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>就业类型</b> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"><b>就业时间</b> </div></td>
+           </tr>
+           <tr>
+		    <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2013-10</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> 第一次就业</div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9">IBM</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">企事业单位</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2014-08 </div></td>
+            </tr>  
+           <tr>
+		    <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2013-10</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> 第二次就业</div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9">微软</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">企事业单位</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2015-09 </div></td>
+            </tr>  
+           <tr>
+		    <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2013-10</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">自主创业</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            </tr>
+           <tr>
+		    <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">2013-10</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF" colspan = "4"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9">西部计划</div></td>
+            <td bgcolor="#FFFFFF" colspan = "2"><div align="center" class="STYLE9"> </div></td>
+            </tr> 
+      </table>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
