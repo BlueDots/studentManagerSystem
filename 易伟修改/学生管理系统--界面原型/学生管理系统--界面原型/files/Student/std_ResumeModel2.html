@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>个人简历</title>
+<link rel="stylesheet" rev="stylesheet" href="../../css/style.css"
+			type="text/css" media="all" />
+<link href="../../css/css.css" rel="stylesheet" type="text/css" />
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../../css/arrow.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+var menuids = [ "suckertree1" ]
+
+function buildsubmenus() {
+	for ( var i = 0; i < menuids.length; i++) {
+		var ultags = document.getElementById(menuids[i]).getElementsByTagName(
+				"ul")
+		for ( var t = 0; t < ultags.length; t++) {
+			ultags[t].parentNode.getElementsByTagName("a")[0].className = "subfolderstyle"
+			ultags[t].parentNode.onmouseover = function() {
+				this.getElementsByTagName("ul")[0].style.display = "block"
+			}
+			ultags[t].parentNode.onmouseout = function() {
+				this.getElementsByTagName("ul")[0].style.display = "none"
+			}
+		}
+	}
+}
+
+if (window.addEventListener)
+	window.addEventListener("load", buildsubmenus, false)
+else if (window.attachEvent)
+	window.attachEvent("onload", buildsubmenus)</script>
+	<script language=JavaScript>
+<script language=JavaScript>
+function viewmypic(mypic,imgfile) {
+if (imgfile.value){
+mypic.src=imgfile.value;
+mypic.style.display="";
+mypic.border=1;
+}
+}
+function sousuo() {
+	window
+			.open(
+					"gaojisousuo.htm",
+					"",
+					"depended=0,alwaysRaised=1,width=800,height=510,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
+}
+function selectAll() {
+	var obj = document.fom.elements;
+	for ( var i = 0; i < obj.length; i++) {
+		if (obj[i].name == "delid") {
+			obj[i].checked = true;
+		}
+	}
+}
+
+function unselectAll() {
+	var obj = document.fom.elements;
+	for ( var i = 0; i < obj.length; i++) {
+		if (obj[i].name == "delid") {
+			if (obj[i].checked == true)
+				obj[i].checked = false;
+			else
+				obj[i].checked = true;
+		}
+	}
+}
+
+function link() {
+	document.getElementById("fom").action = "../addrenwu.htm";
+	document.getElementById("fom").submit();
+}
+</script>
+<script src="../../js/jquery-1.7.2.min.js">
+</script>
+<script src="../../js/testSearch.js">
+</script>
+<script src="../../js/provincesdata.js">
+</script>
+<script src="../../js/jquery.provincesCity.js">
+</script>
+<style type="text/css">
+.STYLE1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+div {
+	font-size: 16px
+}
+</style>
+</head>
+
+<body>
+      <div id="lurubiao" style="margin-left:10px">
+					<table width="99%" border="1" cellpadding="4" cellspacing="1"
+						class="CContent">
+						<tr>
+     <td class="tablestyle_title" width="15%">
+	     <div align="left">
+	          <span class="STYLE1">基本信息</span>
+           <input type="button" name="Otput" value="导出"
+									onclick="alert('导出成功！');" />
+		  </div>
+	 </td>
+	 <td class="tablestyle_title" width="84%">
+	 <div class="suckerdiv" align="left">
+            <ul id="suckertree1">
+            <li> <a href="#">修改信息</a>
+                <ul>
+                  <li> <a href="std_ResumeModel1.html">模板一</a> </li>
+                  <li> <a href="std_ResumeModel2.html">模板二</a> </li>
+                  <li> <a href="std_ResumeModel3.html">模板三</a> </li>
+                </ul>
+            </li>
+          </ul>
+      </div>
+      </td>
+    </tr>
+	<tr>
+	<td colspan="2">
+	<table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+       <tr>
+			<td colspan="9"  valign="middle">
+			<div align="center"><span  class="STYLE9"><strong>个人情况</strong> </span></div>
+			 </td>
+		  </tr>
+		  <tr>
+			<td width="121" align="center"><div align="center"><span  class="STYLE9"><strong>姓名</strong> </span></div></td>
+			<td width="65" align="center">&nbsp;</td>
+			<td width="64" align="center"><div align="center"><span  class="STYLE9"><strong>性别</strong> </span></div></td>
+			<td width="40" align="center">&nbsp;</td>
+			<td width="83" align="center"><div align="center"><span  class="STYLE9"><strong>民族</strong> </span></div></td>
+			<td width="75" align="center">&nbsp;</td>
+			<td width="85" align="center"><div align="center"><span  class="STYLE9"><strong>籍贯</strong> </span></div></td>
+			<td width="85" align="center"><div align="center"><span  class="STYLE9"><strong></strong> </span></div></td>
+			<td width="64" rowspan="4" align="center"><img src="img/luoweifu.jpg"/></td>
+		  </tr>
+		  <tr>
+			<td align="center"><div align="center"><span  class="STYLE9"><strong>出生日期</strong> </span></div></td>
+			<td align="center">&nbsp;</td>
+			<td align="center"><div align="center"><span  class="STYLE9"><strong>政治面貌</strong> </span></div></td>
+			<td align="center">&nbsp;</td>
+			<td align="center"><div align="center"><span  class="STYLE9"><strong>学制</strong> </span></div></td>
+			<td align="center">&nbsp;</td>
+			<td align="center"><div align="center"><span  class="STYLE9"><strong>学历</strong> </span></div></td>
+			<td align="center"><div align="center"><span  class="STYLE9"><strong></strong> </span></div></td>
+		  </tr>
+		  <tr>
+			<td align="center"><div align="center"><span  class="STYLE9"><strong>专业</strong> </span></div></td>
+			<td align="center">&nbsp;</td>
+			<td align="center"><div align="center"><span  class="STYLE9"><strong>英语等级</strong> </span></div></td>
+			<td align="center">&nbsp;</td>
+			<td align="center"><div align="center"><span  class="STYLE9"><strong>手机号</strong> </span></div></td>
+			<td align="center"  colspan="3">&nbsp;</td>
+		  </tr>
+		  <tr>
+			<td align="center"><div align="center"><span  class="STYLE9"><strong>邮箱</strong></span></div></td>
+			<td align="center" colspan="3">&nbsp;</td>
+			<td align="center"><div align="center"><span  class="STYLE9"><strong>担任职务及时间</strong></span></div></td>
+			<td align="center"  colspan="3"><div align="center"><span  class="STYLE9"><strong>&nbsp;</strong> </span></div></td>
+		  </tr>
+		  <tr>
+			<td rowspan="4"><div align="center"><span  class="STYLE9"><strong>实习经历与社会实践(实践活动)</strong> </span></div></td>
+			<td colspan="2" align="center" valign="middle"><div align="center"><span  class="STYLE9"><strong>实习/公司名称</strong> </span></div></td>
+			<td colspan="2" align="center" valign="middle"><div align="center"><span  class="STYLE9"><strong>实习/实践职位</strong></span></div></td>
+			<td colspan="2" align="center" valign="middle"><div align="center"><span  class="STYLE9"><strong>实习/实践内容</strong> </span></div></td>
+			<td colspan="2" align="center" valign="middle"><div align="center"><span  class="STYLE9"><strong>备注</strong> </span></div></td>
+		  </tr>
+		  <tr>
+			<td colspan="2">&nbsp;</td>
+			<td colspan="2">&nbsp;</td>
+			<td colspan="2">&nbsp;</td>
+			<td colspan="3">&nbsp;</td>
+		  </tr>
+		  <tr>
+			<td colspan="2">&nbsp;</td>
+			<td colspan="2">&nbsp;</td>
+			<td colspan="2">&nbsp;</td>
+			<td colspan="3">&nbsp;</td>
+		  </tr>
+		   <tr>
+			<td colspan="2">&nbsp;</td>
+			<td colspan="2">&nbsp;</td>
+			<td colspan="2">&nbsp;</td>
+			<td colspan="3">&nbsp;</td>
+		  </tr>
+		  <tr>
+			<td rowspan="2" align="center" valign="middle"><div align="center"><span  class="STYLE9"><strong>技能与成就<br/></strong> </span></div></td>
+			<td colspan="8" align="center" valign="middle"><div align="center"><span  class="STYLE9"><strong>获奖情况(评优评先,奖助学金，班级奖学金)</strong></span></div></td>
+		  </tr>
+		  <tr>
+			<td height="69" colspan="8">&nbsp;</td>
+		  </tr>		 
+      </table>
+	  </td>
+	</tr>
+   </table>   
+    </td>
+   </tr>  
+   </table>
+   </div>
+</body>
+</html>

@@ -1,0 +1,957 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>学生工作管理系统</title>
+	
+	<script src="../../js/jquery-1.7.2.min.js"></script>
+	<script src="../../js/admin/jquery.cookie.js"></script>
+	<script src="../../js/admin/jquery.treeview.js"></script>
+	<script src="../../js/testSearch.js"></script>
+	<script src="../../js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script src="../../js/date.js"></script>
+	
+	<link href="../../css/admin/jquery.treeview.css" rel="stylesheet" type="text/css" />
+	<link href="../../css/admin/screen.css" rel="stylesheet" type="text/css" />
+	<link href="../../css/admin/file.css" rel="stylesheet" type="text/css" />
+	<link href="../../css/css.css" rel="stylesheet" type="text/css" />
+	<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+	<link href="../../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link href="../../css/arrow.css" rel="stylesheet" type="text/css" />
+ 
+ <script type="text/javascript">
+
+var menuids = [ "suckertree1" ];
+
+$(document).ready(function(){
+		
+    		$("#test").treeview();
+    
+		
+		//给所有的权限复选框绑定事件处理函数
+		$("[name=purview]").click(function(){
+		
+				var checked = this.checked;   //当前checkbox的选中状态
+		
+				//当选中或取消一个权限时，选中或取消所有下级的权限
+				$(this).siblings("ul").find("input").attr("checked",checked);
+				
+				//当选中一个权限时，也要同时选中所有上级权限
+				if(checked){
+					
+					$(this).parents("li").children("input").attr("checked",checked);
+				}
+				
+				//当取消一个权限后，同级若没有选中的权限时，上级也取消权限，再向上一层也类似
+				else{
+				
+					if($(this).parent().siblings("li").children("input:checked").size() == 0){
+						
+						$(this).parent().parent().siblings("input").attr("checked",checked);
+						
+						var startPoint = $(this).parent().parent();
+						
+							if(startPoint.parent().siblings("li").children("input:checked").size() == 0){
+							
+								startPoint.parent().parent().siblings("input").attr("checked",checked);
+							
+							}
+						
+					}
+				}
+		});	
+	});	
+
+function buildsubmenus() {
+	for ( var i = 0; i < menuids.length; i++) {
+		var ultags = document.getElementById(menuids[i]).getElementsByTagName("ul");
+		for ( var t = 0; t < ultags.length; t++) {
+			ultags[t].parentNode.getElementsByTagName("a")[0].className = "subfolderstyle";
+			ultags[t].parentNode.onmouseover = function() {
+				this.getElementsByTagName("ul")[0].style.display = "block";
+			};
+			ultags[t].parentNode.onmouseout = function() {
+				this.getElementsByTagName("ul")[0].style.display = "none";
+			};
+		}
+	}
+}
+
+if (window.addEventListener)
+	window.addEventListener("load", buildsubmenus, false);
+else if (window.attachEvent)
+	window.attachEvent("onload", buildsubmenus);
+
+function sousuo() {
+	window
+			.open(
+					"gaojisousuo.htm",
+					"",
+					"depended=0,alwaysRaised=1,width=800,height=510,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
+}
+
+</script>
+ 
+</head>
+	
+	  <body >
+		<form name="fom" id="fom" method="post" action="">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+				<tr>
+					<td height="30">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="62" background="../../images/nav04.gif">
+
+									<table width="98%" border="0" align="center" cellpadding="0"
+										cellspacing="0">
+										<tr>
+										  <td width="250">											 
+											  角色名称：<font color="red">院级工作人员</font>&nbsp;&nbsp;
+										  </td>
+										  
+										  <td width="77" align="left">
+												<div class="suckerdiv">
+													<ul id="suckertree1">
+														<li>
+															<a href="#">权限管理</a>
+															<ul>
+															 	<li>
+																	<a href="javascript:alert('已进入编辑状态');">编辑</a>
+																</li>
+															</ul>
+
+														</li>
+													</ul>
+												</div>
+											</td>
+											
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+			<!--这事显示录入人员的表格-->
+						<div id="add"  >
+
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td>
+										<div id="lurubiao" style="margin-left: 10px">
+											<table width="99%" border="0" cellpadding="0" cellspacing="0"
+												class="CContent">
+												<tr>
+													<th class="tablestyle_title">
+														 当前位置： <a href="#" style="color:red;">角色管理</a>>> <a href="./admin_jobManager.html" style="color:red">查看角色信息</a>>><a style="color:red;" href="./admin_rolePurview.html">角色权限管理</a> 
+													</th>
+												</tr>
+												<tr>
+													<td class="CPanel">
+														
+										               <!--添加权限的表格-->
+										               		<table width="100%" border="0" cellpadding="4"	cellspacing="1" bgcolor="#464646" class="newfont03">
+																		<tr class="CTitle">
+																			<td height="22" colspan="13" align="center"
+																				style="font-size: 16px" width="100%">
+																				权限列表
+																			</td>
+																		</tr>
+																		<tr bgcolor="#FFFFFF">																		
+																				<td width="33%">
+																				
+<!--  ----------- ----------- -----------权限界面开始---------- ------------------- -->																				
+																				
+		<ul id="test">
+			
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">学生参与活动管理</span>			
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">学生参与活动信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">手动录入学生参与活动信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">编辑学生活动信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">删除学生活动信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导入学生参与活动信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出学生参与活动信息</span>
+							</li>					
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询学生参与活动信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">高级搜索</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">排序</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">审核学生参与活动信息</span>
+							</li>					
+						</ul>		
+			</li>
+			
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">活动管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">活动信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">手动录入活动信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">编辑活动信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">删除活动</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导入活动信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出活动信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">活动启动</span>
+							</li>			
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询活动信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">高级搜索</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">排序</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">审核活动信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">活动学分比例信息</span>
+							</li>				
+						</ul>
+			</li>
+			
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">评优评先管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">评优评先信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">修改评优评先信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">删除评优评先信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">手动录入评优评先信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导入评优评先信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出评优评先信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询评优评先信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">高级搜索</span>
+							</li>			
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">排序</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">审核评优评先信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">评优评先比例分配</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">创建先进项目</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">编辑先进项目</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">设置提交时间</span>
+							</li>			
+						</ul>
+			</li>
+			
+			
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">奖助学金管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">奖助学金信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">修改奖助学金信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">删除奖助学金信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">手动录入奖助学金信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导入奖助学金信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出奖助学金信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询奖助学金信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">高级搜索</span>
+							</li>			
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">排序</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">审核奖助学金信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">分配奖助学金比例</span>
+							</li>		
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">创建新奖助学金</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">编辑新奖助学金</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">设置提交时间</span>
+							</li>				
+						</ul>
+			</li>
+			
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">奖学金评比管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">奖学金评比信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">修改奖学金评比信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">删除奖学金评比信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">手动录入奖学金评比信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导入奖学金评比信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出奖学金评比信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询奖学金评比信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">高级搜索</span>
+							</li>			
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">排序</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">审核奖学金评比信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">按名额分配班级奖学金</span>
+							</li>		
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">设置提交时间</span>
+							</li>				
+						</ul>
+			</li>
+			
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">处分信息管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">处分信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">修改处分信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">删除处分信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">手动录入处分信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导入处分信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出处分信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询处分信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">高级搜索</span>
+							</li>			
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">排序</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">审核处分信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">创建新处分</span>
+							</li>					
+						</ul>
+			</li>
+						
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">学籍变动信息管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">学籍变动信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">修改学籍变动信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">删除学籍变动信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">手动录入学籍变动信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导入学籍变动信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出学籍变动信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询学籍变动信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">高级搜索</span>
+							</li>			
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">排序</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">审核学籍变动信息</span>
+							</li>			
+						</ul>
+			</li>	
+			
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">就业信息管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">就业信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">修改就业信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">删除就业信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">手动录入就业信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导入就业信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出就业信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询就业信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">高级搜索</span>
+							</li>			
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">排序</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">审核就业信息</span>
+							</li>			
+						</ul>
+			</li>	
+			
+			
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">贫困生建档信息管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">贫困生建档信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">修改贫困生建档信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">删除贫困生建档信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">手动录入贫困生建档信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导入贫困生建档信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出贫困生建档信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询贫困生建档信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">高级搜索</span>
+							</li>			
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">排序</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">审核贫困生建档信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">贫困生建档比例分配</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">创建贫困生等级</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">提交时间设置</span>
+							</li>					
+						</ul>					
+			</li>	
+			
+			
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">医保信息管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">医保信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">修改医保信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">删除医保信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导入医保信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出医保信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询医保信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">高级搜索</span>
+							</li>			
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">排序</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">审核医保信息</span>
+							</li>		
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">录入医保信息</span>
+							</li>		
+						</ul>
+			</li>
+			
+			
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">个人简历</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">个人简历展示</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出个人简历</span>
+							</li>				
+						</ul>
+			</li>
+				
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">角色管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">角色信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">修改角色信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">删除角色</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">手动录入角色信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导入角色信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出角色信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询角色信息</span>
+							</li>			
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">排序</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">角色权限信息查看</span>
+							</li>		
+						</ul>
+			</li>
+			
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">分配权限管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">用户权限信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">修改用户权限信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">删除用户权限信息</span>
+							</li>						
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">用户权限信息查看</span>
+							</li>		
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询用户权限信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">排序</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出用户权限信息</span>
+							</li>				
+						</ul>
+			</li>
+			
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">分配角色管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">用户所属角色信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">用户分配角色</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">角色权限信息查看</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询用户所属角色信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出用户所属角色信息</span>
+							</li>					
+						</ul>
+			</li>
+				
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">学院专业班级管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">奖学金评比信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">修改奖学金评比信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">删除奖学金评比信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">手动录入奖学金评比信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导入奖学金评比信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出奖学金评比信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">查询奖学金评比信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">高级搜索奖学金评比信息</span>
+							</li>			
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">排序奖学金评比信息</span>
+							</li>	
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">审核奖学金评比信息</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">活动学分比例信息</span>
+							</li>		
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">活动学分比例信息</span>
+							</li>				
+						</ul>
+			</li>
+			
+			<li>
+				<input type="checkbox" name="purview">
+				<span class="folder">日志管理</span>
+				
+						<ul>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">日志信息列表</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">按用户信息查询</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">按操作时间查询</span>
+							</li>
+							<li>
+								<input type="checkbox" name="purview">
+								<span class="file">导出日志信息</span>
+							</li>											
+						</ul>
+			</li>
+			
+		</ul>
+		
+<!--  ----------- ----------- -----------权限界面结束---------- ------------------- -->		
+		
+																				</td>																		
+																		</tr>
+										               		</table>
+										               		
+
+															
+															<tr>
+																<td colspan="2" align="center" height="30px">
+																	<input type="button" name="Submit" value="保存"
+																		class="button" onclick="link();" />
+																    <input type="button" name="Submit" value="提交"
+																		class="button" onclick="link();" />
+																	<input type="button" name="Submit2" value="返回"
+																		class="button" onclick="window.history.go(-1);" />
+																</td>
+															</tr>
+															
+															
+														</table>
+							                        </div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</table>
+		</form>
+	</body>
+</html>
+

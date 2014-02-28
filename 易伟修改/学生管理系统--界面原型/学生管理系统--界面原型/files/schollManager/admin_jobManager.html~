@@ -1,0 +1,742 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>学生工作管理系统</title>
+	
+		<link href="../../css/css.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/arrow.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript">
+
+var menuids = [ "suckertree1" ]
+
+function buildsubmenus() {
+	for ( var i = 0; i < menuids.length; i++) {
+		var ultags = document.getElementById(menuids[i]).getElementsByTagName(
+				"ul")
+		for ( var t = 0; t < ultags.length; t++) {
+			ultags[t].parentNode.getElementsByTagName("a")[0].className = "subfolderstyle"
+			ultags[t].parentNode.onmouseover = function() {
+				this.getElementsByTagName("ul")[0].style.display = "block"
+			}
+			ultags[t].parentNode.onmouseout = function() {
+				this.getElementsByTagName("ul")[0].style.display = "none"
+			}
+		}
+	}
+}
+
+if (window.addEventListener)
+	window.addEventListener("load", buildsubmenus, false)
+else if (window.attachEvent)
+	window.attachEvent("onload", buildsubmenus)</script>
+	</head>
+
+	<script language=JavaScript>
+function sousuo() {
+	window
+			.open(
+					"gaojisousuo.htm",
+					"",
+					"depended=0,alwaysRaised=1,width=800,height=510,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
+}
+function selectAll() {
+	var obj = document.fom.elements;
+	for ( var i = 0; i < obj.length; i++) {
+		if (obj[i].name == "delid") {
+			obj[i].checked = true;
+		}
+	}
+}
+
+function unselectAll() {
+	var obj = document.fom.elements;
+	for ( var i = 0; i < obj.length; i++) {
+		if (obj[i].name == "delid") {
+			if (obj[i].checked == true)
+				obj[i].checked = false;
+			else
+				obj[i].checked = true;
+		}
+	}
+}
+
+function link() {
+	document.getElementById("fom").action = "../addrenwu.htm";
+	document.getElementById("fom").submit();
+}
+</script>
+	<script src="../../js/jquery-1.7.2.min.js">
+</script>
+	<script src="../../js/testSearch.js">
+	</script>
+		<script src="../../js/jquery-ui-1.8.21.custom.min.js">
+		</script>
+	
+	<body >
+		<form name="fom" id="fom" method="post" action="">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+				<tr>
+					<td height="30">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="62" background="../../images/nav04.gif">
+
+									<table width="98%" border="0" align="center" cellpadding="0"
+										cellspacing="0">
+										<tr>
+											<td width="21">
+												<img src="../../images/ico07.gif" width="20" height="18" />
+											</td>
+										  <td width="538">
+												职位：
+												<select name="job" size="1">
+													<option selected="selected">
+														全部
+													</option>
+													<option>
+														院级管理员
+													</option>
+													<option>
+														校级工作人员
+													</option>
+ 
+												</select>
+												性别：
+												<select name="sex">
+													<option>
+														全部
+													</option>
+													<option>
+														男
+													</option>
+													<option>
+													女
+													</option>
+												</select>
+												 
+												教师工号:<input name="teacherNo"    type="text" size="10" />
+											    教师工号:<input name="teacherName" type="text" size="10" />
+												<input name="Submit4" type="button" class="right-button02"
+													value="查 询" />
+													
+													排序:
+												<select name="排序">
+													<option>
+														工号 
+													</option>
+													<option>
+														姓名
+													</option>
+												</select>
+											  <img src="../../images/up[1].png"></img>											</td>
+											<td width="77" align="center">
+												<div class="suckerdiv">
+													<ul id="suckertree1">
+														<li>
+															<a href="#">职位管理</a>
+															<ul>
+															 	<li>
+																	<a href="#">编辑</a>
+																</li>
+																<li>
+																	<a href="#">删除</a>
+																</li>
+																<li>
+																	<a href="#">录入</a>
+																	<ul>
+																		<li>
+																			<a href="#">导入</a>
+																		</li>
+																		<li>
+																			<a onclick="add(1)">手动录入</a>
+																		</li>
+																	</ul>
+																</li>
+															</ul>
+
+														</li>
+													</ul>
+												</div>
+											</td>
+											 
+											<td width="77" align="center">
+												<a href="#" onclick="sousuo()"> <input name="Submit4"
+														type="button" class="right-button07" value="导出" /> </a>
+											 
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="allbasicMsg" style="display: block">
+							<table id="subtree1" style="DISPLAY: " width="100%" border="0"
+								cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="CPanel">
+										<div id="liulanbiao" style="margin-left: 10px">
+											<table width="99%" border="0" cellpadding="0" cellspacing="0"
+												class="CContent">
+												<tr>
+													<th class="tablestyle_title">
+														当前位置： <a href="#" style="color:red;">职位管理</a>>><a style="color:red;" href="#">查看职位信息</a> 
+													</th>
+												</tr>
+												<tr>
+													<td class="CPanel">
+														<table width="100%" border="0" align="center"
+															cellpadding="0" cellspacing="0">
+
+															<tr>
+																<td height="40" class="font42">
+																	<table width="100%" border="0" cellpadding="4"
+																		cellspacing="1" bgcolor="#464646" class="newfont03">
+																		<tr class="CTitle">
+																			<td height="22" colspan="13" align="center"
+																				style="font-size: 16px">
+																				学生参与活动表																			</td>
+																		</tr>
+																		<tr bgcolor="#EEEEEE">
+																		  <td width="7%"><input type="checkbox" name="delid" />全选</td>
+																			<td width="8%">
+																				学号																			</td>
+																			<td width="5%">
+																				姓名																			</td>
+																			<td width="6%">
+																				学院																			</td>
+																			<td width="6%">
+																				专业																			</td>
+																			<td width="7%">
+																				班级																			</td>
+																			<td width="14%">
+																				项目																			</td>
+																			<td width="8%">
+																				获奖时间																			</td>
+																			<td width="7%">
+																				类别																			</td>
+																			<td width="5%">
+																				性质																			</td>
+																			<td width="7%">
+																				职位(前)																			</td>
+																			<td width="8%">
+																				职位(现)																			</td>
+																			<td width="12%">
+																				活动奖励																			</td>
+																		</tr>
+																		<tr bgcolor="#FFFFFF">
+																		  <td><input type="checkbox" name="delid2" /></td>
+
+																			<td>
+																				<a href="listmokuaimingxi.htm" onclick=""></a>20101428																			</td>
+																			<td>
+																				陈鹏																			</td>
+																			<td>
+																				软件学院																			</td>
+																			<td>
+																				软件开发																			</td>
+																			<td>
+																				软件1001																			</td>
+																			<td>
+																				软件创新设计大赛																			</td>
+																			<td>
+																				2010-04-20																			</td>
+																			<td>
+																				科技活动																			</td>
+																			<td>
+																				校级																			</td>
+																			<td>
+																				无																			</td>
+																			<td>
+																				无																			</td>
+																			<td>
+																				30分																			</td>
+																		</tr>
+																		<tr bgcolor="#FFFFFF">
+																		  <td><input type="checkbox" name="delid3" /></td>
+
+																			<td>
+																				<a href="listmokuaimingxi.htm" onclick=""></a>20101428																			</td>
+																			<td>
+																				陈鹏																			</td>
+																			<td>
+																				软件学院																			</td>
+																			<td>
+																				软件开发																			</td>
+																			<td>
+																				软件1001																			</td>
+																			<td>
+																				软件创新设计大赛																			</td>
+																			<td>
+																				2010-04-20																			</td>
+																			<td>
+																				科技活动																			</td>
+																			<td>
+																				校级																			</td>
+																			<td>
+																				无																			</td>
+																			<td>
+																				无																			</td>
+																			<td>
+																				20分																			</td>
+																		</tr>
+																		<tr bgcolor="#FFFFFF">
+																		  <td><input type="checkbox" name="delid4" /></td>
+
+																			<td>
+																				<a href="listmokuaimingxi.htm" onclick=""></a>20101428																			</td>
+																			<td>
+																				陈鹏																			</td>
+																			<td>
+																				软件学院																			</td>
+																			<td>
+																				软件开发																			</td>
+																			<td>
+																				软件1001																			</td>
+																			<td>
+																				软件创新设计大赛																			</td>
+																			<td>
+																				2010-04-20																			</td>
+																			<td>
+																				科技活动																			</td>
+																			<td>
+																				校级																			</td>
+																			<td>
+																				无																			</td>
+																			<td>
+																				无																			</td>
+																			<td>
+																				无																			</td>
+																		</tr>
+																		<tr bgcolor="#FFFFFF">
+																		  <td><input type="checkbox" name="delid5" /></td>
+
+																			<td>
+																				<a href="listmokuaimingxi.htm" onclick=""></a>20101428																			</td>
+																			<td>
+																				陈鹏																			</td>
+																			<td>
+																				软件学院																			</td>
+																			<td>
+																				软件开发																			</td>
+																			<td>
+																				软件1001																			</td>
+																			<td>
+																				软件创新设计大赛																			</td>
+																			<td>
+																				2010-04-20																			</td>
+																			<td>
+																				科技活动																			</td>
+																			<td>
+																				校级																			</td>
+																			<td>
+																				无																			</td>
+																			<td>
+																				无																			</td>
+																			<td>
+																				无																			</td>
+																		</tr>
+																		<tr bgcolor="#FFFFFF">
+																		  <td><input type="checkbox" name="delid6" /></td>
+
+																			<td>
+																				<a href="listmokuaimingxi.htm" onclick=""></a>20101428																			</td>
+																			<td>
+																				陈鹏																			</td>
+																			<td>
+																				软件学院																			</td>
+																			<td>
+																				软件开发																			</td>
+																			<td>
+																				软件1001																			</td>
+																			<td>
+																				软件创新设计大赛																			</td>
+																			<td>
+																				2010-04-20																			</td>
+																			<td>
+																				科技活动																			</td>
+																			<td>
+																				校级																			</td>
+																			<td>
+																				无																			</td>
+																			<td>
+																				无																			</td>
+																			<td>
+																				无																			</td>
+																		</tr>
+																		<tr class="advanceHistory2" bgcolor="#FFFFFF">
+                                                                  <td colspan="6"><span class="STYLE1"></span></td>
+                                                                  <td><span class="STYLE2">数学建模</span></td>
+                                                                  <td><span class="STYLE2">2012-02-06</span></td>
+                                                                  <td><span class="STYLE2">科技活动</span></td>
+																  <td><span class="STYLE2">省级</span></td>
+																  <td colspan="2"></td>
+																  <td><span class="STYLE2">30分</span></td>
+                                                                </tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+														<table width="95%" border="0" align="center"
+															cellpadding="0" cellspacing="0">
+															<tr>
+																<td height="6">
+																	<img src="../../images/spacer.gif" width="1" height="1" />
+																</td>
+															</tr>
+															<tr>
+																<td height="33">
+																	<table width="100%" border="0" align="center"
+																		cellpadding="0" cellspacing="0" class="right-font08">
+																		<tr>
+																			<td width="50%">
+																				共
+																				<span class="right-text09">5</span> 页 | 第
+																				<span class="right-text09">1</span> 页
+																			</td>
+																			<td width="49%" align="right">
+																				[
+																				<a href="#" class="right-font08">首页</a> |
+																				<a href="#" class="right-font08">上一页</a> |
+																				<a href="#" class="right-font08">下一页</a> |
+																				<a href="#" class="right-font08">末页</a>] 转至：
+																			</td>
+																			<td width="1%">
+																				<table width="20" border="0" cellspacing="0"
+																					cellpadding="0">
+																					<tr>
+																						<td width="1%">
+																							<input name="textfield3" type="text"
+																								class="right-textfield03" size="1" />
+																						</td>
+																						<td width="87%">
+																							<input name="Submit23222" type="submit"
+																								class="right-button06" value=" " />
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div id="add" style="display: none">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td>
+										<div id="lurubiao" style="margin-left: 10px">
+											<table width="99%" border="0" cellpadding="0" cellspacing="0"
+												class="CContent">
+												<tr>
+													<th class="tablestyle_title">
+														当前位置：临时录入页面！ 班级50人，录入5人。
+													</th>
+												</tr>
+												<tr>
+													<td class="CPanel">
+														<table width="100%" border="0" align="center"
+															cellpadding="0" cellspacing="0">
+															<tr>
+																<td height="40" class="font42">
+																	<table width="100%" border="0" cellpadding="4"
+																		cellspacing="1" bgcolor="#464646" class="newfont03">
+																		<tr class="CTitle">
+																			<td height="22" colspan="13" align="center"
+																				style="font-size: 16px">
+																				活动临时表
+																			</td>
+																		</tr>
+																		<tr bgcolor="#EEEEEE">
+																			<td width="7%" align="center" height="20px">
+																				<input type="checkbox" name="delid" />
+																				全选
+																			</td>
+																			<td width="8%">
+																				学号
+																			</td>
+																			<td width="7%">
+																				姓名
+																			</td>
+																			<td width="7%">
+																				学院
+																			</td>
+																			<td width="8%">
+																				专业
+																			</td>
+																			<td width="7%">
+																				班级
+																			</td>
+																			<td width="13%">
+																				项目
+																			</td>
+																			<td width="9%">
+																				获奖时间
+																			</td>
+																			<td width="8%">
+																				类别
+																			</td>
+																			<td width="5%">
+																				性质
+																			</td>
+																			<td width="7%">
+																				职位(前)
+																			</td>
+																			<td width="7%">
+																				职位(现)
+																			</td>
+																			<td width="7%">
+																				活动奖励
+																			</td>
+																		</tr>
+																		<tr bgcolor="#FFFFFF">
+																			<td height="20">
+																				<input type="checkbox" name="delid" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				陈鹏
+																			</td>
+																			<td>
+																				软件学院
+																			</td>
+																			<td>
+																				软件开发
+																			</td>
+																			<td>
+																				软件1001
+																			</td>
+																			<td>
+																				<input type="text" size="18" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" class="datepicker" />
+																			</td>
+																			<td>
+																				科技活动
+																			</td>
+																			<td>
+																				校级
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																		</tr>
+																			<tr bgcolor="#FFFFFF">
+																			<td height="20">
+																				<input type="checkbox" name="delid" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				陈鹏
+																			</td>
+																			<td>
+																				软件学院
+																			</td>
+																			<td>
+																				软件开发
+																			</td>
+																			<td>
+																				软件1001
+																			</td>
+																			<td>
+																				<input type="text" size="18" />
+																			</td>
+																			<td>
+																		<input type="text" size="10" class="datepicker" />
+																			</td>
+																			<td>
+																				科技活动
+																			</td>
+																			<td>
+																				校级
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																		</tr>
+																		<tr bgcolor="#FFFFFF">
+																			<td height="20">
+																				<input type="checkbox" name="delid" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				陈鹏
+																			</td>
+																			<td>
+																				软件学院
+																			</td>
+																			<td>
+																				软件开发
+																			</td>
+																			<td>
+																				软件1001
+																			</td>
+																			<td>
+																				<input type="text" size="18" />
+																			</td>
+																			<td><input type="text" size="10" class="datepicker" />
+																			</td>
+																			<td>
+																				科技活动
+																			</td>
+																			<td>
+																				校级
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																		</tr>
+																		<tr bgcolor="#FFFFFF">
+																			<td height="20">
+																				<input type="checkbox" name="delid" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				陈鹏
+																			</td>
+																			<td>
+																				软件学院
+																			</td>
+																			<td>
+																				软件开发
+																			</td>
+																			<td>
+																				软件1001
+																			</td>
+																			<td>
+																				<input type="text" size="18" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				科技活动
+																			</td>
+																			<td>
+																				校级
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																		</tr>
+																		<tr bgcolor="#FFFFFF">
+																			<td height="20">
+																				<input type="checkbox" name="delid" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				陈鹏
+																			</td>
+																			<td>
+																				软件学院
+																			</td>
+																			<td>
+																				软件开发
+																			</td>
+																			<td>
+																				软件1001
+																			</td>
+																			<td>
+																				<input type="text" size="18" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				科技活动
+																			</td>
+																			<td>
+																				校级
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																			<td>
+																				<input type="text" size="10" />
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="2" align="center" height="30px">
+																	<input type="button" name="Submit" value="保存"
+																		class="button" onclick="link();" />
+																	<input type="button" name="Submit2" value="返回"
+																		class="button" onclick="window.history.go(-1);" />
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+			<script src="../../js/date.js">
+</script>
+</html>
+

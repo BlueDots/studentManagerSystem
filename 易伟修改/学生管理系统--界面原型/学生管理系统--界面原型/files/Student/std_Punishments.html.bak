@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>奖助学金</title>
+<link rel="stylesheet" rev="stylesheet" href="../../css/style.css"
+			type="text/css" media="all" />
+<style type="text/css">
+.STYLE1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+div {
+	font-size: 16px
+}
+</style>
+</head>
+
+<body>
+      <div id="lurubiao" style="margin-left:10px">
+					<table width="99%" border="0" cellpadding="0" cellspacing="4"
+						class="CContent">
+						<th class="tablestyle_title">
+								奖助学信息
+						 <input type="button" name="Otput" value="导出"
+									onclick="alert('导出成功！');" />
+						 </th>
+						</tr>
+						<tr>
+						<td>
+	<table width="100%" border="1" cellpadding="4" cellspacing="1" class="newfont03">
+        <tr>
+            <td width="20%" bgcolor="#FFFFFF"><div align="center" class="STYLE9"><b>受处分时间</b> </div></td>
+            <td width="20%" bgcolor="#FFFFFF"><div align="center" class="STYLE9"><b>受处分等级</b> </div></td>
+            <td width="20%" bgcolor="#FFFFFF"><div align="center" class="STYLE9"><b>解除处分时间</b></div></td>
+            <td width="20%" bgcolor="#FFFFFF"><div align="center" class="STYLE9"><b>受处分原因</b> </div></td>
+			<td width="20%" bgcolor="#FFFFFF"><div align="center" class="STYLE9"><b>解除原因</b> </div></td>
+            </tr>
+          <tr height = 35 >
+            <td bgcolor="#FFFFFF"><div align="center"  class="STYLE9">2011-03-04 </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">学院</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">2011-09-08</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">打架</div></td>
+			<td bgcolor="#FFFFFF"><div align="center" class="STYLE9">表现良好</div></td>
+            </tr>
+           <tr height = 35 >
+            <td bgcolor="#FFFFFF"><div align="center"  class="STYLE9">2011-03-04 </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">校级 </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">2011-09-08</div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9">打架 </div></td>
+			<td bgcolor="#FFFFFF"><div align="center" class="STYLE9">表现良好</div></td>
+            </tr>
+           <tr height = 35 >
+            <td bgcolor="#FFFFFF"><div align="center"  class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"> </div></td>
+			<td bgcolor="#FFFFFF"><div align="center" class="STYLE9"> </div></td>
+            </tr>
+          <tr height = 35 >
+            <td bgcolor="#FFFFFF"><div align="center"  class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"> </div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"></div></td>
+            <td bgcolor="#FFFFFF"><div align="center" class="STYLE9"> </div></td>
+			<td bgcolor="#FFFFFF"><div align="center" class="STYLE9"> </div></td>
+            </tr>            
+      </table>
+	  </td>
+	</tr>
+   </table>   
+    </td>
+   </tr>  
+   </table>
+   </div>
+</body>
+</html>

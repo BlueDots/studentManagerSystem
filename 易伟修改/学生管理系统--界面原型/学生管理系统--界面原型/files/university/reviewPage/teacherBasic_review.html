@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>教师基本信息</title>
+		<link href="../../../css/css.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/school/tanchu.css">
+		<link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../../../css/arrow.css" rel="stylesheet" type="text/css" />
+		<script src="../../../js/jquery-1.10.2.min.js"></script>
+		<script src="../../../js/jquery-1.10.2.js"></script>
+		<script src="../../../js/testSearch.js"></script>
+		<script src="../../../js/provincesdata.js"></script>
+		<script src="../../../js/jquery.provincesCity.js"></script>
+		<script src="../../../js/jquery.chromatable.js"></script>
+		<script type="text/javascript" src="../../../js/school/jquery-1.10.2-vsdoc2.js"></script>
+		<script type="text/javascript" src="../../../js/school/school.js"></script>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+.demo{border:solid 1px #D5D5D5;border-collapse:collapse;width:100%;}
+.demo td{border:1px solid #D5D5D5;font-size:12px;padding:7px 15px;}
+.demo th{background-color:#EEE;border-right:1px solid #D5D5D5;font-size:13.5px;line-height:120%;font-weight:bold;padding:8px 5px;text-align:left;}
+</style>
+	
+</head>
+
+			
+	<body> 
+		<form name="fom" id="fom" method="post" action="">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+				<tr>
+					<td height="30">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="62" background="../../../images/nav04.gif">
+
+									<table width="100%" border="0" align="center" cellpadding="0"
+										cellspacing="0">
+										<tr>
+											<td width="21">
+												<img src="../../../images/ico07.gif" width="20" height="18" />
+											</td>
+											<td width="538">
+												<span class="collegeName">学院
+												<select name="college" size="1" id="collegeId">
+													<option value="selected">
+														请选择学院
+													</option>
+													<option value="agri_college">
+														农学院
+													</option>
+													<option value="garden_art">
+														园林与艺术学院
+													</option>
+													<option value="animal_science_tech">
+														动物科学技术学院
+													</option>
+													<option value="engin_college">
+														工学院
+													</option>
+													<option value="science_college">
+														理学院
+													</option>
+													<option value="land_resources">
+														国土资源与环境学院
+													</option>
+													<option value=" computer_information">
+														计算机与信息工程学院
+													</option>
+													<option value=" economics_management">
+														经济管理学院
+													</option>
+													<option value="food_science_engin">
+														食品科学与工程学院
+													</option>
+													<option value="normal_college">
+														职业师范（技术）学院
+													</option>
+													<option value="biological_science_engine">
+														生物科学与工程学院
+													</option>
+													<option value="foreign_languages">
+														外国语学院
+													</option>
+													<option value="software">
+														软件学院
+													</option>
+													<option value="marxism_college">
+														马克思主义学院
+													</option>
+													<option value="continu_education">
+														继续教育学院
+													</option>
+												</select>
+												</span>
+												<span class="majorName">专业方向
+												<select name="major" id="majorId">
+													<option value="selected">
+														请选择专业方向
+													</option>
+												</select>
+												</span>
+												<input name="condition" type="text" size="20" value="请输入教师编号或者姓名"/>
+												<input name="find" type="button" class="right-button02"
+													value="查询" />
+												&nbsp;&nbsp;排序
+												<select name="rank">
+													<option>
+														教师编号升序
+													</option>
+													<option>
+														教师编号降序
+													</option>
+													
+												</select>
+													 
+											</td>
+											<td width="47" align="center">
+												<div class="suckerdiv" style="padding-right:-20px">
+													<ul id="suckertree1">
+														<li>
+															<a href="#">信息管理</a>
+															<ul>
+																<li>
+																	<a>审核</a>
+																		<ul>
+																			<li>
+																				<a onclick=''>审核通过</a>
+																			</li>
+																			<li>
+																				<a onclick=''>审核不通过</a>
+																			</li>
+																		</ul>
+																	</li>
+																<li>
+																	<a>录入</a>
+																		<ul>
+																			<li>
+																				<a onclick="manually()" id='manuallyId'>手动录入</a>
+																			</li>
+																			<li>
+																				<a onclick='import()' id='importId'>导入</a>
+																			</li>
+																		</ul>
+																</li>
+															</ul>
+														</li>																  
+													</ul>
+												</div>
+											</td>
+											<td width="77" align="center" style="padding-right:-30px">
+												<input name="advanced_search" type="button" class="right-button07" value="高级搜索" onclick="popup('#advancedDiv', '#advancedSearchDiv', '#CloseadvancedSearch')" id='advancedBtn' /> 
+											</td>
+											<td width="77" align="center" style="padding-right:-100px">
+											<input name="export" type="button" class="right-button07" value="导出" onclick="exportData()"/>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="allbasicMsg">
+							<table id="subtree1" width="100%" border="0"
+								cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="CPanel">
+										<div id="liulanbiao" style="margin-left: 10px, display: block">
+											<table width="99%" border="0" cellpadding="0" cellspacing="0"
+												class="CContent">
+												<tr>
+													<th class="tablestyle_title">
+														当前位置:<a href="../mainfra.html">首页</a>---><a href="../sch_teacherBasicInfo.html">教师基本信息查询</a>---><font color="red">教师基本信息审核</font>
+													</th>
+												</tr>
+												<tr>
+													<td class="CPanel">
+														<table width="96%" border="0" align="center"
+															cellpadding="0" cellspacing="0">
+															<tr>
+																<td height="40" class="font42">
+																	<table width="100%" border="0" cellpadding="4"
+																		cellspacing="1" bgcolor="#464646" class="demo" id="tableID" ><thead>															<tr class="CTitle">
+																			<td height="22" colspan="12" align="center"
+																				style="font-size: 16px">
+																				教师基本基本信息表
+																			</td>
+																		</tr>
+																		<tr bgcolor="#EEEEEE">
+																			<td><input type='checkbox'/>&nbsp;&nbsp;<span id='softvareId'>软件学院<font color='red'>(点击查看详细信息,共1条记录)</font></span></td>
+																		</tr>
+																		<tr id='1101tr' bgcolor="#FFFFFF" style="display:none">
+																			<td>
+																				<table width="100%" border="0" cellpadding="4"
+																					cellspacing="1" bgcolor="#464646" class="demo" id="tableID" ><thead>
+																					<tr>
+																						<th class="tablestyle_title" colspan='14'>
+																							<font color='green'>软件学院共提交了10条教师记录！其中女老师5条，男老师5条！</font>
+																						</th>
+																					</tr>
+																					 <tr bgcolor="#EEEEEE">
+																					 	 <td width="7%">选择<input type='checkbox'/></td>
+																					 	 <td width="10%">教师编号</td>
+						                                                                 <td width="7%">姓名</td>
+						                                                                 <td width="7%">性别</td>
+						                                                                 <td width="7%">民族</td>
+						                                                                 <td width="7%">籍贯</td>
+						                                                                 <td width="10%">政治面貌</td>
+						                                                                 <td width="7%">部门</td>
+						                                                                 <td width="10%">在岗状态</td>
+						                                                                 <td width="10%">教师职称</td>
+						                                                                 <td width="10%">职称评定时间</td>
+						                                                                 <td width="10%">工作时间</td>
+						                                                                 <td width="7%">学历</td>
+						                                                                 <td width="7%">状态</td>
+						                                                            </tr>
+						                                                            <tr bgcolor="#FFFFFF">
+					                                                                  <td width="7%"><input type='checkbox'/></td>
+																					 	 <td width="10%">2345</td>
+						                                                                 <td width="7%">旮旯子</td>
+						                                                                 <td width="7%">男</td>
+						                                                                 <td width="7%">汉</td>
+						                                                                 <td width="7%">江西</td>
+						                                                                 <td width="10%">团员</td>
+						                                                                 <td width="7%">蓝点</td>
+						                                                                 <td width="10%">在职</td>
+						                                                                 <td width="10%">程序员</td>
+						                                                                 <td width="10%">2013/2/2</td>
+						                                                                 <td width="10%">2年</td>
+						                                                                 <td width="7%">本科</td>
+						                                                                 <td width="7%">待审核</td>
+					                                                                </tr>
+					                                                                
+																				</table>
+																			</td>
+																		</tr>
+																		
+																		<tr bgcolor="#EEEEEE">
+																			<td><input type='checkbox'/>&nbsp;&nbsp;<span id='agricultureId'>农学院<font color='red'>(当前无记录)</font></span></td>
+																			
+																		</tr>
+																		
+																	</table>
+
+																</td>
+															</tr>
+														</table>
+														<table width="95%" border="0" align="center"
+															cellpadding="0" cellspacing="0">
+															<tr>
+																<td height="6">
+																	<img src="../../images/spacer.gif" width="1" height="1" />
+																</td>
+															</tr>
+															<tr>
+																<td height="33">
+																	<table width="100%" border="0" align="center"
+																		cellpadding="0" cellspacing="0" class="right-font08">
+																		<tr>
+																			<td width="50%">
+																				共
+																				<span class="right-text09">5</span> 页 | 第
+																				<span class="right-text09">1</span> 页
+																			</td>
+																			<td width="49%" align="right">
+																				[
+																				<a href="#" class="right-font08">首页</a> |
+																				<a href="#" class="right-font08">上一页</a> |
+																				<a href="#" class="right-font08">下一页</a> |
+																				<a href="#" class="right-font08">末页</a>] 转至
+																			</td>
+																			<td width="1%">
+																				<table width="20" border="0" cellspacing="0"
+																					cellpadding="0">
+																					<tr>
+																						<td width="1%">
+																							<input name="textfield3" type="text"
+																								class="right-textfield03" size="1" />
+																						</td>
+																						<td width="87%">
+																							<input name="Submit23222" type="submit"
+																								class="right-button06" value=" " />
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						
+					</td>
+				</tr>
+			</table>
+		</form>
+		
+
+    	<form name="fom" id="fom" method="post" action="">
+    	<div id="advancedDiv" style="display: none"></div>
+    		<div id="advancedSearchDiv" style="display: none">
+             	<h2>高级查询选项<a href="#" id="CloseadvancedSearch">关闭</a></h2>
+        	<div class="form">
+            	<table width="50%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="demo" id="advancedSearchTab" ><thead>
+            
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%' name='projectName'> 
+					    	性别
+					    </td>
+					    <td width='35%' name='sex'> 
+					    	<input name="sex" type="radio" value="sex" checked />男 
+							<input name="sex" type="radio" value="sex" />女
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%' name='projectName'> 
+					    	名族
+					    </td>
+					    <td width='35%' name='nation'> 
+					    	<select>
+					    		<option>汉族</option>
+					    		<option>满族</option>
+					    		<option>傣族</option>
+					    		<option>高山族</option>
+					    	</select>	
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%'> 
+					    	学历
+					    </td >
+					    <td width='35%' name='nation'> 
+					  		 <select>
+					    		<option>专科</option>
+					    		<option>本科</option>
+					    	</select>	
+					    </td>
+					</tr>
+					
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%' name='projectName'> 
+					    	政治面貌
+					    </td>
+					    <td width='35%' name='politics'> 
+					    	<select>
+					    		<option>共青团员</option>
+					    		<option>中共预备党员</option>
+					    		<option>中共党员</option>
+					    		<option>群众</option>
+					    	</select>	
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%' name='projectName'> 
+					    	籍贯
+					    </td>
+					    <td width='35%' name='birthplace'> 
+					    	<select>
+					    		<option>南昌市</option>
+					    		<option>赣州市</option>
+					    		<option>宜春市</option>
+					    		<option>高安市</option>
+					    	</select>	
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%' name='projectName'> 
+					    	部门
+					    </td>
+					    <td width='35%' name='birthplace'> 
+					    	<select>
+					    		<option>农学院</option>
+					    		<option>软件院</option>
+					    		<option>教务处</option>
+					    		<option>学工处</option>
+					    	</select>	
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%' name='projectName'> 
+					    	在岗状态
+					    </td>
+					    <td width='35%' name='birthplace'> 
+					    	<select>
+					    		<option>已离职</option>
+					    		<option>在岗</option>
+					    	</select>	
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+					    <td width='15%' name='projectName'> 
+					    	教师职称
+					    </td>
+					    <td width='35%' name='birthplace'> 
+					    	<select>
+					    		<option>教授</option>
+					    		<option>副教授</option>
+					    		<option>讲师</option>
+					    		<option>助教</option>
+					    		<option>研究员</option>
+					    		<option>副研究员</option>
+					    		<option>高级实验师</option>
+					    		<option>助理研究员</option>
+					    		<option>助理工程师</option>
+					    	</select>	
+					    </td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+						<td colspan="2"><input type="button" value="查询"/></td>
+					</tr>
+            	</table>
+        	</div>
+    	</div>
+    </form>
+	</body>
+</html>

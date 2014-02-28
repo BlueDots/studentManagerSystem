@@ -1,0 +1,303 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>学生工作管理系统</title>
+	
+		<link href="../../css/css.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/arrow.css" rel="stylesheet" type="text/css" />
+ 
+</head>
+
+	 
+	<script src="../../js/jquery-1.7.2.min.js"></script>
+	<script src="../../js/testSearch.js"></script>
+	<script src="../../js/jquery-ui-1.8.21.custom.min.js"></script>
+	
+	<body >
+		<form name="fom" id="fom" method="post" action="">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+				<tr>
+					<td height="30">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="62" background="../../images/nav04.gif">
+
+									<table width="98%" border="0" align="center" cellpadding="0"
+										cellspacing="0">
+										<tr>
+										  <td width="538">
+											  教师编号：<font color="red">201</font> &nbsp;&nbsp;
+											  教师姓名：<font color="red">艾老师</font>&nbsp;&nbsp;
+											  教师性别：<FONT color="red">男</font>&nbsp;&nbsp;
+											  教师最高职位：<font color="red">院级工作人员</font>
+					
+										  </td>
+										  </tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+			<!--这事显示录入人员的表格-->
+						<div id="add"  >
+						<form>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td>
+										<div id="lurubiao" style="margin-left: 10px">
+											<table width="99%" border="0" cellpadding="0" cellspacing="0"
+												class="CContent">
+												<tr>
+													<th class="tablestyle_title">
+														 当前位置： <a href="#" style="color:red;">权限管理</a>>> <a href="./admin_powerManager.html" style="color:red">查看权限信息</a>>><a style="color:red;" href="#">添加权限</a> 
+													</th>
+												</tr>
+												<tr>
+													<td class="CPanel">
+														<table width="100%" border="0" align="center"
+															cellpadding="0" cellspacing="0">
+															<tr>
+										               <!--添加权限的表格-->
+																<td height="40" class="font42">
+																	<table width="100%" border="0" cellpadding="4"
+																		cellspacing="1" bgcolor="#464646" class="newfont03">
+																		<tr class="CTitle">
+																			<td height="22" colspan="13" align="center"
+																				style="font-size: 16px">
+																				权限填加表
+																			</td>
+																		</tr>
+																		<tr bgcolor="#EEEEEE">
+																			 
+																			<td  >
+																			  序号
+																			</td>
+																			<td >
+																			  模块名
+																			</td>
+																			<td>
+																				子权限名
+																			</td>
+
+																		</tr>
+																		<tr bgcolor="#FFFFFF">
+																			 
+																			<td>
+																				1
+																			</td>
+																			<td>
+																				<input type="checkbox">
+																		  学生信息管理
+																			</td>
+																			<td>
+																			    <input type="checkbox">创建
+																			    <input type="checkbox">修改
+																			    <input type="checkbox">删除
+																			    <input type="checkbox">查询
+																			    <input type="checkbox">导入
+																			    <input type="checkbox">导出
+																			    <input type="checkbox">其他
+																			</td>
+																		
+																		</tr>
+																		<tr bgcolor="#FFFFFF">
+																			 
+																			<td>
+																				2
+																			</td>
+																			<td>
+																				<input type="checkbox">
+																		  活动管理
+																			</td>
+																			<td>
+																			    <input type="checkbox">创建
+																			    <input type="checkbox">修改
+																			    <input type="checkbox">删除
+																			    <input type="checkbox">查询
+																			    <input type="checkbox">导入
+																			    <input type="checkbox">导出
+																			    <input type="checkbox">其他
+																			</td>
+																		
+																		</tr>
+																								<tr bgcolor="#FFFFFF">
+																			 
+																			<td>
+																				3
+																			</td>
+																			<td>
+																				<input type="checkbox">
+																		  评优评优评先管理
+																			</td>
+																			<td>
+																			    <input type="checkbox">创建
+																			    <input type="checkbox">修改
+																			    <input type="checkbox">删除
+																			    <input type="checkbox">查询
+																			    <input type="checkbox">导入
+																			    <input type="checkbox">导出
+																			    <input type="checkbox">其他
+																			</td>
+																		
+																		</tr>
+<tr bgcolor="#FFFFFF">
+																			 
+																			<td>
+																				4
+																			</td>
+																			<td>
+																				<input type="checkbox">
+																		  奖助学金信息管理
+																			</td>
+																			<td>
+																			    <input type="checkbox">创建
+																			    <input type="checkbox">修改
+																			    <input type="checkbox">删除
+																			    <input type="checkbox">查询
+																			    <input type="checkbox">导入
+																			    <input type="checkbox">导出
+																			    <input type="checkbox">其他
+																			</td>
+																		
+																		</tr>
+<tr bgcolor="#FFFFFF">
+																			 
+																			<td>
+																				5
+																			</td>
+																			<td>
+																				<input type="checkbox">
+																		  处分信息管理
+																			</td>
+																			<td>
+																			    <input type="checkbox">创建
+																			    <input type="checkbox">修改
+																			    <input type="checkbox">删除
+																			    <input type="checkbox">查询
+																			    <input type="checkbox">导入
+																			    <input type="checkbox">导出
+																			    <input type="checkbox">其他
+																			</td>
+																		
+																		</tr>
+<tr bgcolor="#FFFFFF">
+																			 
+																			<td>
+																				6
+																			</td>
+																			<td>
+																				<input type="checkbox">
+																		  学籍变动信息管理
+																			</td>
+																			<td>
+																			    <input type="checkbox">创建
+																			    <input type="checkbox">修改
+																			    <input type="checkbox">删除
+																			    <input type="checkbox">查询
+																			    <input type="checkbox">导入
+																			    <input type="checkbox">导出
+																			    <input type="checkbox">其他
+																			</td>
+																		
+																		</tr>
+<tr bgcolor="#FFFFFF">
+																			 
+																			<td>
+																				7
+																			</td>
+																			<td>
+																				<input type="checkbox">
+																		  就业信息管理
+																			</td>
+																			<td>
+																			    <input type="checkbox">创建
+																			    <input type="checkbox">修改
+																			    <input type="checkbox">删除
+																			    <input type="checkbox">查询
+																			    <input type="checkbox">导入
+																			    <input type="checkbox">导出
+																			    <input type="checkbox">其他
+																			</td>
+																		
+																		</tr>
+<tr bgcolor="#FFFFFF">
+																			 
+																			<td>
+																				8
+																			</td>
+																			<td>
+																				<input type="checkbox">
+																		  贫困生建档管理
+																			</td>
+																			<td>
+																			    <input type="checkbox">创建
+																			    <input type="checkbox">修改
+																			    <input type="checkbox">删除
+																			    <input type="checkbox">查询
+																			    <input type="checkbox">导入
+																			    <input type="checkbox">导出
+																			    <input type="checkbox">其他
+																			</td>
+																		
+																		</tr>
+											<tr bgcolor="#FFFFFF">
+																			 
+																			<td>
+																				9
+																			</td>
+																			<td>
+																				<input type="checkbox">
+																		  医疗保险管理
+																			</td>
+																			<td>
+																			    <input type="checkbox">创建
+																			    <input type="checkbox">修改
+																			    <input type="checkbox">删除
+																			    <input type="checkbox">查询
+																			    <input type="checkbox">导入
+																			    <input type="checkbox">导出
+																			    <input type="checkbox">其他
+																			</td>
+																		
+																		</tr>
+
+																	</table>
+																</td>
+															</tr>
+															<tr>
+																<td colspan="2" align="center" height="30px">
+																	<input type="button" name="Submit" value="保存"
+																		class="button" onclick="link();" />
+																    <input type="button" name="Submit" value="提交"
+																		class="button" onclick="link();" />
+																	<input type="button" name="Submit2" value="返回"
+																		class="button" onclick="window.history.go(-1);" />
+																</td>
+															</tr>
+														</table>
+							                         </form>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+			<script src="../../js/date.js">
+</script>
+</html>
+

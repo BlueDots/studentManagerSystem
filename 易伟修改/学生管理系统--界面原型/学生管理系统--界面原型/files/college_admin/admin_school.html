@@ -1,0 +1,323 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>学生工作管理系统</title>
+	
+		<link href="../../css/css.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/arrow.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript">
+
+var menuids = [ "suckertree1" ]
+
+function buildsubmenus() {
+	for ( var i = 0; i < menuids.length; i++) {
+		var ultags = document.getElementById(menuids[i]).getElementsByTagName(
+				"ul")
+		for ( var t = 0; t < ultags.length; t++) {
+			ultags[t].parentNode.getElementsByTagName("a")[0].className = "subfolderstyle"
+			ultags[t].parentNode.onmouseover = function() {
+				this.getElementsByTagName("ul")[0].style.display = "block"
+			}
+			ultags[t].parentNode.onmouseout = function() {
+				this.getElementsByTagName("ul")[0].style.display = "none"
+			}
+		}
+	}
+}
+
+if (window.addEventListener)
+	window.addEventListener("load", buildsubmenus, false)
+else if (window.attachEvent)
+	window.attachEvent("onload", buildsubmenus)</script>
+	</head>
+
+	<script language=JavaScript>
+function sousuo() {
+	window
+			.open(
+					"gaojisousuo.htm",
+					"",
+					"depended=0,alwaysRaised=1,width=800,height=510,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
+}
+function selectAll() {
+	var obj = document.fom.elements;
+	for ( var i = 0; i < obj.length; i++) {
+		if (obj[i].name == "delid") {
+			obj[i].checked = true;
+		}
+	}
+}
+
+function unselectAll() {
+	var obj = document.fom.elements;
+	for ( var i = 0; i < obj.length; i++) {
+		if (obj[i].name == "delid") {
+			if (obj[i].checked == true)
+				obj[i].checked = false;
+			else
+				obj[i].checked = true;
+		}
+	}
+}
+
+function link() {
+	document.getElementById("fom").action = "../addrenwu.htm";
+	document.getElementById("fom").submit();
+}
+</script>
+
+
+	<script src="../../js/jquery-1.7.2.min.js">
+</script>
+	<script src="../../js/testSearch.js">
+	</script>
+		<script src="../../js/jquery-ui-1.8.21.custom.min.js">
+		</script>
+<script language=JavaScript>
+ function addClickListenrInaddZhuanyeLink(){
+    $("#addZhuanyeFrame").toggle();
+    
+   
+}
+ 	
+	function add(){	
+		$("#addSpecialty").toggle();	
+	}	
+	
+	function deleteSpecialty(){
+			
+		confirm("确定删除该专业？");
+	}
+	function updateZhuanye(){
+	    $("#updateZhuanye").toggle();
+	}
+	
+
+</script>	
+	<body >
+		<form name="fom" id="fom" method="post" action="">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+				<tr>
+					<td height="30">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="62" background="../../images/nav04.gif">
+
+						  
+		   <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+		    	<tr>
+			  		<td width="21"><img src="../../images/ico07.gif" width="20" height="18" /></td>
+			  		
+			  		<td width="538">
+							  <b>学院</b> 
+							  
+							  <select name="学院" class="span2" style="width:120px;height:30px;">
+							  	<option>农学院</option>
+							  	
+								</select>
+								      
+						</td>
+
+						<td>
+												<div class="suckerdiv">
+													<ul id="suckertree1">
+														<li>
+															<a href="#">专业管理</a>
+																<ul>
+																		
+																	<li>
+																		<a href="#" onclick="updateZhuanye()">编辑专业</a>
+																	</li>
+																	
+																	<li>
+																		<a href="#" onclick="addClickListenrInaddZhuanyeLink()">添加新专业</a>
+																	</li>
+																</ul>
+															</a>
+														</li>
+													</ul>
+												</div>
+						</td>
+						
+			   		<td width="144" align="left"><a href="#" onclick="sousuo()">
+			     			<input name="Submit3" type="button" class="right-button07" value="高级搜索" />
+			   		</td>	
+		    	</tr>
+		    </table>					</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="allbasicMsg" style="display: block">
+							<table id="subtree1" style="DISPLAY: " width="100%" border="0"
+								cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="CPanel">
+										<div id="liulanbiao" style="margin-left: 10px">
+											<table width="99%" border="0" cellpadding="0" cellspacing="0"
+												class="CContent">
+												<tr>
+													<th class="tablestyle_title">
+														 当前位置： <a href="#" style="color:red;">专业管理</a>>> <a href="./admin_jobManager.html" style="color:red">查看专业信息</a> 
+													</th>
+												</tr>
+												<tr>
+													<td class="CPanel">
+														<table width="100%" border="0" align="center"
+															cellpadding="0" cellspacing="0">
+
+															<tr>
+																<td height="40" class="font42">
+																	<table width="100%" border="0" cellpadding="4"
+																		cellspacing="1" bgcolor="#464646" class="newfont03">
+																		<tr class="CTitle">
+																			<td height="22" colspan="13" align="center"
+																				style="font-size: 16px">
+																				全院专业方向管理</td>
+																		</tr>
+																		<tr>
+            	<td width="5%" align="center" bgcolor="#EEEEEE"><input type="checkbox"></td>
+      			
+      				<td width="10%" align="center" bgcolor="#EEEEEE">专业id</td>
+      				<td width="25%" align="center" bgcolor="#EEEEEE">专业名称</td>
+	  					<td width="20%" align="center" bgcolor="#EEEEEE">专业简介</td>
+	  						 
+      				<td width="40%" align="center" bgcolor="#EEEEEE">操作</td>
+    				</tr>
+    				
+    				<tr align="center">
+    				<td bgcolor="#FFFFFF"><input type="checkBox"></td>
+      				<td bgcolor="#FFFFFF">01</td>
+      				<td bgcolor="#FFFFFF">软件开发</td>
+	  					<td bgcolor="#FFFFFF">软件开发</td>
+      				<td bgcolor="#FFFFFF"><a href="admin_college.html" target="mainFrame">查看班级</a>|<a href="#" onclick="updateZhuanye()">修改</a>|<a href="#" onclick="deleteZhuanye()">删除</a></td>
+    				</tr>
+    				
+	 					<tr align="center">
+				    <td bgcolor="#FFFFFF"><input type="checkBox"></td>
+      				
+				      <td bgcolor="#FFFFFF">02</td>
+				      <td bgcolor="#FFFFFF">数字媒体</td>
+					  	<td bgcolor="#FFFFFF">数媒</td>
+				      <td bgcolor="#FFFFFF"><a href="admin_college.html" target="mainFrame">查看班级</a>|<a href="#" onclick="updateZhuanye()">修改</a>|<a href="#" onclick="deleteZhuanye()">删除</a></td>
+    				</tr>
+    				
+	 					<tr align="center">
+				    <td bgcolor="#FFFFFF"><input type="checkBox"></td>
+      				
+				      <td bgcolor="#FFFFFF">03</td>
+				      <td bgcolor="#FFFFFF">嵌入式</td>
+					  	<td bgcolor="#FFFFFF">嵌入式</td>
+				      <td bgcolor="#FFFFFF"><a href="admin_college.html" target="mainFrame">查看班级</a>|<a href="#" onclick="updateZhuanye()">修改</a>|<a href="#" onclick="deleteZhuanye()">删除</a></td>
+    				</tr>
+            			
+																		</table>
+																</td>
+															</tr>
+														</table>
+														<table width="95%" border="0" align="center"
+															cellpadding="0" cellspacing="0">
+															<tr>
+																<td height="6">
+																	<img src="../../images/spacer.gif" width="1" height="1" />
+																</td>
+															</tr>
+															<tr>
+																<td height="33">
+																	<table width="100%" border="0" align="center"
+																		cellpadding="0" cellspacing="0" class="right-font08">
+																		<tr>
+																			<td width="50%">
+																				共
+																				<span class="right-text09">5</span> 页 | 第
+																				<span class="right-text09">1</span> 页
+																			</td>
+																			<td width="49%" align="right">
+																				[
+																				<a href="#" class="right-font08">首页</a> |
+																				<a href="#" class="right-font08">上一页</a> |
+																				<a href="#" class="right-font08">下一页</a> |
+																				<a href="#" class="right-font08">末页</a>] 转至：
+																			</td>
+																			<td width="1%">
+																				<table width="20" border="0" cellspacing="0"
+																					cellpadding="0">
+																					<tr>
+																						<td width="1%">
+																							<input name="textfield3" type="text"
+																								class="right-textfield03" size="1" />
+																						</td>
+																						<td width="87%">
+																							<input name="Submit23222" type="submit"
+																								class="right-button06" value=" " />
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+				</tr>
+			</table>
+			<iframe id="addZhuanyeFrame" src="./admin_addZhuanye.html" frameborder="0" height="100%" width="100%" style="display:none;"></iframe>
+
+<br>
+              <table width="99%" border="0" cellpadding="0" cellspacing="0"
+						style="display:none;"					class="CContent" id="updateZhuanye">
+												 
+												 
+            <tr>
+              <td height="40" class="font42"><table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="newfont03">
+                 <tr class="CTitle" >
+                  	<td height="22" colspan="8" align="center" style="font-size:16px">全院专业方向管理</td>
+                 </tr>
+            </tr>
+            
+            <tr>
+      				<td width="15%" align="center" bgcolor="#EEEEEE">专业id</td>
+      				<td width="25%" align="center" bgcolor="#EEEEEE">专业名称</td>
+	  					<td width="20%" align="center" bgcolor="#EEEEEE">专业简介</td>
+	  						 
+      				<td width="40%" align="center" bgcolor="#EEEEEE">操作</td>
+    				</tr>
+    				
+    				<tr align="center">
+      				<td bgcolor="#FFFFFF">01</td>
+      				<td bgcolor="#FFFFFF"><input type="text"></td>
+	  					<td bgcolor="#FFFFFF"><input  type="text" ></td>
+      			<td bgcolor="#FFFFFF"><input  type="submit" ></td>
+    				</tr>
+    			 
+         			</td>
+       			</tr>
+       			 
+     			</table>
+    		</td>
+   		</tr>
+ 		</table>
+
+		</form>
+	</body>
+			<script src="../../js/date.js">
+</script>
+</html>
+

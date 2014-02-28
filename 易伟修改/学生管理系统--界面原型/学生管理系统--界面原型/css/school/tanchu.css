@@ -1,0 +1,767 @@
+body, h2
+        {
+            margin: 0;
+            padding: 0;
+        }
+        #
+        {
+            background-color: #e3e3e3;
+            position: absolute;
+            z-index: 99;
+            left: 0;
+            top: 0;
+            display: none;
+            width: 100%;
+            height: 1000px;
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+            -moz-opacity: 0.5;
+        }
+        
+	#projectProportionDiv
+        {
+            position: absolute;
+            width: 1000px;
+            left: 50%;
+            top: 50%;
+            margin-left: -500px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #projectProportionDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #projectProportionDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #projectProportionDiv .form 
+        {
+            padding: 10px;
+        }
+	
+	#advancedSearchDiv
+	{
+            position: absolute;
+            width: 500px;
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #advancedSearchDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #advancedSearchDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #advancedSearchDiv .form 
+        {
+            padding: 10px;
+        }
+
+	#CreditProportionDiv
+	{
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #CreditProportionDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #CreditProportionDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #CreditProportionDiv .form 
+        {
+            padding: 10px;
+        }
+
+	#ActivityTypeDiv
+	{
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #ActivityTypeDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #ActivityTypeDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #ActivityTypeDiv .form 
+        {
+            padding: 10px;
+        }
+
+	#AdvanceDetailsDiv
+	{
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #AdvanceDetailsDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #AdvanceDetailsDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #AdvanceDetailsDiv .form 
+        {
+            padding: 10px;
+        }
+
+	#setTimeDiv
+	{
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #setTimeDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #setTimeDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #setTimeDiv .form 
+        {
+            padding: 10px;
+        }
+
+	#AdvanceInfoDiv
+	{
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #AdvanceInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #AdvanceInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #AdvanceInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #SchoolShipDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #SchoolShipDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #SchoolShipDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #SchoolShipDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #setSchshipTimeDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #setSchshipTimeDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #setSchshipTimeDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #setSchshipTimeDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #SchoolshipInfoDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #SchoolshipInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #SchoolshipInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #SchoolshipInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #setPovertyLevelDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #setPovertyLevelDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #setPovertyLevelDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #setPovertyLevelDiv .form 
+        {
+            padding: 10px;
+        }
+
+         #setPovertyTimeDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #setPovertyTimeDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #setPovertyTimeDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #setPovertyTimeDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #setSchJobInfoDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #setSchJobInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #setSchJobInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #setSchJobInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #getSchStuBasicInfoDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #getSchStuBasicInfoDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #getSchStuBasicInfoDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #getSchStuBasicInfoDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #getAdvanceSearch
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #getAdvanceSearch h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #getAdvanceSearch h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #getAdvanceSearch .form 
+        {
+            padding: 10px;
+        }
+
+        #newPunishDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #newPunishDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #newPunishDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #newPunishDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #SchoolshipProportionDiv
+        {
+            position: absolute;
+            width: 800px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #SchoolshipProportionDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #SchoolshipProportionDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #SchoolshipProportionDiv .form 
+        {
+            padding: 10px;
+        }
+
+        #collegeProportionDiv
+        {
+            position: absolute;
+            width: 850px;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #collegeProportionDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #collegeProportionDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #collegeProportionDiv .form 
+        {
+            padding: 10px;
+        }
+
+         #acceptResultDiv
+        {
+            position: absolute;
+            width: 600px;
+            left: 50%;
+            top: 50%;
+            margin-left: -300px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #acceptResultDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #acceptResultDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #acceptResultDiv .form 
+        {
+            padding: 10px;
+        }
+
+         #acceptResultList
+        {
+            position: absolute;
+            width: 600px;
+            left: 50%;
+            top: 50%;
+            margin-left: -300px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #acceptResultList h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #acceptResultList h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #acceptResultList .form 
+        {
+            padding: 10px;
+        }
+
+        #acceptMoney
+        {
+            position: absolute;
+            width: 600px;
+            left: 50%;
+            top: 50%;
+            margin-left: -300px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #acceptMoney h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #acceptMoney h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #acceptMoney .form 
+        {
+            padding: 10px;
+        }
+
+        #ItemSchoolarShipDiv
+        {
+            position: absolute;
+            width: 1100px;
+            left: 50%;
+            top: 50%;
+            margin-left: -500px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #ItemSchoolarShipDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #ItemSchoolarShipDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #ItemSchoolarShipDiv .form 
+        {
+            padding: 10px;
+        }
