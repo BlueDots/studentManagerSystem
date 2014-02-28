@@ -23,6 +23,7 @@
 <script src="../../js/jquery-ui-1.8.21.custom.min.js"></script>
 <script src="../../js/jquery.chromatable.js"></script></script>
 <script src="../../js/college/college.js"></script>
+<script src="../../js/college/entry.js"></script>
 <script type="text/javascript">
    $(document).ready(function(){ 
  	
@@ -129,7 +130,7 @@
 																	<a  href="#">录入</a>
 																	<ul>
 																		<li>
-																			<a href="#" onclick="manually()">手动录入</a>
+																			<a href="#" onclick="manually('entryStudentActivityInfo')">手动录入</a>
 																		</li>
 																		<li>
 																			<a href="#">导入</a>
@@ -176,67 +177,46 @@
 												<tr id="editMsg"  style="display:none">
 													<td  class="CPanel" align="center">
 														<div style="overflow-x: auto; overflow-y: auto;width:98%;">
-														<table width="150%" border="0" align="center" cellpadding="0" cellspacing="0">
+														<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
 															<tr>
 																<td height="40" class="font42">
 																	<form action="#" method = "post">
 																	
 																	<table border="0" cellpadding="4"
-																		cellspacing="1" bgcolor="#464646" class="demo" id = "add_edit">
+																		cellspacing="1" bgcolor="#464646" class="demo" id = "entryStudentActivityInfo">
 																		<tr class="CTitle" align = "center">
 																			<td height="22" colspan="17" align="center"
 																				style="font-size: 16px">
-																				学生基本信息录入表
+																				学生参与活动信息录入表
 																			</td>
 																		</tr>
 																		<tr bgcolor="#EEEEEE" align = "center">
-																			<th width="3%" >
-																				<center>照片</center>
-																			</th>																				
-																			<th width="4%">
+																			<th width="10%" >
 																				<center>学号</center>
+																			</th>																				
+																			<th width="10%">
+																				<center>活动编号</center>
 																			</th>
-                                                                            <th width="3%">
-																				<center>姓名</center>
+                                                                            <th width="5%">
+																				<center>届数</center>
 																			</th>
-																			<th width="5%">
-																				<center>专业</center>
+																			<th width="10%">
+																				<center>获奖时间</center>
 																			</th>
-																			<th width="5%">
-																				<center>班级</center>
+																			<th width="10%">
+																				<center>获奖等级</center>
 																			</th>
-																			<th width="3%">
-																				<center>性别</center>
+																			<th width="15%">
+																				<center>学生干部职位</center>
 																			</th>
-																			<th width="3%">
-																				<center>民族</center>
-																			</th>
-																			<th width="3%">
-																				<center>籍贯</center>
-																			</th>
-																			<th width="5%">
-																				<center>政治面貌</center>
-																			</th>
-																			<th width="7%">
-																				<center>身份证号码</center>
-																			</th>
-																			<th width="4%">
-																				<center>学历</center>
-																			</th>
-																			<th width="5%">
-																				<center>英语等级</center>
-																			</th>
-																			<th width="8%">
-																				<center>担任职务及时间</center>
-																			</th>																			
-																			<th width="7%">
-																				<center>银行卡号</center>
+																			<th width="15%">
+																				<center>学生干部任职时间</center>
 																			</th>		
 																		</tr>
 																		<tr bgcolor="#EEEEEE" align = "center" >
 																			<td colspan="14" style="padding:1px">
 																				<button type="button">提交</button>
-																				<button type="button">取消</button>
+																				<button type="button" onclick="exchange('allbasicMsg','editMsg')">取消</button>
 																			</td>
 																		</tr>
 																	</table>
