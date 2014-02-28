@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>奖学金评定信息</title>
+		<title>奖学金评定审核信息</title>
 		<link href="../../../css/css.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" type="text/css" href="../../../css/school/tanchu.css">
 		<link href="../../../css/style.css" rel="stylesheet" type="text/css" />
@@ -211,14 +211,14 @@
 																			<td><input type='checkbox'/>&nbsp;&nbsp;<span id='softvareId'>软件学院<font color='red'>(点击查看详细信息,共1条记录！该院一等人数为100人，占2%！二等人数为200人，占5%！三等人数为300人，占7%！)</font></span></td>
 																		</tr>
 																		<tr id='1101tr' bgcolor="#FFFFFF" style="display:none">
-																			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox'/><span id='1101td'>1101<font color='red'>(点击查看详细信息)</font></span></td>
+																			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox'/><span id='1101td'>软件工程1101<font color='red'>(点击查看详细信息)</font></span></td>
 																		</tr>
 																		<tr id='1101table' bgcolor="#FFFFFF"  style="display:none">
 																			<td height="40" class="font42">
 																				<table width="100%" border="0" cellpadding="4"
 																					cellspacing="1" bgcolor="#464646" class="demo" id="tableID" ><thead>
 																					<tr>
-																						<th class="tablestyle_title" colspan='24'>
+																						<th class="tablestyle_title" colspan='25'>
 																							<font color='green'>1101班共有42条记录待审核！其中男生40条，女生2条！</font>
 																						</th>
 																					</tr>
@@ -227,6 +227,7 @@
 																					 	 <td width="7%" rowspan="3">学号</td>
 						                                                                 <td width="7%" rowspan="3">姓名</td>
 						                                                                 <td width="7%" rowspan="3">性别</td>
+						                                                                 <td width="7%" rowspan="3">学期</td>
 						                                                                 <td colspan="4">德育素质评测(20%)</td>
 						                                                                 <td colspan="5">智育素质测评(60%)</td>
 						                                                                 <td colspan="4">体育素质测评(5%)</td>
@@ -262,8 +263,9 @@
 					                                                                <tr bgcolor="#FFFFFF">
 					                                                                 
 					                                                                  <td width="10%">20112222</td>
-					                                                                  <td width="14%">旮旯子</td>
+					                                                                  <td width="14%">旮旯</td>
 					                                                                  <td width="6%">男</td>
+					                                                                  <td width="6%">20131</td>
 					                                                                  <td width="6%">6</td>
 					                                                                  <td width="6%">6</td>
 					                                                                  <td width="6%">0</td>
@@ -532,7 +534,7 @@
             	<table width="50%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="demo" id="advancedSearchTab" ><thead>
             
 					<tr bgcolor="#FFFFFF" align="center">
-					    <td width='15%'> 
+					    <td width='25%'> 
 					    	性别
 					    </td>
 					    <td width='35%' name='sex'> 
@@ -541,7 +543,7 @@
 					    </td>
 					</tr>
 					<tr bgcolor="#FFFFFF" align="center">
-					    <td width='15%'> 
+					    <td width='25%'> 
 					    	奖学金等级
 					    </td>
 					    <td width='35%'> 
@@ -554,15 +556,15 @@
 					    </td>
 					</tr>
 					<tr bgcolor="#FFFFFF" align="center">
-					    <td width='15%'> 
-					    	排名
+					    <td width='25%'> 
+					    	总分排名
 					    </td >
 					    <td width='35%'> 
 					  		前<input name="advRank" type="text" value="14" />
 					    </td>
 					</tr>
 					<tr bgcolor="#FFFFFF" align="center">
-					    <td width='15%'> 
+					    <td width='25%'> 
 					    	总得分
 					    </td >
 					    <td width='35%'> 
@@ -573,6 +575,46 @@
 					    		<option>不及格(60以下)</option>
 					    	</select>	
 					    </td>
+					</tr>
+					<tr bgcolor="#EEEEEE" align="center">
+						<td width="25%">
+							德育素质测评班级排名
+						</td>
+						<td width="35%">
+							<input type="text" />
+						</td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+						<td width="25%">
+							智育素质测评班级排名
+						</td>
+						<td width="35%">
+							<input type="text" />
+						</td>
+					</tr>
+					<tr bgcolor="#EEEEEE" align="center">
+						<td width="25%">
+							体育素质测评班级排名
+						</td>
+						<td width="35%">
+							<input type="text" />
+						</td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+						<td width="25%">
+							美育素质测评班级排名
+						</td>
+						<td width="35%">
+							<input type="text" />
+						</td>
+					</tr>
+					<tr bgcolor="#EEEEEE" align="center">
+						<td width="25%">
+							学期
+						</td>
+						<td width="35%">
+							<input type="text" />
+						</td>
 					</tr>
 					<tr bgcolor="#FFFFFF" align="center">
 						<td colspan="2"><input type="button" value="查询"/></td>
