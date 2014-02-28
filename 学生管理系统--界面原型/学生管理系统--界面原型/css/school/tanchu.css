@@ -599,7 +599,7 @@ body, h2
         #collegeProportionDiv
         {
             position: absolute;
-            width: 800px;
+            width: 850px;
             left: 50%;
             top: 50%;
             margin-left: -400px;
@@ -732,3 +732,36 @@ body, h2
             padding: 10px;
         }
 
+        #ItemSchoolarShipDiv
+        {
+            position: absolute;
+            width: 1100px;
+            left: 50%;
+            top: 50%;
+            margin-left: -500px;
+            height: auto;
+            z-index: 100;
+            background-color: #fff;
+            border: 1px #8FA4F5 solid;
+            padding: 1px;
+        }
+        #ItemSchoolarShipDiv h2
+        {
+            height: 25px;
+            font-size: 14px;
+            background-color: #8FA4F5;
+            position: relative;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        #ItemSchoolarShipDiv h2 a
+        {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        #ItemSchoolarShipDiv .form 
+        {
+            padding: 10px;
+        }

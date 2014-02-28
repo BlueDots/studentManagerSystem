@@ -369,7 +369,7 @@ $(document).ready(function(){
 		            		<table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="demo" id="tableID" ><thead>
 		            			<tr class="CTitle">
 		            				<td height="22" colspan="12" align="center" style="font-size: 16px">
-		            					奖学金比例表 
+		            					奖学金比例表 <input type="button" value="编辑" style="position: absolute;right: 22px;" onclick="edit('editProportion')">
 									</td>
 								</tr>
 								<tr bgcolor="#FFFFFF">
@@ -377,13 +377,13 @@ $(document).ready(function(){
 								    	<center>级别</center>
 								    </th>
 								    <th width='20%' name='time'> 
+								    	<center>分配人数</center>
+								    </th>
+								    <th width='20%' name='time'> 
 								    	<center>分配比例</center>
 								    </th>
 								    <th width='20%' name='time'> 
-								    	<center>分配时间</center>
-								    </th>
-								    <th width='20%' name='time'> 
-								    	<center>操作</center>
+								    	<center>时间分配</center>
 								    </th>
 								</tr>
 								<tr bgcolor="#EEEEEE">
@@ -391,16 +391,13 @@ $(document).ready(function(){
 								    	<center>一等奖</center>
 								    </td>
 								    <td> 
+								    	<center>20</center>
+								    </td>
+								    <td> 
 								    	<center>2%</center>
 								    </td>
 								    <td> 
-								    	<center>2011-11-11</center>
-								    </td>
-								    <td> 
-								    	<center>
-								    		<img src="../../../images/turnUp1.jpg" style="width:10px;height:10px;" onclick="alert('up')">
-                                            <img src="../../../images/turnDown1.jpg" style="width:10px;height:10px;" onclick="alert('down')">
-                                      	</center>
+								    	<center>分配时间：2011-11-11</center>
 								    </td>
 								</tr>
 								<tr bgcolor="#EEEEEE">
@@ -408,16 +405,13 @@ $(document).ready(function(){
 								    	<center>二等奖</center>
 								    </td>
 								    <td> 
+								    	<center>50</center>
+								    </td>
+								    <td> 
 								    	<center>5%</center>
 								    </td>
 								    <td> 
-								    	<center>2011-11-11</center>
-								    </td>
-								    <td> 
-								    	<center>
-								    		<img src="../../../images/turnUp1.jpg" style="width:10px;height:10px;" onclick="alert('up')">
-                                            <img src="../../../images/turnDown1.jpg" style="width:10px;height:10px;" onclick="alert('down')">
-                                      	</center>
+								    	<center>开始时间：2011-11-11</center>
 								    </td>
 								</tr>	
 								<tr bgcolor="#EEEEEE">
@@ -425,16 +419,13 @@ $(document).ready(function(){
 								    	<center>三等奖</center>
 								    </td>
 								    <td> 
+								    	<center>100</center>
+								    </td>
+								    <td> 
 								    	<center>10%</center>
 								    </td>
 								    <td> 
-								    	<center>2011-11-11</center>
-								    </td>
-								    <td> 
-								    	<center>
-								    		<img src="../../../images/turnUp1.jpg" style="width:10px;height:10px;" onclick="alert('up')">
-                                            <img src="../../../images/turnDown1.jpg" style="width:10px;height:10px;" onclick="alert('down')">
-                                      	</center>
+								    	<center>截止时间：2011-11-11</center>
 								    </td>
 								</tr>		
 

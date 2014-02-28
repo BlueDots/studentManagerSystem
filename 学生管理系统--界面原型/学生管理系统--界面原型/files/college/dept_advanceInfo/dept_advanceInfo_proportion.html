@@ -378,19 +378,28 @@ $(document).ready(function(){
 									</td>
 								</tr>
 								<tr bgcolor="#FFFFFF">
-								    <th width='20%' name='advanceProjectType'> 
+								    <th width='10%' name='advanceProjectType'> 
 								    	<center>先进项目</center>
 								    </th>
-								    <th width='20%' name='level'> 
+								    <th width='10%' name='level'> 
 								    	<center>级别</center>
 								    </th>
-								    <th width='20%' name='time'> 
+								    <th width='10%' name='time'> 
+								    	<center>分配人数</center>
+								    </th>
+								    <th width='10%' name='time'> 
 								    	<center>分配比例</center>
 								    </th>
-								    <th width='20%' name='time'> 
+								    <th width='10%' name='time'> 
 								    	<center>分配时间</center>
 								    </th>
-								    <th width='20%' name='time'> 
+								    <th width='10%' name='time'> 
+								    	<center>开始时间</center>
+								    </th>
+								    <th width='10%' name='time'> 
+								    	<center>截止时间</center>
+								    </th>
+								    <th width='10%' name='time'> 
 								    	<center>操作</center>
 								    </th>
 								</tr>
@@ -417,19 +426,28 @@ $(document).ready(function(){
 								    	</select></center>
 								    </td>
 								    <td> 
+								    	<center>50</center>
+								    </td>
+								    <td> 
 								    	<center>1%</center>
 								    </td>
 								    <td> 
 								    	<center>2011-11-11</center>
 								    </td>
 								    <td> 
-								    	<center></center>
+								    	<center>2011-11-11</center>
+								    </td>
+								    <td> 
+								    	<center>2011-11-15</center>
+								    </td>
+								    <td> 
+								    	<center><input type='button' value='修改' id="saveProjectPro" onclick="edit('editProportion')" /></center>
 								    </td>
 								</tr>								
 				
 		            		</table>
 		            	
-		            		<div id="editProportion" style="display: none">
+		            		<div id="editProportion" style="display:none">
 		            			<div  align="center">
 		            				<input type='button' value='保存' id="saveProjectPro" onclick="save('editProportion')" />
 		            				&nbsp;&nbsp;&nbsp;&nbsp;

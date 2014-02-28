@@ -106,7 +106,7 @@ $(document).ready(function(){
 												<tr>
 													<th class="tablestyle_title">
 														当前位置：<a href="../dept_scholarshipInfo.html">奖助学信息页面</a>--->分配比例
-													<span style="position:relative;right:-765px">
+													<span style="position:relative;right:-650px">
 														<font size="2" color="red">奖助学项目</font>
 														<select style="font-size:8px">
 															<option>请选择</option>
@@ -114,19 +114,19 @@ $(document).ready(function(){
 															<option>国家励志</option>
 															<option>国家助学金</option>
 															<option>校奖学金</option>
-															<option>企业资助</option>
-															<option>个人资助</option>
 														</select>
 													</span>
-	<!-- 												<span style="position:relative;right:-650px">
+													<span style="position:relative;right:-650px">
 														<font size="2" color="red">性质</font>
 															<select style="font-size:8px">
 															<option>请选择</option>
 															<option>院级</option>
 															<option>校级</option>
 															<option>省级</option>
+															<option>企业资助</option>
+															<option>个人资助</option>															
 														</select>
-													</span> -->
+													</span> 
 													</th>
 												</tr>
 												<tr id="allbasicMsg">
@@ -357,16 +357,28 @@ $(document).ready(function(){
 									</td>
 								</tr>
 								<tr bgcolor="#FFFFFF">
-								    <th width='20%' name='advanceProjectType'> 
+								    <th width='10%' name='advanceProjectType'> 
 								    	<center>奖助学项目</center>
 								    </th>
-								    <th width='20%' name='time'> 
+								    <th width='10%' name='advanceProjectType'> 
+								    	<center>奖助学性质</center>
+								    </th>
+								    <th width='10%' name='advanceProjectType'> 
+								    	<center>分配人数</center>
+								    </th>
+								    <th width='10%' name='time'> 
 								    	<center>分配比例</center>
 								    </th>
-								    <th width='20%' name='time'> 
+								    <th width='10%' name='time'> 
 								    	<center>分配时间</center>
 								    </th>
-								    <th width='20%' name='time'> 
+								    <th width='10%' name='advanceProjectType'> 
+								    	<center>开始时间</center>
+								    </th>
+								    <th width='10%' name='advanceProjectType'> 
+								    	<center>截止时间</center>
+								    </th>
+								    <th width='10%' name='time'> 
 								    	<center>操作</center>
 								    </th>
 								</tr>
@@ -384,6 +396,21 @@ $(document).ready(function(){
 														</select>
 								    	</center>
 								    </td>
+									<td> 
+								    	<center>
+														<select style="font-size:8px">
+															<option>请选择</option>
+															<option>院级</option>
+															<option>校级</option>
+															<option>国家级</option>
+															<option>企业资助</option>
+															<option>个人资助</option>
+														</select>
+								    	</center>
+								    </td>
+								    <td> 
+								    	<center>40</center>
+								    </td>								    
 								    <td> 
 								    	<center>1%</center>
 								    </td>
@@ -391,9 +418,14 @@ $(document).ready(function(){
 								    	<center>2011-11-11</center>
 								    </td>
 								    <td> 
+								    	<center>2011-11-11</center>
+								    </td>
+								    <td> 
+								    	<center>2011-11-16</center>
+								    </td>
+								    <td> 
 								    	<center>
-								    	<img src="../../../images/turnUp1.jpg" style="width:10px;height:10px;" onclick="alert('up')">
-                                        <img src="../../../images/turnDown1.jpg" style="width:10px;height:10px;" onclick="alert('down')">			    		
+								    		<input type='button' value='修改' id="saveProjectPro" onclick="edit('editProportion')" />	    		
 								    	</center>
 								    </td>
 								</tr>								
