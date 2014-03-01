@@ -131,13 +131,10 @@
 															<ul>
 																
 																<li>
-																	<a onclick="popup('#SchoolshipProportion', '#SchoolshipProportionDiv', '#btnCloseSchoolshipProportion')" id='projectBtn'>分配比例</a>
+																	<a href="reviewPage/scholarshipInfo_proportion.html">分配比例</a>
 																</li>
 																<li>
 																	<a onclick="popup('#SchshipDiv', '#SchoolshipInfoDiv', '#btnCloseNewSchship')">创建新助学金</a>
-																</li>
-																<li>
-																	<a onclick="popup('#SchshipDiv', '#setSchshipTimeDiv', '#btnCloseSchshipTime')">设置提交时间</a>
 																</li>
 															</ul>
 														</li>																  
@@ -270,91 +267,6 @@
 				</tr>
 			</table>
 		</form>
-		
-		<div id="SchoolshipProportion" style="display: none"></div>
-    		<div id="SchoolshipProportionDiv" style="display: none">
-        		<h2>奖助学金比例分配信息<a href="#" id="btnCloseSchoolshipProportion">关闭</a></h2>
-        		<div class="form">
-            		<table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="demo" id="tableID" ><thead>
-            			<tr class="CTitle">
-            				<td height="22" colspan="12" align="center" style="font-size: 16px">
-            				奖助学金详分配比例信息表
-							</td>
-						</tr>
-						<tr bgcolor="#FFFFFF">
-						    <td width='15%' name='major'> 
-						    	名称
-						    </td>
-						    <td width='10%' name='class'> 
-						    	性质
-						    </td>
-						    <td width='10%' name='fp_students'> 
-						    	分配比例
-						    </td>
-						    <td width='15%' name='sq_studenta'> 
-						    	分配时间
-						    </td>
-						    <td width='15%' name='isOver'> 
-						    	学院编号
-						    </td>
-						    <td width='15%' name='state'> 
-						    	学院名称
-						    </td>
-						    <td width='15%' name='state'> 
-						    	分配人数
-						    </td>
-						    <td width='15%' name='state'> 
-						    	操作
-						    </td>
-						</tr>
-						<tr bgcolor="#FFFFFF">
-						    <td width='15%' name='major' rowspan="2"> 
-						    	国家奖学金
-						    </td>
-						    <td width='10%' name='class' rowspan="2"> 
-						    	国家级
-						    </td>
-						    <td width='10%' name='fp_students' rowspan="2"> 
-						    	12%
-						    </td>
-						    <td width='15%' name='sq_studenta' rowspan="2"> 
-						    	2011/1/1
-						    </td>
-						    <td width='15%' name='isOver'> 
-						    	201111
-						    </td>
-						    <td width='15%' name='state'> 
-						    	农学院
-						    </td>
-						    <td width='15%' name='state'> 
-						    	122
-						    </td>
-						    <td width='10%' rowspan="2"> 
-						    	<input type="button" value="编辑" onclick="edit('editSchsipProportion')" />
-						    </td>
-						</tr>
-						<tr bgcolor="#FFFFFF">
-						    <td width='15%' name='isOver'> 
-						    	201122
-						    </td>
-						    <td width='15%' name='state'> 
-						    	软件学院
-						    </td>
-						    <td width='15%' name='state'> 
-						    	123
-						    </td>
-						</tr>
-            		</table>
-            		<div id="editSchsipProportion" style="display: none">
-            			<div style="margin-left: 350px">
-            				<input type='button' value='保存' id="saveProjectPro" onclick="save('editSchsipProportion')" />
-            				&nbsp;&nbsp;&nbsp;&nbsp;
-            				<input type='button' value='取消' onclick="cancel()" />
-            			</div>
-            		</div>
-        		</div>
-    		</div>
-		</div>
 
 		<div id="SchoolshipDiv" style="display: none"></div>
     		<div id="SchoolShipDiv" style="display: none">
@@ -435,76 +347,6 @@
     		</div>
 		</div>
 
-		<div id="SchshipDiv" style="display: none"></div>
-    		<div id="setSchshipTimeDiv" style="display: none">
-        		<h2>设置奖助学金信息提交时间<a href="#" id="btnCloseSchshipTime">关闭</a></h2>
-        		<div class="form">
-            		<table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="demo" id="tableID" ><thead>
-            			<tr class="CTitle">
-            				<td height="22" colspan="12" align="center" style="font-size: 16px">
-            				奖助学金提交时间表
-							</td>
-						</tr>
-						<tr bgcolor="#FFFFFF">
-						    <td width='15%' name='grantNum'> 
-						    	助学金编号
-						    </td>
-						    <td width='15%' name='grantName'> 
-						    	名称
-						    </td>
-						    <td width='10%' name='grantType'> 
-						    	性质
-						    </td>
-						    <td width='10%' name='grantMoney'> 
-						    	金额
-						    </td>
-						    <td width='15%' name='startTime'> 
-						    	开始时间
-						    </td>
-						    <td width='15%' name='endTime'> 
-						    	截止时间
-						    </td>
-						    <td width='10%' name='oprate'> 
-						    	操作
-						    </td>
-						    
-						</tr>
-						<tr bgcolor="#EEEEEE">
-						    <td width='15%'> 
-						    	20132
-						    </td>
-						    <td width='15%'> 
-						    	国家励志奖学金
-						    </td>
-						    <td width='10%'> 
-						    	国家级
-						    </td>
-						    <td width='10%'> 
-						    	5000元
-						    </td>
-						    <td width='15%'> 
-						    	2014/1/1 12:12:00
-						    </td>
-						    <td width='15%'> 
-						    	2014/2/2 12:12:00
-						    </td>
-						    <td width='10%'> 
-						    	<input type="button" value="编辑" onclick="edit('editSchshipTime')" />
-						    </td>
-						   
-						</tr>
-						
-            		</table>
-            	
-            		<div id="editSchshipTime" style="display: none">
-            			<div style="margin-left: 350px">
-            				<input type='button' value='保存' id="saveProjectPro" onclick="save('editSchshipTime')" />
-            				&nbsp;&nbsp;&nbsp;&nbsp;
-            				<input type='button' value='取消' onclick="cancel()" />
-            			</div>
-            		</div>
-        		</div>
-    		</div>
 
     		<div id="SchoolshipInfoDiv" style="display: none">
         		<h2>创建新助学金<a href="#" id="btnCloseNewSchship">关闭</a></h2>

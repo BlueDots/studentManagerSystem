@@ -20,6 +20,7 @@
 <script src="../../js/jquery-ui-1.8.21.custom.min.js"></script>
 <script src="../../js/jquery.chromatable.js"></script></script>
 <script src="../../js/college/college.js"></script>
+<script src="../../js/college/entry.js"></script>
 
 <script type="text/javascript">
    
@@ -130,7 +131,7 @@
 																	<a  href="#">录入</a>
 																	<ul>
 																		<li>
-																			<a href="#" onclick="manually()">手动录入</a>
+																			<a href="#" onclick="manually('entryScholarshipAssessInfo')">手动录入</a>
 																		</li>
 																		<li>
 																			<a href="#">导入</a>
@@ -166,7 +167,7 @@
 				</tr>
 				<tr>
 					<td>
-						<div id="allbasicMsg" style="display: block">
+						<div style="display: block">
 							<table id="subtree1" style="DISPLAY: " width="100%" border="0"
 								cellspacing="0" cellpadding="0">
 								<tr>
@@ -180,7 +181,72 @@
 													</th>
 													</th>
 												</tr>
-												<tr>
+												<tr id="editMsg"  style="display:none">
+													<td  class="CPanel" align="center">
+														<div style="overflow-x: auto; overflow-y: auto;width:98%;">
+														<table width="30%" border="0" align="center" cellpadding="0" cellspacing="0">
+															<tr>
+																<td height="40" class="font42">
+																	<form action="#" method = "post">
+																	
+																	<table border="0" cellpadding="4"
+																		cellspacing="1" bgcolor="#464646" class="demo" id = "entryScholarshipAssessInfo">
+																		<tr class="CTitle" align = "center">
+																			<td height="22" colspan="22" align="center"
+																				style="font-size: 16px">
+																				学生奖学金信息录入表
+																			</td>
+																		</tr>
+                                                                 <tr bgcolor="#EEEEEE" align = "center">
+                                                                  <td width="10%" rowspan="3"> 学号 </td>
+                                                                  <td width="10%" rowspan="3"> 姓名 </td>
+                                                                  <td colspan="4" width="20%"> 德育素质测评（20%）</td>
+                                                                  <td colspan="5" width="20%"> 智育素质测评（60%）</td>
+                                                                  <td colspan="4" width="20%">体育素质测评（5%）</td>
+                                                                  <td colspan="4" width="20%">美育素质测评（15%）</td>
+                                                                  <td colspan="2" rowspan="2" width="5%">综合测评</td>
+                                                                  <td width="5%" rowspan="3"> 奖学金等级</td>
+                                                                </tr>
+                                                                <tr bgcolor="#EEEEEE" align = "center">
+                                                                  <td width="4%" rowspan="2">基准分</td>
+                                                                  <td width="4%" rowspan="2">奖励分</td>
+                                                                  <td width="4%" rowspan="2">惩罚分</td>
+                                                                  <td width="3%" rowspan="2">得分</td>
+                                                                  <td colspan="2">学业课程分</td>
+                                                                  <td width="3%" rowspan="2">科技活动与创新分</td>
+                                                                  <td width="3%" rowspan="2">职业技能分</td>
+                                                                  <td width="2%" rowspan="2">得分</td>
+                                                                  <td width="3%" rowspan="2">体育课程分</td>
+                                                                  <td width="3%" rowspan="2">体育健康分</td>
+                                                                  <td width="2%" rowspan="2">体育竞赛分</td>
+                                                                  <td width="2%" rowspan="2">得分</td>
+                                                                  <td width="2%" rowspan="2">美育管理艺术分</td>
+                                                                  <td width="2%" rowspan="2">美育文化艺术分</td>
+                                                                  <td width="2%" rowspan="2">美育媒体艺术分</td>
+                                                                  <td width="3%" rowspan="2">美育实践服务分</td>
+                                                                </tr> 
+                                                                <tr bgcolor="#EEEEEE" align = "center">
+                                                                  <td width="3%">必修课成绩</td>
+                                                                  <td width="3%">公选课惩罚分</td>
+                                                                  <td width="2%">总得分</td>
+                                                                  <td width="3%">排名</td>
+                                                                </tr>
+																<tr bgcolor="#EEEEEE" align = "center" >
+																			<td colspan="22" style="padding:1px">
+																				<button type="button">提交</button>
+																				<button type="button" onclick="exchange('allbasicMsg','editMsg')">取消</button>
+																			</td>
+																</tr>                                                                                           
+																</table>
+																
+																</td>
+																</form>
+															</tr>	
+														</table>
+														</div>
+													</td>
+												</tr>												
+												<tr id="allbasicMsg">
 													<td class="CPanel">
 														<table width="100%" border="0" align="center"
 															cellpadding="0" cellspacing="0">
@@ -188,8 +254,8 @@
 															<tr>
 															  <td height="40" class="font42"><table width="100%" border="0" cellpadding="4"
 																		cellspacing="1" bgcolor="#464646" class="newfont03">
-                                                                <tr class="CTitle">
-                                                                  <td height="22" colspan="24" align="center"
+                                                            <tr class="CTitle">
+                                                                 <td height="22" colspan="24" align="center"
 																				style="font-size: 16px"> 奖学金信息表 </td>
                                                                 </tr>
                                                                 <tr bgcolor="#EEEEEE" align = "center">

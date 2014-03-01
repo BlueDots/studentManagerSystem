@@ -62,18 +62,7 @@ function  edit(){
 		 }
 		
 }
-/*切换*/
-function change(id1,id2) {
-	alert("ssssssssssss");
-	if(id1.style.display == "none") {
- 			id1.style.display = "block";
- 			id2.style.display = "none";
- 		}
- 		else {
- 			id1.style.display = "none";
- 			id2.style.display = "block";
- 		}
-}
+
 
 /**
 	@todo 弹出框响应函数
