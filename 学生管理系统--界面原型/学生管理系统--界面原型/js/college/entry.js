@@ -48,7 +48,7 @@ function entryStuBasicInfo(numsOfRow) {
 
 		for(var i=0;i<numsOfRow-differ;i++) {
 			var TrObj = tableObj.insertRow(trLength-1);
-			TrObj.setAttribute("bgcolor","#FFFFFF");
+			TrObj.setAttribute("bgcolor","#EEEEEE");
 			TrObj.setAttribute("align","center");
 
 			//第一列
@@ -829,3 +829,813 @@ function entryTeacherInfo(numsOfRow) {
 	}
 		
 }
+
+
+
+
+/*录入先进项目信息*/
+function entryAdvanceInfo(numsOfRow) {
+	var mainTr = document.getElementById("allbasicMsg");
+		var editDiv = document.getElementById("editMsg");
+		//change(mainTr,editDiv);
+		mainTr.style.display = "none";
+		editDiv.style.display = "block";
+		//取得表对象
+		var tableObj = document.getElementById("entryAdvanceInfo");
+		var trLength = $("#entryAdvanceInfo tr").length;
+		var differ = trLength-3;
+		if(differ >= numsOfRow) {
+			var i,j;
+			j=differ-numsOfRow;
+			for(i=0;i<j;i++)
+				tableObj.deleteRow(trLength-2-i);
+					
+		}
+		else {
+
+		for(var i=0;i<numsOfRow-differ;i++) {
+			var oTeacherTri = tableObj.insertRow(trLength-1);
+			oTeacherTri.setAttribute("align", "center");
+			if((i%2) === 0){
+				oTeacherTri.setAttribute("bgcolor", "#FFFFFF");
+			}else {
+				oTeacherTri.setAttribute("bgcolor", "#EEEEEE");
+			}
+			/*第一列*/
+			oTeacherTri.insertCell(0);
+			var oTeacherTriTd1 = oTeacherTri.cells[0];
+			oTeacherTriTd1.setAttribute("width", "10%");
+			var tec_No = document.createElement('input');
+			tec_No.type = "text";
+			tec_No.size = "5";
+			oTeacherTriTd1.appendChild(tec_No);
+
+			/*第二列*/
+			oTeacherTri.insertCell(1);
+			var oTeacherTriTd2 = oTeacherTri.cells[1];
+			oTeacherTriTd2.setAttribute("width", "7%");
+			var tec_Name = document.createElement('input');
+			tec_Name.type = "text";
+			tec_Name.size = "5";
+			oTeacherTriTd2.appendChild(tec_Name);
+
+			/*第三列*/
+			oTeacherTri.insertCell(2);
+			var oTeacherTriTd3 = oTeacherTri.cells[2];
+			oTeacherTriTd3.setAttribute("width", "7%");
+			var tec_Sex = document.createElement('select');
+			var man = document.createElement("option");
+			man.appendChild(document.createTextNode("男"));
+			var woman = document.createElement("option");
+			woman.appendChild(document.createTextNode("女"));
+			tec_Sex.appendChild(man);
+			tec_Sex.appendChild(woman);
+			oTeacherTriTd3.appendChild(tec_Sex);
+
+			/*第四列*/
+			oTeacherTri.insertCell(3);
+			var oTeacherTriTd4 = oTeacherTri.cells[3];
+			oTeacherTriTd4.setAttribute("width", "7%");
+			var tec_College = document.createElement('select');
+			var software = document.createElement("option");
+			software.appendChild(document.createTextNode("软件学院"));
+			var finance = document.createElement("option");
+			finance.appendChild(document.createTextNode("经贸学院"));
+			tec_College.appendChild(software);
+			tec_College.appendChild(finance);
+			oTeacherTriTd4.appendChild(tec_College);
+
+			/*第五列*/
+			oTeacherTri.insertCell(4);
+			var oTeacherTriTd5 = oTeacherTri.cells[4];
+			oTeacherTriTd5.setAttribute("width", "7%");
+			var tec_Major = document.createElement('select');
+			var soft_design = document.createElement("option");
+			soft_design.appendChild(document.createTextNode("软件开发"));
+			var fin_internation = document.createElement("option");
+			fin_internation.appendChild(document.createTextNode("国际贸易"));
+			tec_Major.appendChild(soft_design);
+			tec_Major.appendChild(fin_internation);
+			oTeacherTriTd5.appendChild(tec_Major);
+
+			/*第六列*/
+			oTeacherTri.insertCell(5);
+			var oTeacherTriTd6 = oTeacherTri.cells[5];
+			oTeacherTriTd6.setAttribute("width", "7%");
+			var tec_class = document.createElement('select');
+			var class1 = document.createElement("option");
+			class1.appendChild(document.createTextNode("1101"));
+			var class2 = document.createElement("option");
+			class2.appendChild(document.createTextNode("1102"));
+			tec_class.appendChild(class1);
+			tec_class.appendChild(class2);
+			oTeacherTriTd6.appendChild(tec_class);
+
+			/*第七列*/
+			oTeacherTri.insertCell(6);
+			var oTeacherTriTd7 = oTeacherTri.cells[6];
+			oTeacherTriTd7.setAttribute("width", "7%");
+			var adv_type = document.createElement('select');
+			var type1 = document.createElement("option");
+			type1.appendChild(document.createTextNode("优秀三好学生"));
+			var type2 = document.createElement("option");
+			type2.appendChild(document.createTextNode("优秀学生干部"));
+			var type3 = document.createElement("option");
+			type3.appendChild(document.createTextNode("最佳三好学生"));
+			var type4 = document.createElement("option");
+			type4.appendChild(document.createTextNode("最佳学生干部"));
+			var type5 = document.createElement("option");
+			type5.appendChild(document.createTextNode("优秀团员"));
+			var type6 = document.createElement("option");
+			type6.appendChild(document.createTextNode("优秀团干部"));
+
+			adv_type.appendChild(type1);
+			adv_type.appendChild(type2);
+			adv_type.appendChild(type3);
+			adv_type.appendChild(type4);
+			adv_type.appendChild(type5);
+			adv_type.appendChild(type6);
+
+			oTeacherTriTd7.appendChild(adv_type);
+
+			/*第八列*/
+			oTeacherTri.insertCell(7);
+			var oTeacherTriTd8 = oTeacherTri.cells[7];
+			oTeacherTriTd8.setAttribute("width", "10%");
+			var tec_Position = document.createElement('input');
+			tec_Position.type = "text";
+			tec_Position.size = "5";
+			oTeacherTriTd8.appendChild(tec_Position);
+
+			/*第九列*/
+			oTeacherTri.insertCell(8);
+			var oTeacherTriTd9 = oTeacherTri.cells[8];
+			oTeacherTriTd9.setAttribute("width", "10%");
+			var adv_level= document.createElement('select');
+			var level1 = document.createElement("option");
+			level1.appendChild(document.createTextNode("院级"));
+			var level2 = document.createElement("option");
+			level2.appendChild(document.createTextNode("校级"));
+			var level3 = document.createElement("option");
+			level3.appendChild(document.createTextNode("厅级"));
+			var level4 = document.createElement("option");
+			level4.appendChild(document.createTextNode("省级"));
+			var level5 = document.createElement("option");
+			level5.appendChild(document.createTextNode("国家级"));
+			
+			adv_level.appendChild(level1);
+			adv_level.appendChild(level2);
+			adv_level.appendChild(level3);
+			adv_level.appendChild(level4);
+			adv_level.appendChild(level5);
+
+			oTeacherTriTd9.appendChild(adv_level);
+		}
+	}
+		
+}
+
+
+
+
+/*录入贫困生建档信息*/
+function entryJiandangInfo(numsOfRow) {
+	var mainTr = document.getElementById("allbasicMsg");
+		var editDiv = document.getElementById("editMsg");
+		//change(mainTr,editDiv);
+		mainTr.style.display = "none";
+		editDiv.style.display = "block";
+		//取得表对象
+		var tableObj = document.getElementById("entryJiandangInfo");
+		var trLength = $("#entryJiandangInfo tr").length;
+		var differ = trLength-3;
+		if(differ >= numsOfRow) {
+			var i,j;
+			j=differ-numsOfRow;
+			for(i=0;i<j;i++)
+				tableObj.deleteRow(trLength-2-i);
+					
+		}
+		else {
+
+		for(var i=0;i<numsOfRow-differ;i++) {
+			var oTeacherTri = tableObj.insertRow(trLength-1);
+			oTeacherTri.setAttribute("align", "center");
+			if((i%2) === 0){
+				oTeacherTri.setAttribute("bgcolor", "#FFFFFF");
+			}else {
+				oTeacherTri.setAttribute("bgcolor", "#EEEEEE");
+			}
+			/*第一列*/
+			oTeacherTri.insertCell(0);
+			var oTeacherTriTd1 = oTeacherTri.cells[0];
+			oTeacherTriTd1.setAttribute("width", "10%");
+			var tec_No = document.createElement('input');
+			tec_No.type = "text";
+			tec_No.size = "5";
+			oTeacherTriTd1.appendChild(tec_No);
+
+			/*第二列*/
+			oTeacherTri.insertCell(1);
+			var oTeacherTriTd2 = oTeacherTri.cells[1];
+			oTeacherTriTd2.setAttribute("width", "7%");
+			var tec_Name = document.createElement('input');
+			tec_Name.type = "text";
+			tec_Name.size = "5";
+			oTeacherTriTd2.appendChild(tec_Name);
+
+			/*第三列*/
+			oTeacherTri.insertCell(2);
+			var oTeacherTriTd3 = oTeacherTri.cells[2];
+			oTeacherTriTd3.setAttribute("width", "7%");
+			var tec_Sex = document.createElement('select');
+			var man = document.createElement("option");
+			man.appendChild(document.createTextNode("男"));
+			var woman = document.createElement("option");
+			woman.appendChild(document.createTextNode("女"));
+			tec_Sex.appendChild(man);
+			tec_Sex.appendChild(woman);
+			oTeacherTriTd3.appendChild(tec_Sex);
+
+
+			/*第四列*/
+			oTeacherTri.insertCell(3);
+			var oTeacherTriTd4 = oTeacherTri.cells[3];
+			oTeacherTriTd4.setAttribute("width", "7%");
+			var tec_College = document.createElement('select');
+			var software = document.createElement("option");
+			software.appendChild(document.createTextNode("软件学院"));
+			var finance = document.createElement("option");
+			finance.appendChild(document.createTextNode("经贸学院"));
+			tec_College.appendChild(software);
+			tec_College.appendChild(finance);
+			oTeacherTriTd4.appendChild(tec_College);
+
+			/*第五列*/
+			oTeacherTri.insertCell(4);
+			var oTeacherTriTd5 = oTeacherTri.cells[4];
+			oTeacherTriTd5.setAttribute("width", "7%");
+			var tec_Major = document.createElement('select');
+			var soft_design = document.createElement("option");
+			soft_design.appendChild(document.createTextNode("软件开发"));
+			var fin_internation = document.createElement("option");
+			fin_internation.appendChild(document.createTextNode("国际贸易"));
+			tec_Major.appendChild(soft_design);
+			tec_Major.appendChild(fin_internation);
+			oTeacherTriTd5.appendChild(tec_Major);
+
+			/*第六列*/
+			oTeacherTri.insertCell(5);
+			var oTeacherTriTd6 = oTeacherTri.cells[5];
+			oTeacherTriTd6.setAttribute("width", "7%");
+			var tec_class = document.createElement('select');
+			var class1 = document.createElement("option");
+			class1.appendChild(document.createTextNode("1101"));
+			var class2 = document.createElement("option");
+			class2.appendChild(document.createTextNode("1102"));
+			tec_class.appendChild(class1);
+			tec_class.appendChild(class2);
+			oTeacherTriTd6.appendChild(tec_class);
+
+
+			/*第七列*/
+			oTeacherTri.insertCell(6);
+			var oTeacherTriTd7 = oTeacherTri.cells[6];
+			oTeacherTriTd7.setAttribute("width", "7%");
+			var address = document.createElement('input');
+			address.type = "text";
+			address.size = "5";
+			oTeacherTriTd7.appendChild(address);
+
+			/*第八列*/
+			oTeacherTri.insertCell(7);
+			var oTeacherTriTd8 = oTeacherTri.cells[7];
+			oTeacherTriTd8.setAttribute("width", "7%");
+			var fina = document.createElement('input');
+			fina.type = "text";
+			fina.size = "5";
+			oTeacherTriTd8.appendChild(fina);
+			/*第九列*/
+			oTeacherTri.insertCell(8);
+			var oTeacherTriTd9 = oTeacherTri.cells[8];
+			oTeacherTriTd9.setAttribute("width", "10%");
+			var pastPovLevel = document.createElement('select');
+			var level1 = document.createElement("option");
+			level1.appendChild(document.createTextNode("甲等"));
+			var level2 = document.createElement("option");
+			level2.appendChild(document.createTextNode("乙等"));
+			var level3 = document.createElement("option");
+			level3.appendChild(document.createTextNode("丙等"));
+
+			pastPovLevel.appendChild(level1);
+			pastPovLevel.appendChild(level2);
+			pastPovLevel.appendChild(level3);
+			
+			oTeacherTriTd9.appendChild(pastPovLevel);
+
+			/*第十列*/
+			oTeacherTri.insertCell(9);
+			var oTeacherTriTd10 = oTeacherTri.cells[9];
+			oTeacherTriTd10.setAttribute("width", "10%");
+			var term = document.createElement('select');
+			var term1 = document.createElement("option");
+			term1.appendChild(document.createTextNode("201101"));
+			var term2 = document.createElement("option");
+			term2.appendChild(document.createTextNode("201102"));
+			var term3 = document.createElement("option");
+			term3.appendChild(document.createTextNode("201201"));
+
+			term.appendChild(term1);
+			term.appendChild(term2);
+			term.appendChild(term3);
+			
+			oTeacherTriTd10.appendChild(term);
+		}
+	}
+		
+}
+
+
+/*录入奖学金信息*/
+function entryScholarshipAssessInfo(numsOfRow) {
+	var mainTr = document.getElementById("allbasicMsg");
+		var editDiv = document.getElementById("editMsg");
+		//change(mainTr,editDiv);
+		mainTr.style.display = "none";
+		editDiv.style.display = "block";
+		//取得表对象
+		var tableObj = document.getElementById("entryScholarshipAssessInfo");
+		var trLength = $("#entryScholarshipAssessInfo tr").length;
+		var differ = trLength-5;
+		if(differ >= numsOfRow) {
+			var i,j;
+			j=differ-numsOfRow;
+			for(i=0;i<j;i++)
+				tableObj.deleteRow(trLength-2-i);
+					
+		}
+		else {
+
+		for(var i=0;i<numsOfRow-differ;i++) {
+			var oTeacherTri = tableObj.insertRow(trLength-1);
+			oTeacherTri.setAttribute("align", "center");
+			if((i%2) === 0){
+				oTeacherTri.setAttribute("bgcolor", "#FFFFFF");
+			}else {
+				oTeacherTri.setAttribute("bgcolor", "#EEEEEE");
+			}
+			/*第一列*/
+			oTeacherTri.insertCell(0);
+			var oTeacherTriTd1 = oTeacherTri.cells[0];
+			var tec_No = document.createElement('input');
+			tec_No.type = "text";
+			tec_No.size = "5";
+			oTeacherTriTd1.appendChild(tec_No);
+
+			/*第二列*/
+			oTeacherTri.insertCell(1);
+			var oTeacherTriTd2 = oTeacherTri.cells[1];
+			var tec_Name = document.createElement('input');
+			tec_Name.type = "text";
+			tec_Name.size = "5";
+			oTeacherTriTd2.appendChild(tec_Name);
+
+			/*第三列*/
+			oTeacherTri.insertCell(2);
+			var oTeacherTriTd3 = oTeacherTri.cells[2];
+			var basic = document.createElement('input');
+			basic.type = "text";
+			basic.size = "5";
+			oTeacherTriTd3.appendChild(basic);
+
+			/*第四列*/
+			oTeacherTri.insertCell(3);
+			var oTeacherTriTd4 = oTeacherTri.cells[3];
+			var award = document.createElement('input');
+			awardtype = "text";
+			award.size = "5";
+			oTeacherTriTd4.appendChild(award);
+
+			/*第五列*/
+			oTeacherTri.insertCell(4);
+			var oTeacherTriTd5 = oTeacherTri.cells[4];
+			var punish = document.createElement('input');
+			punish.type = "text";
+			punish.size = "5";
+			oTeacherTriTd5.appendChild(punish);
+
+			/*第六列*/
+			oTeacherTri.insertCell(5);
+			var oTeacherTriTd6 = oTeacherTri.cells[5];
+			var tot1 = document.createElement('input');
+			tot1.type = "text";
+			tot1.size = "5";
+			oTeacherTriTd6.appendChild(tot1);
+
+			/*第七列*/
+			oTeacherTri.insertCell(6);
+			var oTeacherTriTd7 = oTeacherTri.cells[6];
+			var compulsary = document.createElement('input');
+			compulsary.type = "text";
+			compulsary.size = "5";
+			oTeacherTriTd7.appendChild(compulsary);
+			
+			/*第八列*/
+			oTeacherTri.insertCell(7);
+			var oTeacherTriTd8 = oTeacherTri.cells[7];
+			var common = document.createElement('input');
+			common.type = "text";
+			common.size = "5";
+			oTeacherTriTd8.appendChild(common);
+			/*第九列*/
+			oTeacherTri.insertCell(8);
+			var oTeacherTriTd9 = oTeacherTri.cells[8];
+			var technology = document.createElement('input');
+			technology.type = "text";
+			technology.size = "5";
+			oTeacherTriTd9.appendChild(technology);
+
+			/*第十列*/
+			oTeacherTri.insertCell(9);
+			var oTeacherTriTd10 = oTeacherTri.cells[9];
+			var occuption = document.createElement('input');
+			occuption.type = "text";
+			occuption.size = "5";
+			oTeacherTriTd10.appendChild(occuption);
+
+			/*第十一列*/
+			oTeacherTri.insertCell(10);
+			var oTeacherTriTd11 = oTeacherTri.cells[10];
+			var tot2 = document.createElement('input');
+			tot2.type = "text";
+			tot2.size = "5";
+			oTeacherTriTd11.appendChild(tot2);
+
+			/*第十二列*/
+			oTeacherTri.insertCell(11);
+			var oTeacherTriTd12 = oTeacherTri.cells[11];
+			var PE1 = document.createElement('input');
+			PE1.type = "text";
+			PE1.size = "5";
+			oTeacherTriTd12.appendChild(PE1);
+			/*第十三列*/
+			oTeacherTri.insertCell(12);
+			var oTeacherTriTd13 = oTeacherTri.cells[12];
+			var PE2 = document.createElement('input');
+			PE2.type = "text";
+			PE2.size = "5";
+			oTeacherTriTd13.appendChild(PE2);
+			/*第十四列*/
+			oTeacherTri.insertCell(13);
+			var oTeacherTriTd14 = oTeacherTri.cells[13];
+			var PE3 = document.createElement('input');
+			PE3.type = "text";
+			PE3.size = "5";
+			oTeacherTriTd14.appendChild(PE3);
+			/*第十五列*/
+			oTeacherTri.insertCell(14);
+			var oTeacherTriTd15 = oTeacherTri.cells[14];
+			var tot3 = document.createElement('input');
+			tot3.type = "text";
+			tot3.size = "5";
+			oTeacherTriTd15.appendChild(tot3);
+				
+			/*第十六列*/
+			oTeacherTri.insertCell(15);
+			var oTeacherTriTd16 = oTeacherTri.cells[15];
+			var morManager = document.createElement('input');
+			morManager.type = "text";
+			morManager.size = "5";
+			oTeacherTriTd16.appendChild(morManager);
+
+			/*第十七列*/
+			oTeacherTri.insertCell(16);
+			var oTeacherTriTd17 = oTeacherTri.cells[16];
+			var morCulture = document.createElement('input');
+			morCulture.type = "text";
+			morCulture.size = "5";
+			oTeacherTriTd17.appendChild(morCulture);
+
+			/*第十八列*/
+			oTeacherTri.insertCell(17);
+			var oTeacherTriTd18 = oTeacherTri.cells[17];
+			var morArt = document.createElement('input');
+			morArt.type = "text";
+			morArt.size = "5";
+			oTeacherTriTd18.appendChild(morArt);
+			/*第十九列*/
+			oTeacherTri.insertCell(18);
+			var oTeacherTriTd19 = oTeacherTri.cells[18];
+			var morService = document.createElement('input');
+			morService.type = "text";
+			morService.size = "5";
+			oTeacherTriTd19.appendChild(morService);
+			/*第二十列*/
+			oTeacherTri.insertCell(19);
+			var oTeacherTriTd20 = oTeacherTri.cells[19];
+			var total = document.createElement('input');
+			total.type = "text";
+			total.size = "5";
+			oTeacherTriTd20.appendChild(total);
+			/*第二十一列*/
+			oTeacherTri.insertCell(20);
+			var oTeacherTriTd21 = oTeacherTri.cells[20];
+			var rank = document.createElement('input');
+			rank.type = "text";
+			rank.size = "5";
+			oTeacherTriTd21.appendChild(rank);
+			/*第二十二列*/
+			oTeacherTri.insertCell(21);
+			var oTeacherTriTd20 = oTeacherTri.cells[21];
+			var preClassLevel = document.createElement('select');
+			var nLevel1 = document.createElement("option");
+			nLevel1.appendChild(document.createTextNode("一等"));
+			var nLevel2 = document.createElement("option");
+			nLevel2.appendChild(document.createTextNode("二等"));
+			var nLevel3 = document.createElement("option");
+			nLevel3.appendChild(document.createTextNode("三等"));
+
+			preClassLevel.appendChild(nLevel1);
+			preClassLevel.appendChild(nLevel2);
+			preClassLevel.appendChild(nLevel3);
+			
+			oTeacherTriTd20.appendChild(preClassLevel);
+		}
+	}
+		
+}
+
+
+
+
+/*录入奖助学金信息*/
+function entrySholarshipInfo(numsOfRow) {
+	var mainTr = document.getElementById("allbasicMsg");
+		var editDiv = document.getElementById("editMsg");
+		//change(mainTr,editDiv);
+		mainTr.style.display = "none";
+		editDiv.style.display = "block";
+		//取得表对象
+		var tableObj = document.getElementById("entrySholarshipInfo");
+		var trLength = $("#entrySholarshipInfo tr").length;
+		var differ = trLength-4;
+		if(differ >= numsOfRow) {
+			var i,j;
+			j=differ-numsOfRow;
+			for(i=0;i<j;i++)
+				tableObj.deleteRow(trLength-2-i);
+					
+		}
+		else {
+
+		for(var i=0;i<numsOfRow-differ;i++) {
+			var oTeacherTri = tableObj.insertRow(trLength-1);
+			oTeacherTri.setAttribute("align", "center");
+			if((i%2) === 0){
+				oTeacherTri.setAttribute("bgcolor", "#FFFFFF");
+			}else {
+				oTeacherTri.setAttribute("bgcolor", "#EEEEEE");
+			}
+				/*第一列*/
+			oTeacherTri.insertCell(0);
+			var oTeacherTriTd1 = oTeacherTri.cells[0];
+			oTeacherTriTd1.setAttribute("width", "10%");
+			var tec_No = document.createElement('input');
+			tec_No.type = "text";
+			tec_No.size = "5";
+			oTeacherTriTd1.appendChild(tec_No);
+
+			/*第二列*/
+			oTeacherTri.insertCell(1);
+			var oTeacherTriTd2 = oTeacherTri.cells[1];
+			oTeacherTriTd2.setAttribute("width", "7%");
+			var tec_Name = document.createElement('input');
+			tec_Name.type = "text";
+			tec_Name.size = "5";
+			oTeacherTriTd2.appendChild(tec_Name);
+
+			/*第三列*/
+			oTeacherTri.insertCell(2);
+			var oTeacherTriTd3 = oTeacherTri.cells[2];
+			oTeacherTriTd3.setAttribute("width", "7%");
+			var tec_Sex = document.createElement('select');
+			var man = document.createElement("option");
+			man.appendChild(document.createTextNode("男"));
+			var woman = document.createElement("option");
+			woman.appendChild(document.createTextNode("女"));
+			tec_Sex.appendChild(man);
+			tec_Sex.appendChild(woman);
+			oTeacherTriTd3.appendChild(tec_Sex);
+
+
+			/*第四列*/
+			oTeacherTri.insertCell(3);
+			var oTeacherTriTd4 = oTeacherTri.cells[3];
+			oTeacherTriTd4.setAttribute("width", "7%");
+			var tec_College = document.createElement('select');
+			var software = document.createElement("option");
+			software.appendChild(document.createTextNode("软件学院"));
+			var finance = document.createElement("option");
+			finance.appendChild(document.createTextNode("经贸学院"));
+			tec_College.appendChild(software);
+			tec_College.appendChild(finance);
+			oTeacherTriTd4.appendChild(tec_College);
+
+			/*第五列*/
+			oTeacherTri.insertCell(4);
+			var oTeacherTriTd5 = oTeacherTri.cells[4];
+			oTeacherTriTd5.setAttribute("width", "7%");
+			var tec_Major = document.createElement('select');
+			var soft_design = document.createElement("option");
+			soft_design.appendChild(document.createTextNode("软件开发"));
+			var fin_internation = document.createElement("option");
+			fin_internation.appendChild(document.createTextNode("国际贸易"));
+			tec_Major.appendChild(soft_design);
+			tec_Major.appendChild(fin_internation);
+			oTeacherTriTd5.appendChild(tec_Major);
+
+			/*第六列*/
+			oTeacherTri.insertCell(5);
+			var oTeacherTriTd6 = oTeacherTri.cells[5];
+			oTeacherTriTd6.setAttribute("width", "7%");
+			var tec_class = document.createElement('select');
+			var class1 = document.createElement("option");
+			class1.appendChild(document.createTextNode("1101"));
+			var class2 = document.createElement("option");
+			class2.appendChild(document.createTextNode("1102"));
+			tec_class.appendChild(class1);
+			tec_class.appendChild(class2);
+			oTeacherTriTd6.appendChild(tec_class);
+
+
+			/*第七列*/
+			oTeacherTri.insertCell(6);
+			var oTeacherTriTd7 = oTeacherTri.cells[6];
+			oTeacherTriTd7.setAttribute("width", "7%");
+			var pastClassLevel = document.createElement('select');
+			var pLevel1 = document.createElement("option");
+			pLevel1.appendChild(document.createTextNode("一等"));
+			var pLevel2 = document.createElement("option");
+			pLevel2.appendChild(document.createTextNode("二等"));
+			var pLevel3 = document.createElement("option");
+			pLevel3.appendChild(document.createTextNode("三等"));
+
+			pastClassLevel.appendChild(pLevel1);
+			pastClassLevel.appendChild(pLevel2);
+			pastClassLevel.appendChild(pLevel3);
+
+			oTeacherTriTd7.appendChild(pastClassLevel);
+
+			/*第八列*/
+			oTeacherTri.insertCell(7);
+			var oTeacherTriTd8 = oTeacherTri.cells[7];
+			oTeacherTriTd8.setAttribute("width", "7%");
+			var preClassLevel = document.createElement('select');
+			var nLevel1 = document.createElement("option");
+			nLevel1.appendChild(document.createTextNode("一等"));
+			var nLevel2 = document.createElement("option");
+			nLevel2.appendChild(document.createTextNode("二等"));
+			var nLevel3 = document.createElement("option");
+			nLevel3.appendChild(document.createTextNode("三等"));
+
+			preClassLevel.appendChild(nLevel1);
+			preClassLevel.appendChild(nLevel2);
+			preClassLevel.appendChild(nLevel3);
+			
+			oTeacherTriTd8.appendChild(preClassLevel);
+
+
+
+			/*第九列*/
+			oTeacherTri.insertCell(8);
+			var oTeacherTriTd9 = oTeacherTri.cells[8];
+			oTeacherTriTd9.setAttribute("width", "7%");
+			var pastSchName = document.createElement('select');
+			var name1 = document.createElement("option");
+			name1.appendChild(document.createTextNode("国家奖学金"));
+			var name2 = document.createElement("option");
+			name2.appendChild(document.createTextNode("国家励志"));
+			var name3 = document.createElement("option");
+			name3.appendChild(document.createTextNode("国家助学金"));
+			var name4 = document.createElement("option");
+			name4.appendChild(document.createTextNode("校奖学金"));
+			var name5 = document.createElement("option");
+			name5.appendChild(document.createTextNode("企业"));
+			var name6 = document.createElement("option");
+			name6.appendChild(document.createTextNode("个人资助"));
+
+			pastSchName.appendChild(name1);
+			pastSchName.appendChild(name2);
+			pastSchName.appendChild(name3);
+			pastSchName.appendChild(name4);
+			pastSchName.appendChild(name5);
+			pastSchName.appendChild(name6);
+			
+			oTeacherTriTd9.appendChild(pastSchName);
+
+			/*第十列*/
+			oTeacherTri.insertCell(9);
+			var oTeacherTriTd10 = oTeacherTri.cells[9];
+			oTeacherTriTd10.setAttribute("width", "10%");
+			var pastPovLevel = document.createElement('select');
+			var level1 = document.createElement("option");
+			level1.appendChild(document.createTextNode("甲等"));
+			var level2 = document.createElement("option");
+			level2.appendChild(document.createTextNode("乙等"));
+			var level3 = document.createElement("option");
+			level3.appendChild(document.createTextNode("丙等"));
+
+			pastPovLevel.appendChild(level1);
+			pastPovLevel.appendChild(level2);
+			pastPovLevel.appendChild(level3);
+			
+			oTeacherTriTd10.appendChild(pastPovLevel);
+
+			/*第十一列*/
+			oTeacherTri.insertCell(10);
+			var oTeacherTriTd11 = oTeacherTri.cells[10];
+			oTeacherTriTd11.setAttribute("width", "10%");
+
+			var prePovLevel = document.createElement('select');
+			var level1 = document.createElement("option");
+			level1.appendChild(document.createTextNode("甲等"));
+			var level2 = document.createElement("option");
+			level2.appendChild(document.createTextNode("乙等"));
+			var level3 = document.createElement("option");
+			level3.appendChild(document.createTextNode("丙等"));
+
+			prePovLevel.appendChild(level1);
+			prePovLevel.appendChild(level2);
+			prePovLevel.appendChild(level3);
+			
+			oTeacherTriTd11.appendChild(prePovLevel);
+
+			/*第十二列*/
+			oTeacherTri.insertCell(11);
+			var oTeacherTriTd12 = oTeacherTri.cells[11];
+			oTeacherTriTd12.setAttribute("width", "10%");
+			var preSchName = document.createElement('select');
+			var name1 = document.createElement("option");
+			name1.appendChild(document.createTextNode("国家奖学金"));
+			var name2 = document.createElement("option");
+			name2.appendChild(document.createTextNode("国家励志"));
+			var name3 = document.createElement("option");
+			name3.appendChild(document.createTextNode("国家助学金"));
+			var name4 = document.createElement("option");
+			name4.appendChild(document.createTextNode("校奖学金"));
+			var name5 = document.createElement("option");
+			name5.appendChild(document.createTextNode("企业"));
+			var name6 = document.createElement("option");
+			name6.appendChild(document.createTextNode("个人资助"));
+
+			preSchName.appendChild(name1);
+			preSchName.appendChild(name2);
+			preSchName.appendChild(name3);
+			preSchName.appendChild(name4);
+			preSchName.appendChild(name5);
+			preSchName.appendChild(name6);
+			
+			oTeacherTriTd12.appendChild(preSchName);
+
+			/*第十三列*/
+			oTeacherTri.insertCell(12);
+			var oTeacherTriTd13 = oTeacherTri.cells[12];
+			oTeacherTriTd13.setAttribute("width", "7%");
+			var scholarProperty = document.createElement('select');
+			var property1 = document.createElement("option");
+			property1.appendChild(document.createTextNode("国家"));
+			var property2 = document.createElement("option");
+			property2.appendChild(document.createTextNode("学校"));
+			var property3 = document.createElement("option");
+			property3.appendChild(document.createTextNode("企业资助"));
+			var property4 = document.createElement("option");
+			property4.appendChild(document.createTextNode("个人资助"));
+
+			scholarProperty.appendChild(property1);
+			scholarProperty.appendChild(property2);
+			scholarProperty.appendChild(property3);
+			scholarProperty.appendChild(property4);
+			
+			oTeacherTriTd13.appendChild(scholarProperty);
+			/*第十四列*/
+			oTeacherTri.insertCell(13);
+			var oTeacherTriTd14 = oTeacherTri.cells[13];
+			oTeacherTriTd14.setAttribute("width", "7%");
+			var tec_time = document.createElement('input');
+			tec_time.type = "text";
+			tec_time.size = "5";
+			oTeacherTriTd14.appendChild(tec_time);
+			/*第十五列*/
+			oTeacherTri.insertCell(14);
+			var oTeacherTriTd15 = oTeacherTri.cells[14];
+			oTeacherTriTd15.setAttribute("width", "7%");
+			var tec_fare = document.createElement('input');
+			tec_fare.type = "text";
+			tec_fare.size = "5";
+			oTeacherTriTd15.appendChild(tec_fare);
+		}
+	}
+		
+}
+
+

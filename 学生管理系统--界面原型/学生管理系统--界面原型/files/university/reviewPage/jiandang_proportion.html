@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>学生工作管理系统</title>
+	
+		<link href="../../../css/css.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/college/tanchu.css">
+		<link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../../../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<link href="../../../css/arrow.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+.demo{border:solid 1px #D5D5D5;border-collapse:collapse;width:100%;}
+.demo td{border:1px solid #D5D5D5;font-size:12px;padding:7px 5px;}
+.demo th{background-color:#EEE;border-right:1px solid #D5D5D5;font-size:13.5px;line-height:120%;font-weight:bold;padding:8px 5px;text-align:left;}
+ 
+</style>
+		
+	</head>
+
+<script src="../../../js/jquery-1.7.2.min.js"></script>
+<script src="../../../js/jquery-ui-1.8.21.custom.min.js"></script>
+
+<script src="../../../js/jquery.chromatable.js"></script>
+<script type="text/javascript">
+   
+
+$(document).ready(function(){ 
+ 	
+	$("#tableID").chromatable({
+		width: "100%",
+	 
+          scrolling: "yes"
+	});
+
+	});
+
+
+</script>
+<script src="../../../js/college/college.js"></script>
+	<body> 
+		<form name="fom" id="fom" method="post" action="">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+				<tr>
+					<td height="30">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="62" background="../../../images/nav04.gif">
+
+									<table width="98%" border="0" align="center" cellpadding="0"
+										cellspacing="0">
+										<tr>
+											<td width="21">
+												<img src="../../../images/ico07.gif" width="20" height="18" />
+											</td>
+											<td width="538">
+												<span class="collegeName">学院
+												<select name="college" size="1" id="collegeId">
+													<option value="selected">
+														请选择学院
+													</option>
+													<option value="agri_college">
+														农学院
+													</option>
+													<option value="garden_art">
+														园林与艺术学院
+													</option>
+													<option value="animal_science_tech">
+														动物科学技术学院
+													</option>
+													<option value="engin_college">
+														工学院
+													</option>
+													<option value="science_college">
+														理学院
+													</option>
+													<option value="land_resources">
+														国土资源与环境学院
+													</option>
+													<option value=" computer_information">
+														计算机与信息工程学院
+													</option>
+													<option value=" economics_management">
+														经济管理学院
+													</option>
+													<option value="food_science_engin">
+														食品科学与工程学院
+													</option>
+													<option value="normal_college">
+														职业师范（技术）学院
+													</option>
+													<option value="biological_science_engine">
+														生物科学与工程学院
+													</option>
+													<option value="foreign_languages">
+														外国语学院
+													</option>
+													<option value="software">
+														软件学院
+													</option>
+													<option value="marxism_college">
+														马克思主义学院
+													</option>
+													<option value="continu_education">
+														继续教育学院
+													</option>
+												</select>
+												</span>
+			
+											</td>
+											<td width="77" align="center" style="position:relative;left:-100px">
+												<div class="suckerdiv">
+													<ul id="suckertree1">
+														<li>
+															<a href="#">分配</a>
+															<ul>
+																<li>
+																	<a href="#" onclick="popup('#jiandangProportion', '#JiandangProportion', '#btnCloseJiandangProportion')">建档比例</a>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+											</td>
+											<td width="77" align="center">
+
+												<a href="#" onclick="sousuo()"> <input name="Submit3"
+														type="button" class="right-button07" value="高级搜索" /> </a>
+											</td>
+											<td width="77" align="center">
+												<a href="#" onclick="sousuo()"> <input name="Submit4"
+														type="button" class="right-button07" value="导出" /> </a>
+
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="allbasicMsg" style="display: block">
+							<table id="subtree1" style="DISPLAY: " width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="CPanel">
+										<div id="liulanbiao" style="margin-left: 10px">
+											<table width="99%" border="0" cellpadding="0" cellspacing="0" class="CContent">
+												<tr>
+													<th class="tablestyle_title">
+														当前位置：<a href="../dept_jiandang.html">学生建档信息页面</a>--->分配比例
+													<!-- <span style="position:relative;right:-650px">
+														<font size="2" color="red">先进项目类型</font>
+														<select style="font-size:8px">
+															<option>请选择</option>
+															<option>优秀三好学生</option>
+															<option>优秀学生干部</option>
+															<option>最佳三好学生</option>
+															<option>最佳学生干部</option>
+															<option>优秀团员</option>
+															<option>优秀团干部</option>
+														</select>
+													</span>
+													<span style="position:relative;right:-650px">
+														<font size="2" color="red">性质</font>
+															<select style="font-size:8px">
+															<option>请选择</option>
+															<option>院级</option>
+															<option>校级</option>
+															<option>省级</option>
+														</select>
+													</span> -->
+													</th>
+												</tr>
+												<tr id="allbasicMsg">
+
+													<td class="CPanel" align="center">
+														<table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+															<tr>
+																<td height="40" class="font42">
+																	<table width="100%" border="0" cellpadding="4"
+																		cellspacing="1" bgcolor="#464646" class="demo" id="tableID" >
+																		<tr class="CTitle">
+																			<td height="22" colspan="18" align="center"
+																				style="font-size: 16px">
+																				学院建档分配表
+																			</td>
+																		</tr>
+																		<tr bgcolor="#EEEEEE" align="center">
+                                                                        	<td width="20%">
+                                                                        		<b>学院编号</b>
+                                                                        	</td>
+										<td width="20%">
+                                                                        		<b>学院名称</b>
+                                                                        	</td>
+                                                                        	<td><B>甲等</B></td>
+                                                                        	<td><B>乙等</B></td>
+                                                                        	<td><B>丙等</B></td>
+                                                                        	<td><B>汇总</B></td>
+                                                                        	<td><B>操作</B></td>
+																		</tr>
+																		<tr bgcolor="#DDDDDD" align="center">
+                                                                        	<td><a href="#" onclick="popup('#jiandangNum', '#JiandangNum', '#btnCloseJiandangNum')">12321</a></td><td>软件学院</td>
+                                                                        	<td>30</td><td>75</td><td>120</td><td>225</td>
+                                                                        	<td>
+								    											<img src="../../../images/turnUp1.jpg" style="width:10px;height:10px;" onclick="alert('up')">
+                                       											<img src="../../../images/turnDown1.jpg" style="width:10px;height:10px;" onclick="alert('down')">
+                                                                        	</td>
+																		</tr>																		
+																		<tr bgcolor="#EEEEEE" align="center">
+                                                                        	<td><a href="#" onclick="">12321</a></td><td>外国语学院</td>
+                                                                        	<td>30</td><td>75</td><td>120</td><td>225</td>
+                                                                        	<td>
+								    											<img src="../../../images/turnUp1.jpg" style="width:10px;height:10px;" onclick="alert('up')">
+                                       											<img src="../../../images/turnDown1.jpg" style="width:10px;height:10px;" onclick="alert('down')">
+                                                                        	</td>
+																		</tr>
+																		<tr bgcolor="#DDDDDD" align="center">
+                                                                        	<td><a href="#" onclick="">12321</a></td><td>农学院</td>
+                                                                        	<td>30</td><td>75</td><td>120</td><td>225</td>
+                                                                        	<td>
+								    											<img src="../../../images/turnUp1.jpg" style="width:10px;height:10px;" onclick="alert('up')">
+                                       											<img src="../../../images/turnDown1.jpg" style="width:10px;height:10px;" onclick="alert('down')">
+                                                                        	</td>
+																		</tr>
+																		<tr bgcolor="#EEEEEE" align="center">
+                                                                        	<td><a href="#" onclick="">12321</a></td><td>经贸学院</td>
+                                                                        	<td>10</td><td>25</td><td>40</td><td>225</td>
+                                                                        	<td>
+								    											<img src="../../../images/turnUp1.jpg" style="width:10px;height:10px;" onclick="alert('up')">
+                                       											<img src="../../../images/turnDown1.jpg" style="width:10px;height:10px;" onclick="alert('down')">
+                                                                        	</td>
+																		</tr>
+																		<tr bgcolor="#DDDDDD" align="center">
+                                                                        	<td><b>汇总</b></td><td>100%</td><td>100</td><td>350</td><td>400</td><td>850</td>	
+                                                                        	<td></td>					
+																		</tr>				
+																	</table>													
+																	</table>
+																</td>
+															</tr>
+														</table>
+														
+														
+														<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+															<tr>
+																<td height="6">
+																	<img src="../../images/spacer.gif" width="1" height="1" />
+																</td>
+															</tr>
+															<tr>
+																<td height="33">
+																	<table width="100%" border="0" align="center"
+																		cellpadding="0" cellspacing="0" class="right-font08">
+																		<tr>
+																			<td width="50%">
+																				共
+																				<span class="right-text09">5</span> 页 | 第
+																				<span class="right-text09">1</span> 页
+																			</td>
+																			<td width="49%" align="right">
+																				[
+																				<a href="#" class="right-font08">首页</a> |
+																				<a href="#" class="right-font08">上一页</a> |
+																				<a href="#" class="right-font08">下一页</a> |
+																				<a href="#" class="right-font08">末页</a>] 转至：
+																			</td>
+																			<td width="1%">
+																				<table width="20" border="0" cellspacing="0"
+																					cellpadding="0">
+																					<tr>
+																						<td width="1%">
+																							<input name="textfield3" type="text"
+																								class="right-textfield03" size="1" />
+																						</td>
+																						<td width="87%">
+																							<input name="Submit23222" type="submit"
+																								class="right-button06" value=" " />
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</table>
+
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>					
+					</td>
+				</tr>
+			</table>
+		</form>
+
+				<div id="JiandangNum" style="display: none">
+		        		<h2>班级建档信息<a href="#" id="btnCloseJiandangNum">关闭</a></h2>
+		        		<div class="form">
+		            		<table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="demo" id="tableID" ><thead>
+		            			<tr class="CTitle">
+		            				<td height="22" colspan="12" align="center" style="font-size: 16px">
+		            				班级建档信息表 
+									</td>
+								</tr>
+								<tr bgcolor="#FFFFFF">
+								    <th width='20%' name='advanceProjectType'> 
+								    	<center>班级</center>
+								    </th>
+								    <th width='10%' name='level'> 
+								    	<center>甲等</center>
+								    </th>
+								    <th width='10%' name='time'> 
+								    	<center>乙等</center>
+								    </th>
+									<th width='10%' name='time'> 
+								    	<center>丙等</center>
+								    </th>
+								    <th width='10%' name='time'> 
+								    	<center>总数</center>
+								    </th>
+								    <th width='20%' name='oprate'> 
+								    	<center>操作</center>
+								    </th>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td > 
+								    	<center>1201</center>
+								    </td>
+								    <td> 
+								    	<center>2</center>
+								    </td>
+								    <td > 
+								    	<center>5</center>
+								    </td>
+								    <td > 
+								    	<center>8</center>
+								    </td>
+								    <td > 
+								    	<center>15</center>
+								    </td>
+								    <td align="center"> 
+								    	<img src="../../../images/turnUp1.jpg" style="width:10px;height:10px;" onclick="alert('up')">
+                                        <img src="../../../images/turnDown1.jpg" style="width:10px;height:10px;" onclick="alert('down')">
+								    </td>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td > 
+								    	<center>1202</center>
+								    </td>
+								    <td> 
+								    	<center>2</center>
+								    </td>
+								    <td > 
+								    	<center>5</center>
+								    </td>
+								    <td > 
+								    	<center>8</center>
+								    </td>
+								    <td > 
+								    	<center>15</center>
+								    </td>
+								    <td align="center"> 
+								    	<img src="../../../images/turnUp1.jpg" style="width:10px;height:10px;" onclick="alert('up')">
+                                        <img src="../../../images/turnDown1.jpg" style="width:10px;height:10px;" onclick="alert('down')">
+								    </td>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td > 
+								    	<center>1207</center>
+								    </td>
+								    <td> 
+								    	<center>2</center>
+								    </td>
+								    <td > 
+								    	<center>5</center>
+								    </td>
+								    <td > 
+								    	<center>8</center>
+								    </td>
+								    <td > 
+								    	<center>15</center>
+								    </td>
+								    <td align="center"> 
+								    	<img src="../../../images/turnUp1.jpg" style="width:10px;height:10px;" onclick="alert('up')">
+                                        <img src="../../../images/turnDown1.jpg" style="width:10px;height:10px;" onclick="alert('down')">
+								    </td>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td > 
+								    	<center>汇总</center>
+								    </td>
+								    <td> 
+								    	<center>2</center>
+								    </td>
+								    <td > 
+								    	<center>5</center>
+								    </td>
+								    <td > 
+								    	<center>8</center>
+								    </td>
+								    <td > 
+								    	<center>15</center>
+								    </td>
+								    <td></td>
+								</tr>
+		            		</table>
+		            	
+		            		<div id="editScore" style="display: none">
+		            			<div  align="center">
+		            				<input type='button' value='保存' id="saveProjectPro" onclick="save('editScore')" />
+		            				&nbsp;&nbsp;&nbsp;&nbsp;
+		            				<input type='button' value='取消' onclick="cancel()" />
+		            			</div>
+		            		</div>
+		        		</div>
+		    		</div>
+
+
+				<div id="JiandangProportion" style="display: none">
+		        		<h2>建档比例<a href="#" id="btnCloseJiandangProportion">关闭</a></h2>
+		        		<div class="form">
+		            		<div class="form">
+		            		<table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="demo" id="tableID" ><thead>
+		            			<tr class="CTitle">
+		            				<td height="22" colspan="12" align="center" style="font-size: 16px">
+		            					建档比例表 <input type="button" value="编辑" style="position: absolute;right: 22px;" onclick="edit('editProportion')">
+									</td>
+								</tr>
+								<tr bgcolor="#FFFFFF">
+								    <th width='20%' name='level'> 
+								    	<center>级别</center>
+								    </th>
+								    <th width='20%' name='time'> 
+								    	<center>分配人数</center>
+								    </th>
+								    <th width='20%' name='time'> 
+								    	<center>分配比例</center>
+								    </th>
+								    <th width='20%' name='time'> 
+								    	<center>时间分配</center>
+								    </th>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td > 
+								    	<center>甲等</center>
+								    </td>
+								    <td> 
+								    	<center>20</center>
+								    </td>
+								    <td> 
+								    	<center>2%</center>
+								    </td>
+								    <td> 
+								    	<center>分配时间：2011-11-11</center>
+								    </td>
+								</tr>
+								<tr bgcolor="#EEEEEE">
+								    <td > 
+								    	<center>乙等</center>
+								    </td>
+								    <td> 
+								    	<center>50</center>
+								    </td>
+								    <td> 
+								    	<center>5%</center>
+								    </td>
+								    <td> 
+								    	<center>开始时间：2011-11-11</center>
+								    </td>
+								</tr>	
+								<tr bgcolor="#EEEEEE">
+								    <td > 
+								    	<center>丙等</center>
+								    </td>
+								    <td> 
+								    	<center>100</center>
+								    </td>
+								    <td> 
+								    	<center>10%</center>
+								    </td>
+								    <td> 
+								    	<center>截止时间：2011-11-11</center>
+								    </td>
+								</tr>		
+
+				
+		            		</table>
+		            	
+		            	
+		            		<div id="editProportion" style="display: none">
+		            			<div  align="center">
+		            				<input type='button' value='保存' id="saveProjectPro" onclick="save('editProportion')" />
+		            				&nbsp;&nbsp;&nbsp;&nbsp;
+		            				<input type='button' value='取消' onclick="cancel()" />
+		            			</div>
+		            		</div>
+		        		</div>
+		    		</div>
+
+
+
+
+	</body>
+</html>
+
+
