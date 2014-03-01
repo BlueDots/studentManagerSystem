@@ -180,7 +180,7 @@
 																	<table width="100%" border="0" cellpadding="4"
 																		cellspacing="1" bgcolor="#464646" class="demo" id="tableID" ><thead>
 																		<tr class="CTitle">
-																			<td height="22" colspan="24" align="center"
+																			<td height="22" colspan="28" align="center"
 																				style="font-size: 16px">
 																				奖学金基本信息表
 																			</td>
@@ -189,6 +189,10 @@
 																			<td width="7%" rowspan="3">学号</td>
 						                                                    <td width="7%" rowspan="3">姓名</td>
 						                                                    <td width="7%" rowspan="3">性别</td>
+						                                                    <td width="7%" rowspan="3">学院</td>
+						                                                    <td width="7%" rowspan="3">专业</td>
+						                                                    <td width="7%" rowspan="3">班级</td>
+						                                                    <td width="7%" rowspan="3">学期</td>
 						                                                    <td colspan="4">德育素质评测(20%)</td>
 						                                                    <td colspan="5">智育素质测评(60%)</td>
 						                                                    <td colspan="4">体育素质测评(5%)</td>
@@ -223,10 +227,14 @@
 					                                                        <td width="4%">排名</td>
 					                                                    </tr> 
 					                                                    <tr bgcolor="#FFFFFF">
-					                                                                 
-					                                                       	<td width="10%">20112222</td>
-					                                                        <td width="14%">旮旯子</td>
+					                                                               
+					                                                       	<td width="10%"><a onclick="popup('#ItemDiv', '#ItemSchoolarShipDiv', '#btnItem')" title="其它学期奖学金信息">20112222</a></td>
+					                                                        <td width="14%">旮旯</td>
 					                                                        <td width="6%">男</td>
+					                                                        <td width="14%">软件学院</td>
+					                                                        <td width="14%">软件开发</td>
+					                                                        <td width="14%">1101</td>
+					                                                        <td width="14%">20131</td>
 					                                                        <td width="6%">6</td>
 					                                                        <td width="6%">6</td>
 					                                                        <td width="6%">0</td>
@@ -348,6 +356,9 @@
 					    <td width='15%' name='levelC'> 
 					    	三等人数
 					    </td>
+					    <td width='15%' name='totalNumber'> 
+					    	总人数
+					    </td>
 					    <td width='25%' name='projectName'> 
 					    	分配时间
 					    </td>
@@ -374,6 +385,9 @@
 					    <td width='15%'> 
 					    	300
 					    </td>
+					    <td width='15%'> 
+					    	600
+					    </td>
 					    <td width='25%'> 
 					    	2014/1/1 00:00:00
 					    </td>
@@ -399,6 +413,9 @@
 					    </td>
 					    <td width='15%'> 
 					    	300
+					    </td>
+					    <td width='15%'> 
+					    	600
 					    </td>
 					    <td width='25%'> 
 					    	2014/1/1 00:00:00
@@ -492,7 +509,7 @@
             	<table width="50%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="demo" id="advancedSearchTab" ><thead>
             
 					<tr bgcolor="#FFFFFF" align="center">
-					    <td width='15%'> 
+					    <td width='25%'> 
 					    	性别
 					    </td>
 					    <td width='35%' name='sex'> 
@@ -501,7 +518,7 @@
 					    </td>
 					</tr>
 					<tr bgcolor="#FFFFFF" align="center">
-					    <td width='15%'> 
+					    <td width='25%'> 
 					    	奖学金等级
 					    </td>
 					    <td width='35%'> 
@@ -514,15 +531,15 @@
 					    </td>
 					</tr>
 					<tr bgcolor="#FFFFFF" align="center">
-					    <td width='15%'> 
-					    	排名
+					    <td width='25%'> 
+					    	总分排名
 					    </td >
 					    <td width='35%'> 
 					  		前<input name="advRank" type="text" value="14" />
 					    </td>
 					</tr>
 					<tr bgcolor="#FFFFFF" align="center">
-					    <td width='15%'> 
+					    <td width='25%'> 
 					    	总得分
 					    </td >
 					    <td width='35%'> 
@@ -533,6 +550,46 @@
 					    		<option>不及格(60以下)</option>
 					    	</select>	
 					    </td>
+					</tr>
+					<tr bgcolor="#EEEEEE" align="center">
+						<td width="25%">
+							德育素质测评班级排名
+						</td>
+						<td width="35%">
+							<input type="text" />
+						</td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+						<td width="25%">
+							智育素质测评班级排名
+						</td>
+						<td width="35%">
+							<input type="text" />
+						</td>
+					</tr>
+					<tr bgcolor="#EEEEEE" align="center">
+						<td width="25%">
+							体育素质测评班级排名
+						</td>
+						<td width="35%">
+							<input type="text" />
+						</td>
+					</tr>
+					<tr bgcolor="#FFFFFF" align="center">
+						<td width="25%">
+							美育素质测评班级排名
+						</td>
+						<td width="35%">
+							<input type="text" />
+						</td>
+					</tr>
+					<tr bgcolor="#EEEEEE" align="center">
+						<td width="25%">
+							学期
+						</td>
+						<td width="35%">
+							<input type="text" />
+						</td>
 					</tr>
 					<tr bgcolor="#FFFFFF" align="center">
 						<td colspan="2"><input type="button" value="查询"/></td>
@@ -606,6 +663,105 @@
             		</div>
         		</div>
     		</div>
+    	</div>
+    		<!-- 其它学期奖学金信息 -->
     	
+    	<div id="ItemDiv" style="display: none"></div>
+    		<div id="ItemSchoolarShipDiv" style="display: none">
+        	<h2>奖学金信息<a href="#" id="btnItem">关闭</a></h2>
+        	<div class="form">
+            	<table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="demo" id="tableID" ><thead>
+            		<tr class="CTitle">
+            			<td height="22" colspan="22" align="center" style="font-size: 16px">
+            				其他学期奖学金信息
+						</td>
+					</tr>
+					<tr bgcolor="#EEEEEE">
+						 <td width="7%" rowspan="3">学期</td>
+						 <td colspan="4">德育素质评测(20%)</td>
+	                     <td colspan="5">智育素质测评(60%)</td>
+	                     <td colspan="4">体育素质测评(5%)</td>
+	                     <td colspan="4">美育素质测评(15%)</td>
+	                     <td colspan="2" rowspan="2">综合测评</td>
+	                     <td width="2%" rowspan="3">奖学金等级</td>
+	                     <td width="2%" rowspan="3">状态</>
+					</tr>
+					<tr bgcolor="#EEEEEE">
+						  <td width="10%" rowspan="2">基准分</td>
+	                      <td width="8%" rowspan="2">奖励分</td>
+	                      <td width="8%" rowspan="2">处罚分</td>
+	                      <td width="6%" rowspan="2">得分</td>
+	                      <td colspan="2">学业课程分</td>
+	                      <td width="3%" rowspan="2">科技活动与创新分</td>
+	                      <td width="3%" rowspan="2">职业技能分</td>
+	                      <td width="5%" rowspan="2">得分</td>
+	                      <td width="3%" rowspan="2">体育课程分</td>
+	                      <td width="3%" rowspan="2">体育健康分</td>
+	                      <td width="2%" rowspan="2">体育竞赛分</td>
+	                      <td width="4%" rowspan="2">得分</td>
+	                      <td width="2%" rowspan="2">美育管理艺术分</td>
+	                      <td width="2%" rowspan="2">美育文化艺术分</td>
+                          <td width="2%" rowspan="2">美育媒体艺术分</td>
+                          <td width="4%" rowspan="2">美育实践服务</td>
+					</tr>
+					<tr bgcolor="#EEEEEE">
+	                      <td width="3%">必修课成绩</td>
+	                      <td width="3%">公选课惩罚分</td>
+	                      <td width="2%">总得分</td>
+	                      <td width="4%">排名</td>
+                    </tr> 
+                    <tr bgcolor="#FFFFFF">
+                      <td width="6%">20121</td>
+                      <td width="6%">6</td>
+                      <td width="6%">6</td>
+                      <td width="6%">0</td>
+                      <td width="6%">10</td>
+                      <td width="6%">20</td>
+                      <td width="6%">80</td>
+					  <td width="6%">6</td>
+					  <td width="6%">0</td>
+                      <td width="6%">10</td>
+                      <td width="6%">20</td>
+                      <td width="6%">80</td>
+ 		   			  <td width="6%">80</td>
+					  <td width="6%">6</td>
+					  <td width="6%">0</td>
+                      <td width="6%">10</td>
+                      <td width="6%">20</td>
+                      <td width="6%">80</td>
+                      <td width="6%">90</td>
+                      <td width="6%">2</td>
+                      <td width="6%">一等</td>
+                      <td width="6%">已审核</td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                      <td width="6%">20122</td>
+                      <td width="6%">6</td>
+                      <td width="6%">6</td>
+                      <td width="6%">0</td>
+                      <td width="6%">10</td>
+                      <td width="6%">20</td>
+                      <td width="6%">80</td>
+					  <td width="6%">6</td>
+					  <td width="6%">0</td>
+                      <td width="6%">10</td>
+                      <td width="6%">20</td>
+                      <td width="6%">80</td>
+ 		   			  <td width="6%">80</td>
+					  <td width="6%">6</td>
+					  <td width="6%">0</td>
+                      <td width="6%">10</td>
+                      <td width="6%">20</td>
+                      <td width="6%">80</td>
+                      <td width="6%">90</td>
+                      <td width="6%">2</td>
+                      <td width="6%">一等</td>
+                      <td width="6%">已审核</td>
+                    </tr>
+            	</table>
+            	
+        	</div>
+    	</div>
+
 	</body>
 </html>
