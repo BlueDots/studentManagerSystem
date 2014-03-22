@@ -16,7 +16,7 @@
     <constant name="struts.ui.theme" value="xhtml"/>  
       
     <package name="default" namespace="/" extends="struts-default">  
-        <action name="hello" class="com.li.action.HelloAction">  
+        <action name="hello" class="com.sms.li.action.HelloAction">  
             <result name="success">/Hello.jsp</result>  
         </action>  
         	<action name="demo" class="demoAction">  

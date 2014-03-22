@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.sms.li.dao.LoginDao">  
+  
+  <select id="findUser" resultMap="UserList">
+  		select * from t_user;
+  </select>
+  
+  <resultMap type="com.sms.li.po.User" id="UserList">
+	        <id column="id" property="id" />
+	        <result column="username" property="username" />
+	        <result column="age" property="age" />
+   </resultMap>
+   		 
+</mapper>  

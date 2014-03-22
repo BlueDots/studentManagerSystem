@@ -55,19 +55,26 @@
         <property name="dataSource" ref="dataSource" />  
         <property name="configLocation" value="classpath:mybatis.xml"></property>  
     </bean>
-      
+    
+      <!--  允许批量处理-->
+      <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+  <constructor-arg index="0" ref="sqlSessionFactory" />
+  <constructor-arg index="1" value="BATCH" /></bean>
+    
     <!-- 配置mybatis数据处理的方式，共四种方式，这里采用MapperScannerConfigurer方式 -->  
     <!--   
         SqlSessionTemplate  这个需要写配置文件，在实现类中注入sqlsession，再使用sqlsession,是细颗粒控制  
         SqlSessionDaoSupport   这个只需要在实现类中继承特殊类就可以使用sqlsession  
         MapperFactoryBean  这个要写配置文件，把对应的所有接口在配置文件中引用即可，无需写实现类  
         MapperScannerConfigurer  这个要写配置文件，只要给出接口所在的包即可，会自动把包中的接口引入，无需写实现类  
-     -->  
-   <!--    
+     -->
+     
+       <!-- 
+       
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">   
-        <property name="basePackage" value="com"/>  
+        <property name="basePackage" value="com.sms.*.dao"/>  
     </bean> 
-   -->   
+       -->
     <!-- 事务配置 -->  
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
         <property name="dataSource" ref="dataSource"/>  

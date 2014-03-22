@@ -14,7 +14,10 @@
     </typeAliases>  
      
      <mappers>  
-        <mapper resource="com/li/dao/demoMapper.xml"/>
-          <mapper resource="com/li/dao/useSecondLevelCache.xml"/>
+        <mapper resource="com/sms/li/dao/demoMapper.xml"/>
+          <mapper resource="com/sms/li/dao/useSecondLevelCache.xml"/>
+         <mapper resource="com/sms/anping/dao/userMapper.xml"/>
+        <mapper resource="com/sms/anping/dao/studentMapper.xml"/>
+   
     </mappers>
 </configuration>
