@@ -1,1 +1,0 @@
-insert into t_user values(null,'jack',19);
